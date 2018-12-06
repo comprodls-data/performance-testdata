@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="1020-Teacher_changes_edits_date_&amp;_metadata_of_the_class" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="1018: Teacher Create New Class" enabled="true"/>
+      <hashTree>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a new Instructor-led class" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/create_new_instructor_led_class.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_details_for_a_specific_class.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get All the User Spaces" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_all_the_User_Spaces.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_an_access_token_for_an_external_user.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_classes_of_an_user.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get Products of first space" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_products_of_first_space.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

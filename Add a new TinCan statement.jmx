@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Add a new TinCan statement" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add a new tincan statement" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;actor&quot;: {&#xd;
+      &quot;account&quot;: {&#xd;
+        &quot;name&quot;: &quot;${userid}&quot;&#xd;
+      }&#xd;
+    },&#xd;
+    &quot;verb&quot;: {&#xd;
+      &quot;id&quot;: &quot;${verbid}&quot;&#xd;
+    },&#xd;
+    &quot;object&quot;: {&#xd;
+      &quot;id&quot;: &quot;${objectid}&quot;&#xd;
+    },&#xd;
+    &quot;context&quot;: {&#xd;
+      &quot;registration&quot;: &quot;${productid}&quot;&#xd;
+    },&#xd;
+    &quot;result&quot;: {&#xd;
+      &quot;score&quot;: {&#xd;
+        &quot;min&quot;: 0,&#xd;
+        &quot;scaled&quot;: 0.5,&#xd;
+        &quot;max&quot;: 1,&#xd;
+        &quot;raw&quot;: 0.5&#xd;
+      }&#xd;
+    }&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${xapi_url}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/${orgid}/tapi/statements</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
+            <stringProp name="cacheKey"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">vars.put(&quot;task&quot;,vars.get(&quot;code_&quot;+vars.get(&quot;sectionCounter&quot;)));</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="productid" elementType="Argument">
+                <stringProp name="Argument.name">productid</stringProp>
+                <stringProp name="Argument.value">${__P(Product_id,fd75fc27-bde0-11e5-88d3-0a75091e6d25)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="verbid" elementType="Argument">
+                <stringProp name="Argument.name">verbid</stringProp>
+                <stringProp name="Argument.value">http://adlnet.gov/expapi/verbs/scored</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="objectid" elementType="Argument">
+                <stringProp name="Argument.name">objectid</stringProp>
+                <stringProp name="Argument.value">http://product.comprodls.com/cup2-prod/tapi/products/c052cd5e-c2f4-11e7-9716-0e34ffe5d91e/items/1_friends_and_family/activities/unit_2_exercise_3</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">authorization</stringProp>
+                <stringProp name="Header.value">${access_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname=" Extract statementid" enabled="false">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">statementid</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;uuid&quot;\:&quot;(.*?)&quot;,&quot;type</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NULL</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1070786788">&quot;task&quot;:&quot;${task}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Assertion.scope">all</stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Complete Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1341898700">{&quot;actor&quot;:{&quot;uuid&quot;:&quot;${userid}&quot;},&quot;product&quot;:{&quot;uuid&quot;:&quot;${productid}&quot;},&quot;entity&quot;:{&quot;verb&quot;:&quot;attempted&quot;,&quot;task&quot;:&quot;${task}&quot;,&quot;timespent&quot;:200000},&quot;status&quot;:&quot;in-process&quot;}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

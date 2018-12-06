@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="1008: Student accesses the learning path of a product (self-paced or private learning)" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="1008: Student accesses the learning path of a product (self-paced or private learning)" enabled="true"/>
+      <hashTree>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get product by product id" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_product_by_product_id.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Product items and their progress analytic (default) (My Private Learning)" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Product_items_and_their_progress_analytic(default)_private.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get user&apos;s application state for a product or class (product) (My Private Learning)" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_user&apos;s_application_state_for_a_product_or_class(product)_private.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get user&apos;s application state for a product or class (product)(My Private Learning)" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Get_user&apos;s_application_state_for_a_product_or_class(product)_private.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)(My Private Learning)" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Update_user&apos;s_application_state_for_a_product_or_class(product)_private.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add statements(My Private Learning)" enabled="true">
+          <stringProp name="IncludeController.includepath">Fragements/Add_statements_private.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
