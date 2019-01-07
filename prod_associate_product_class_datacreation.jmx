@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ComproDLS Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="users" elementType="Argument">
+            <stringProp name="Argument.name">users</stringProp>
+            <stringProp name="Argument.value">${__P(users,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampup" elementType="Argument">
+            <stringProp name="Argument.name">rampup</stringProp>
+            <stringProp name="Argument.value">${__P(rampup,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="inputcsvname" elementType="Argument">
+            <stringProp name="Argument.name">inputcsvname</stringProp>
+            <stringProp name="Argument.value">${__P(inputcsvname,NOT_FOUND.csv)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="comproDLS- new data" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">4800</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - PROD" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="startTime" elementType="Argument">
+              <stringProp name="Argument.name">startTime</stringProp>
+              <stringProp name="Argument.value">1504224000000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="minWait" elementType="Argument">
+              <stringProp name="Argument.name">minWait</stringProp>
+              <stringProp name="Argument.value">1000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="maxWait" elementType="Argument">
+              <stringProp name="Argument.name">maxWait</stringProp>
+              <stringProp name="Argument.value">1500</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="asyncWait" elementType="Argument">
+              <stringProp name="Argument.name">asyncWait</stringProp>
+              <stringProp name="Argument.value">8000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="userProgress_max" elementType="Argument">
+              <stringProp name="Argument.name">userProgress_max</stringProp>
+              <stringProp name="Argument.value">2000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="learning_progress" elementType="Argument">
+              <stringProp name="Argument.name">learning_progress</stringProp>
+              <stringProp name="Argument.value">12</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="auth_url" elementType="Argument">
+              <stringProp name="Argument.name">auth_url</stringProp>
+              <stringProp name="Argument.value">${__P(auth_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-auth)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="product_url" elementType="Argument">
+              <stringProp name="Argument.name">product_url</stringProp>
+              <stringProp name="Argument.value">${__P(product_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-product)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="collab_url" elementType="Argument">
+              <stringProp name="Argument.name">collab_url</stringProp>
+              <stringProp name="Argument.value">${__P(collab_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-collab)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="xapi_url" elementType="Argument">
+              <stringProp name="Argument.name">xapi_url</stringProp>
+              <stringProp name="Argument.value">${__P(xapi_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-xapi)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="analytics_url" elementType="Argument">
+              <stringProp name="Argument.name">analytics_url</stringProp>
+              <stringProp name="Argument.value">${__P(analytics_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-analytics)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="activity_url" elementType="Argument">
+              <stringProp name="Argument.name">activity_url</stringProp>
+              <stringProp name="Argument.value">${__P(activity_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-activity)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="date" elementType="Argument">
+              <stringProp name="Argument.name">date</stringProp>
+              <stringProp name="Argument.value">${__time(YMDHMS)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="testrun" elementType="Argument">
+              <stringProp name="Argument.name">testrun</stringProp>
+              <stringProp name="Argument.value">${__P(run_id,perf)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="accountid" elementType="Argument">
+              <stringProp name="Argument.name">accountid</stringProp>
+              <stringProp name="Argument.value">${__P(Account_id,cup1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="spacecode" elementType="Argument">
+              <stringProp name="Argument.name">spacecode</stringProp>
+              <stringProp name="Argument.value">${__P(space_code,PRF-ORG-ONE)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="orgid" elementType="Argument">
+              <stringProp name="Argument.name">orgid</stringProp>
+              <stringProp name="Argument.value">${__P(orgid,perf-test1-prod1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="shorgid" elementType="Argument">
+              <stringProp name="Argument.name">shorgid</stringProp>
+              <stringProp name="Argument.value">${__P(shorgid,sh_prod1_cup1_1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="productid" elementType="Argument">
+              <stringProp name="Argument.name">productid</stringProp>
+              <stringProp name="Argument.value">${__P(productid,8e8e9c6a-f8c0-11e8-9432-0242ac110003)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="shproductid" elementType="Argument">
+              <stringProp name="Argument.name">shproductid</stringProp>
+              <stringProp name="Argument.value">${__P(productid,906b9965-f8c0-11e8-afa0-0242ac110003)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ext_product_id" elementType="Argument">
+              <stringProp name="Argument.name">ext_product_id</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,EvolveLiveTest)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="productcode" elementType="Argument">
+              <stringProp name="Argument.name">productcode</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,evolve_l1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="itemcode" elementType="Argument">
+              <stringProp name="Argument.name">itemcode</stringProp>
+              <stringProp name="Argument.value">${__P(itemcode,1528285334091/1528285634672/1528286714281)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="task" elementType="Argument">
+              <stringProp name="Argument.name">task</stringProp>
+              <stringProp name="Argument.value">${__P(task_code,1528285334091/1528285634672/1528286714281)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="verb" elementType="Argument">
+              <stringProp name="Argument.name">verb</stringProp>
+              <stringProp name="Argument.value">${__P(verb_type,launched)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="product-enddate" elementType="Argument">
+              <stringProp name="Argument.name">product-enddate</stringProp>
+              <stringProp name="Argument.value">${__P(end_date,1575719566000)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classcodeinst" elementType="Argument">
+              <stringProp name="Argument.name">classcodeinst</stringProp>
+              <stringProp name="Argument.value">${__P(class_code,ca8V-b8fg)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classcode" elementType="Argument">
+              <stringProp name="Argument.name">classcode</stringProp>
+              <stringProp name="Argument.value">${__P(class_code,GjXc-Lfb2)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classcode2" elementType="Argument">
+              <stringProp name="Argument.name">classcode2</stringProp>
+              <stringProp name="Argument.value">${__P(class_code,4PE7-GH3g)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classname" elementType="Argument">
+              <stringProp name="Argument.name">classname</stringProp>
+              <stringProp name="Argument.value">${__P(classname,newclass)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="multipleUsersForEnrollment" elementType="Argument">
+              <stringProp name="Argument.name">multipleUsersForEnrollment</stringProp>
+              <stringProp name="Argument.value">${__P(userset,&quot;c824a0e8-fd73-11e8-9397-0242ac110003&quot;)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="counter" elementType="Argument">
+              <stringProp name="Argument.name">counter</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - Alpha" enabled="false">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="startTime" elementType="Argument">
+              <stringProp name="Argument.name">startTime</stringProp>
+              <stringProp name="Argument.value">1504224000000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="minWait" elementType="Argument">
+              <stringProp name="Argument.name">minWait</stringProp>
+              <stringProp name="Argument.value">1000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="maxWait" elementType="Argument">
+              <stringProp name="Argument.name">maxWait</stringProp>
+              <stringProp name="Argument.value">1500</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="asyncWait" elementType="Argument">
+              <stringProp name="Argument.name">asyncWait</stringProp>
+              <stringProp name="Argument.value">8000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="userProgress_max" elementType="Argument">
+              <stringProp name="Argument.name">userProgress_max</stringProp>
+              <stringProp name="Argument.value">2000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="learning_progress" elementType="Argument">
+              <stringProp name="Argument.name">learning_progress</stringProp>
+              <stringProp name="Argument.value">12</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="auth_url" elementType="Argument">
+              <stringProp name="Argument.name">auth_url</stringProp>
+              <stringProp name="Argument.value">${__P(auth_url,dls-cup-alpha-302611962.us-west-2.elb.amazonaws.com/lb-auth)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="product_url" elementType="Argument">
+              <stringProp name="Argument.name">product_url</stringProp>
+              <stringProp name="Argument.value">${__P(product_url,dls-cup-alpha-302611962.us-west-2.elb.amazonaws.com/lb-product)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="collab_url" elementType="Argument">
+              <stringProp name="Argument.name">collab_url</stringProp>
+              <stringProp name="Argument.value">${__P(collab_url,dls-cup-alpha-302611962.us-west-2.elb.amazonaws.com/lb-collab)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="xapi_url" elementType="Argument">
+              <stringProp name="Argument.name">xapi_url</stringProp>
+              <stringProp name="Argument.value">${__P(xapi_url,dls-cup-alpha-302611962.us-west-2.elb.amazonaws.com/lb-xapi)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="analytics_url" elementType="Argument">
+              <stringProp name="Argument.name">analytics_url</stringProp>
+              <stringProp name="Argument.value">${__P(analytics_url,dls-cup-alpha-302611962.us-west-2.elb.amazonaws.com/lb-analytics)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="activity_url" elementType="Argument">
+              <stringProp name="Argument.name">activity_url</stringProp>
+              <stringProp name="Argument.value">${__P(activity_url,dls-cup-alpha-302611962.us-west-2.elb.amazonaws.com/lb-activity)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="date" elementType="Argument">
+              <stringProp name="Argument.name">date</stringProp>
+              <stringProp name="Argument.value">${__time(YMDHMS)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="testrun" elementType="Argument">
+              <stringProp name="Argument.name">testrun</stringProp>
+              <stringProp name="Argument.value">${__P(run_id,Perf)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="accountid" elementType="Argument">
+              <stringProp name="Argument.name">accountid</stringProp>
+              <stringProp name="Argument.value">${__P(Account_id,cup1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="spacecode" elementType="Argument">
+              <stringProp name="Argument.name">spacecode</stringProp>
+              <stringProp name="Argument.value">${__P(space_code,INT-ORG-ONE)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="orgid" elementType="Argument">
+              <stringProp name="Argument.name">orgid</stringProp>
+              <stringProp name="Argument.value">${__P(orgid,integ-test1-alpha)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="shorgid" elementType="Argument">
+              <stringProp name="Argument.name">shorgid</stringProp>
+              <stringProp name="Argument.value">${__P(shorgid,sh_alpha_cup1_1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="productid" elementType="Argument">
+              <stringProp name="Argument.name">productid</stringProp>
+              <stringProp name="Argument.value">${__P(productid,fe31e5e6-edb0-11e8-945e-0242ac110003)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="shproductid" elementType="Argument">
+              <stringProp name="Argument.name">shproductid</stringProp>
+              <stringProp name="Argument.value">${__P(productid,ffb63bc2-edb0-11e8-945e-0242ac110003)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ext_product_id" elementType="Argument">
+              <stringProp name="Argument.name">ext_product_id</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,comproalpha111222333)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="productcode" elementType="Argument">
+              <stringProp name="Argument.name">productcode</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,evolve_l1)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="itemcode" elementType="Argument">
+              <stringProp name="Argument.name">itemcode</stringProp>
+              <stringProp name="Argument.value">${__P(itemcode,1528285334091/1528285634672/1528286714281)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="task" elementType="Argument">
+              <stringProp name="Argument.name">task</stringProp>
+              <stringProp name="Argument.value">${__P(task_code,1528285334091/1528285634672/1528286714281)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="verb" elementType="Argument">
+              <stringProp name="Argument.name">verb</stringProp>
+              <stringProp name="Argument.value">${__P(verb_type,launched)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="product-enddate" elementType="Argument">
+              <stringProp name="Argument.name">product-enddate</stringProp>
+              <stringProp name="Argument.value">${__P(end_date,1575719566000)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classcodeinst" elementType="Argument">
+              <stringProp name="Argument.name">classcodeinst</stringProp>
+              <stringProp name="Argument.value">${__P(class_code,Lh7G-MjZd)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classcode" elementType="Argument">
+              <stringProp name="Argument.name">classcode</stringProp>
+              <stringProp name="Argument.value">${__P(class_code,H9cF-NeHh)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="classname" elementType="Argument">
+              <stringProp name="Argument.name">classname</stringProp>
+              <stringProp name="Argument.value">${__P(classname,newclass)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="multipleUsersForEnrollment" elementType="Argument">
+              <stringProp name="Argument.name">multipleUsersForEnrollment</stringProp>
+              <stringProp name="Argument.value">${__P(userset,&quot;6d04b516-ee1c-11e8-945e-0242ac110003&quot;)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1014: Teacher logs in (and accesses dashboard)" enabled="false">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>3.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">1014${__P(InstanceID)}.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get All the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get Products of first space" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_products_of_first_space.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1019: Teacher adds materials (product) to a class - available in that institution." enabled="false">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">1019${__P(InstanceID)}.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="1014 - Teacher logs in (and accesses dashboard)" enabled="true">
+            <stringProp name="IncludeController.includepath">1014-Teacher_logs_in_and_accesses_the_dashboard.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class2.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="prod_associate_class_product" enabled="true"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">${inputcsvname}</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">false</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+            <boolProp name="stopThread">true</boolProp>
+            <stringProp name="variableNames">extuserid,classtitle,csvclasscode</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">aggreport.csv</stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">resultstree.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
