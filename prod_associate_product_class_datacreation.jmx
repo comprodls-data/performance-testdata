@@ -143,22 +143,22 @@
             </elementProp>
             <elementProp name="productid" elementType="Argument">
               <stringProp name="Argument.name">productid</stringProp>
-              <stringProp name="Argument.value">${__P(productid,8e8e9c6a-f8c0-11e8-9432-0242ac110003)}</stringProp>
+              <stringProp name="Argument.value">${__P(productid,c6147759-0a8c-11e9-a22c-0242ac110003)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="shproductid" elementType="Argument">
               <stringProp name="Argument.name">shproductid</stringProp>
-              <stringProp name="Argument.value">${__P(productid,906b9965-f8c0-11e8-afa0-0242ac110003)}</stringProp>
+              <stringProp name="Argument.value">${__P(productid,c92cdb01-0a8c-11e9-a22c-0242ac110003)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="ext_product_id" elementType="Argument">
               <stringProp name="Argument.name">ext_product_id</stringProp>
-              <stringProp name="Argument.value">${__P(product_code,EvolveLiveTest)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,dummyisbn123)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="productcode" elementType="Argument">
               <stringProp name="Argument.name">productcode</stringProp>
-              <stringProp name="Argument.value">${__P(product_code,evolve_l1)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,mqa-cqa-3)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="itemcode" elementType="Argument">
