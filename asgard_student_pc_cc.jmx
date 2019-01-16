@@ -49,7 +49,7 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - Azgard" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="startTime" elementType="Argument">
               <stringProp name="Argument.name">startTime</stringProp>
@@ -83,32 +83,32 @@
             </elementProp>
             <elementProp name="auth_url" elementType="Argument">
               <stringProp name="Argument.name">auth_url</stringProp>
-              <stringProp name="Argument.value">${__P(auth_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-auth)}</stringProp>
+              <stringProp name="Argument.value">${__P(auth_url,internal-dls-asgard-thor-1520741357.us-west-2.elb.amazonaws.com/lb-auth)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="product_url" elementType="Argument">
               <stringProp name="Argument.name">product_url</stringProp>
-              <stringProp name="Argument.value">${__P(product_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-product)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_url,internal-dls-asgard-thor-1520741357.us-west-2.elb.amazonaws.com/lb-product)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="collab_url" elementType="Argument">
               <stringProp name="Argument.name">collab_url</stringProp>
-              <stringProp name="Argument.value">${__P(collab_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-collab)}</stringProp>
+              <stringProp name="Argument.value">${__P(collab_url,internal-dls-asgard-thor-1520741357.us-west-2.elb.amazonaws.com/lb-collab)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="xapi_url" elementType="Argument">
               <stringProp name="Argument.name">xapi_url</stringProp>
-              <stringProp name="Argument.value">${__P(xapi_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-xapi)}</stringProp>
+              <stringProp name="Argument.value">${__P(xapi_url,internal-dls-asgard-thor-1520741357.us-west-2.elb.amazonaws.com/lb-xapi)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="analytics_url" elementType="Argument">
               <stringProp name="Argument.name">analytics_url</stringProp>
-              <stringProp name="Argument.value">${__P(analytics_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-analytics)}</stringProp>
+              <stringProp name="Argument.value">${__P(analytics_url,internal-dls-asgard-thor-1520741357.us-west-2.elb.amazonaws.com/lb-analytics)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="activity_url" elementType="Argument">
               <stringProp name="Argument.name">activity_url</stringProp>
-              <stringProp name="Argument.value">${__P(activity_url,internal-dls-cup-prod1-284466545.us-west-2.elb.amazonaws.com/lb-activity)}</stringProp>
+              <stringProp name="Argument.value">${__P(activity_url,internal-dls-asgard-thor-1520741357.us-west-2.elb.amazonaws.com/lb-activity)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="accountid" elementType="Argument">
@@ -116,24 +116,39 @@
               <stringProp name="Argument.value">${__P(Account_id,cup1)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="productcode2" elementType="Argument">
+              <stringProp name="Argument.name">productcode2</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,evolve_l2)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ext_product_id2" elementType="Argument">
+              <stringProp name="Argument.name">ext_product_id2</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,comproalpha222333444)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="productid2" elementType="Argument">
+              <stringProp name="Argument.name">productid2</stringProp>
+              <stringProp name="Argument.value">${__P(productid,f0165bdf-ed9f-11e8-965c-0242ac110003)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
             <elementProp name="productcode" elementType="Argument">
               <stringProp name="Argument.name">productcode</stringProp>
-              <stringProp name="Argument.value">${__P(product_code,evolve_l1)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,perf_test1)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="ext_product_id" elementType="Argument">
               <stringProp name="Argument.name">ext_product_id</stringProp>
-              <stringProp name="Argument.value">${__P(product_code,EvolveLiveTest)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,test333444555)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="productid" elementType="Argument">
               <stringProp name="Argument.name">productid</stringProp>
-              <stringProp name="Argument.value">${__P(productid,8e8e9c6a-f8c0-11e8-9432-0242ac110003)}</stringProp>
+              <stringProp name="Argument.value">${__P(productid,04fd637b-1581-11e9-bd08-0242ac110003)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="spacecode" elementType="Argument">
               <stringProp name="Argument.name">spacecode</stringProp>
-              <stringProp name="Argument.value">${__P(space_code,PRF-ORG-ONE)}</stringProp>
+              <stringProp name="Argument.value">${__P(space_code,integ-test1-thor)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="task" elementType="Argument">
@@ -151,6 +166,11 @@
               <stringProp name="Argument.value">${__P(verb_type,launched)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="spacecode2" elementType="Argument">
+              <stringProp name="Argument.name">spacecode2</stringProp>
+              <stringProp name="Argument.value">${__P(space_code,INT-ORG-TWO)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
             <elementProp name="multipleUsersForEnrollment" elementType="Argument">
               <stringProp name="Argument.name">multipleUsersForEnrollment</stringProp>
               <stringProp name="Argument.value">${__P(userset,&quot;e2e24ada-cdf6-11e8-aaf7-0242ac110003&quot;)}</stringProp>
@@ -166,6 +186,11 @@
               <stringProp name="Argument.value">${__time(HMS)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="extuserid" elementType="Argument">
+              <stringProp name="Argument.name">extuserid</stringProp>
+              <stringProp name="Argument.value">${__P(ext,11111111)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
             <elementProp name="classname" elementType="Argument">
               <stringProp name="Argument.name">classname</stringProp>
               <stringProp name="Argument.value">${__P(classname,newclass)}</stringProp>
@@ -173,7 +198,7 @@
             </elementProp>
             <elementProp name="orgid" elementType="Argument">
               <stringProp name="Argument.name">orgid</stringProp>
-              <stringProp name="Argument.value">${__P(orgid,perf-test1-prod1)}</stringProp>
+              <stringProp name="Argument.value">${__P(orgid,integ-test1-thor)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="classcode" elementType="Argument">
@@ -183,12 +208,12 @@
             </elementProp>
             <elementProp name="shorgid" elementType="Argument">
               <stringProp name="Argument.name">shorgid</stringProp>
-              <stringProp name="Argument.value">${__P(shorgid,sh_prod1_cup1_1)}</stringProp>
+              <stringProp name="Argument.value">${__P(shorgid,sh_thor_cup1_1)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="shproductid" elementType="Argument">
               <stringProp name="Argument.name">shproductid</stringProp>
-              <stringProp name="Argument.value">${__P(productid,906b9965-f8c0-11e8-afa0-0242ac110003)}</stringProp>
+              <stringProp name="Argument.value">${__P(productid,06bf373b-1581-11e9-808a-0242ac110003)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="itemcode" elementType="Argument">
