@@ -376,11 +376,6 @@
               <stringProp name="Argument.value">${__P(class_code,GjXc-Lfb2)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="classcode2" elementType="Argument">
-              <stringProp name="Argument.name">classcode2</stringProp>
-              <stringProp name="Argument.value">${__P(class_code,4PE7-GH3g)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
             <elementProp name="classname" elementType="Argument">
               <stringProp name="Argument.name">classname</stringProp>
               <stringProp name="Argument.value">${__P(classname,newclass)}</stringProp>
@@ -418,7 +413,7 @@
             <stringProp name="variableNames">extuserid, classcode2</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user - ADMIN" enabled="true">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user - ADMIN" enabled="false">
             <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_ADMIN.jmx</stringProp>
           </IncludeController>
           <hashTree/>
