@@ -156,11 +156,6 @@
               <stringProp name="Argument.value">${__P(task_code,1528285334091/1528285590109/1528286220783)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="classcode2" elementType="Argument">
-              <stringProp name="Argument.name">classcode2</stringProp>
-              <stringProp name="Argument.value">${__P(class_code,i4f2-jfeh)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
             <elementProp name="verb" elementType="Argument">
               <stringProp name="Argument.name">verb</stringProp>
               <stringProp name="Argument.value">${__P(verb_type,launched)}</stringProp>
@@ -194,11 +189,6 @@
             <elementProp name="orgid" elementType="Argument">
               <stringProp name="Argument.name">orgid</stringProp>
               <stringProp name="Argument.value">${__P(orgid,integ-test1-alpha)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="classcode1" elementType="Argument">
-              <stringProp name="Argument.name">classcode1</stringProp>
-              <stringProp name="Argument.value">${__P(class_code,28a6-7jHT)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="shorgid" elementType="Argument">
@@ -366,16 +356,6 @@
               <stringProp name="Argument.value">${__P(end_date,1575719566000)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="classcodeinst" elementType="Argument">
-              <stringProp name="Argument.name">classcodeinst</stringProp>
-              <stringProp name="Argument.value">${__P(class_code,ca8V-b8fg)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="classcode" elementType="Argument">
-              <stringProp name="Argument.name">classcode</stringProp>
-              <stringProp name="Argument.value">${__P(class_code,GjXc-Lfb2)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
             <elementProp name="classname" elementType="Argument">
               <stringProp name="Argument.name">classname</stringProp>
               <stringProp name="Argument.value">${__P(classname,newclass)}</stringProp>
@@ -410,21 +390,70 @@
             <boolProp name="recycle">false</boolProp>
             <stringProp name="shareMode">shareMode.group</stringProp>
             <boolProp name="stopThread">true</boolProp>
-            <stringProp name="variableNames">extuserid, classcode2</stringProp>
+            <stringProp name="variableNames">extuserid,classcode</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user - ADMIN" enabled="false">
-            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_ADMIN.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
-            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Space using classcode" enabled="true">
-            <stringProp name="IncludeController.includepath">Join_Spaces_with_class_code.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Join Spaces with class_code" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+  &quot;ext_user_id&quot;: &quot;${extuserid}&quot;,&#xd;
+  &quot;ref_id&quot;: &quot;${extuserid}&quot;,&#xd;
+  &quot;ext_role&quot;: &quot;student&quot;,&#xd;
+  &quot;class_code&quot;: &quot;${classcode}&quot;&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${auth_url}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/accounts/${accountid}/enroll-with-classcode</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Org Id  " enabled="false">
+              <stringProp name="JSONPostProcessor.referenceNames">orgid</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].dls_org_id</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.entities[0].dls_account_id  </stringProp>
+              <stringProp name="EXPECTED_VALUE">${accountid}</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">false</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
