@@ -27,7 +27,7 @@
   },&#xd;
   &quot;invitation_data&quot;: [&#xd;
     {&#xd;
-      &quot;email&quot;: &quot;${studentextuserid}@comprodls.com&quot;,&#xd;
+      &quot;email&quot;: &quot;${studentextuserid}@yopmail.com&quot;,&#xd;
       &quot;dls_org_status&quot;: &quot;existing&quot;,&#xd;
       &quot;ext_user_id&quot;: &quot;${studentextuserid}&quot;,&#xd;
       &quot;first_name&quot;: &quot;${studentextuserid}&quot;,&#xd;

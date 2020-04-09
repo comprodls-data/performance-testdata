@@ -62,7 +62,7 @@
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract invitationid for student" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">invitationid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities..[?(@.target_id == &apos;email~~${studentextuserid}@comprodls.com&apos;)].invitation_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities..[?(@.target_id == &apos;email~~${studentextuserid}@yopmail.com&apos;)].invitation_id</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">INVITATION_ID_NOT_FOUND</stringProp>
           </JSONPostProcessor>
