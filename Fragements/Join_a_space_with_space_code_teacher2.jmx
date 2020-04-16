@@ -11,31 +11,20 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="send invitation" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname=" Join Spaces with space_code" enabled="true"/>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="send invitation" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname=" Join Spaces with space_code" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;context&quot;: &quot;class_enrollment&quot;,&#xd;
-  &quot;created&quot;: ${assignmentstartdate},&#xd;
-  &quot;class_enrollment&quot;: {&#xd;
-    &quot;classid&quot;: &quot;${classid}&quot;&#xd;
-  },&#xd;
-  &quot;invitation_data&quot;: [&#xd;
-    {&#xd;
-      &quot;email&quot;: &quot;${studentextuserid}@yopmail.com&quot;,&#xd;
-      &quot;dls_org_status&quot;: &quot;new&quot;,&#xd;
-      &quot;ext_user_id&quot;: &quot;${studentextuserid}&quot;,&#xd;
-      &quot;first_name&quot;: &quot;${studentextuserid}&quot;,&#xd;
-      &quot;last_name&quot;: &quot;test&quot;,&#xd;
-      &quot;role&quot;: &quot;student&quot;,&#xd;
-      &quot;rowId&quot;: &quot;${rowid}&quot;&#xd;
-    }&#xd;
-  ]&#xd;
+  &quot;ext_user_id&quot;: &quot;${extuserid2}&quot;,&#xd;
+  &quot;ext_first_name&quot;: &quot;${extuserid2}&quot;,&#xd;
+  &quot;ext_last_name&quot;: &quot;test&quot;,&#xd;
+  &quot;ext_role&quot;: &quot;teacher&quot;,&#xd;
+  &quot;space_code&quot;: &quot;${spacecode}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -45,9 +34,9 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/org/${orgid}/invitations</stringProp>
+          <stringProp name="HTTPSampler.path">/accounts/${accountid}/join-institute-space</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
@@ -58,14 +47,6 @@
         <hashTree>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">accept</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">authorization</stringProp>
-                <stringProp name="Header.value">${access_token}</stringProp>
-              </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
@@ -78,9 +59,9 @@
           </HeaderManager>
           <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">$.jobId</stringProp>
-            <stringProp name="EXPECTED_VALUE"></stringProp>
-            <boolProp name="JSONVALIDATION">false</boolProp>
+            <stringProp name="JSON_PATH">$.entities[0].dls_account_id</stringProp>
+            <stringProp name="EXPECTED_VALUE">${accountid}</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">false</boolProp>

@@ -27,13 +27,16 @@
   },&#xd;
   &quot;invitation_data&quot;: [&#xd;
     {&#xd;
-      &quot;email&quot;: &quot;${studentextuserid}@yopmail.com&quot;,&#xd;
-      &quot;dls_org_status&quot;: &quot;new&quot;,&#xd;
-      &quot;ext_user_id&quot;: &quot;${studentextuserid}&quot;,&#xd;
-      &quot;first_name&quot;: &quot;${studentextuserid}&quot;,&#xd;
+      &quot;email&quot;: &quot;${extuseridInvitation}@yopmail.com&quot;,&#xd;
+      &quot;dls_org_status&quot;: &quot;existing&quot;,&#xd;
+      &quot;ext_user_id&quot;: &quot;${extuseridInvitation}&quot;,&#xd;
+      &quot;first_name&quot;: &quot;${extuseridInvitation}&quot;,&#xd;
       &quot;last_name&quot;: &quot;test&quot;,&#xd;
-      &quot;role&quot;: &quot;student&quot;,&#xd;
-      &quot;rowId&quot;: &quot;${rowid}&quot;&#xd;
+      &quot;role&quot;: &quot;teacher&quot;,&#xd;
+      &quot;rowId&quot;: &quot;${rowid}&quot;,&#xd;
+      &quot;class_enrollment&quot;: {&#xd;
+        &quot;classid&quot;: &quot;${classid}&quot;&#xd;
+      }&#xd;
     }&#xd;
   ]&#xd;
 }</stringProp>
