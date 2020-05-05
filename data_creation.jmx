@@ -2246,9 +2246,7 @@ System.out.println(vars.get(&quot;classcode&quot;));</stringProp>
           </IncludeController>
           <hashTree/>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_output_csv_creation" enabled="true">
-            <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
-
-FileOutputStream out = new FileOutputStream(timestamp + &quot;_students.csv&quot;, true);
+            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
