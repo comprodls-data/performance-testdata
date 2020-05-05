@@ -33,17 +33,17 @@
       &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
       &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
     },&#xd;
-        {&#xd;
+    {&#xd;
       &quot;item-code&quot;: &quot;${itemcode3}&quot;,&#xd;
       &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
       &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
     },&#xd;
-        {&#xd;
+    {&#xd;
       &quot;item-code&quot;: &quot;${itemcode4}&quot;,&#xd;
       &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
       &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
     },&#xd;
-        {&#xd;
+    {&#xd;
       &quot;item-code&quot;: &quot;${itemcode5}&quot;,&#xd;
       &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
       &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
@@ -58,11 +58,11 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${auth_url}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/org/${orgid}/classes/${classid}/assigned-paths</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/classes/${classid}/assigned-paths</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>

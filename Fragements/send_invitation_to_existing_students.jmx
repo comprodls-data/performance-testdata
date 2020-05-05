@@ -21,7 +21,7 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
   &quot;context&quot;: &quot;class_enrollment&quot;,&#xd;
-  &quot;created&quot;: &quot;${assignmentstartdate}&quot;,&#xd;
+  &quot;created&quot;: ${assignmentstartdate},&#xd;
   &quot;class_enrollment&quot;: {&#xd;
     &quot;classid&quot;: &quot;${classid}&quot;&#xd;
   },&#xd;

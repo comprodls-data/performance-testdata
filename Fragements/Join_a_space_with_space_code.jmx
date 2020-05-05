@@ -21,20 +21,20 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
   &quot;ext_user_id&quot;: &quot;${extuserid}&quot;,&#xd;
+  &quot;ext_role&quot;: &quot;teacher&quot;,&#xd;
   &quot;ext_first_name&quot;: &quot;${extuserid}&quot;,&#xd;
   &quot;ext_last_name&quot;: &quot;test&quot;,&#xd;
-  &quot;ext_role&quot;: &quot;teacher&quot;,&#xd;
   &quot;space_code&quot;: &quot;${spacecode}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${auth_url}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/accounts/${accountid}/join-institute-space</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/accounts/${accountid}/join-institute-space</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
