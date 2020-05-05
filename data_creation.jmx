@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">160</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">480</stringProp>
+        <stringProp name="ThreadGroup.num_threads">200</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1000</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -733,13 +733,13 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="teacher-1class-class-product-20students-5assignments" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="teacher-1class-class-product-5assignments" enabled="false"/>
         <hashTree>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilename" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilename</stringProp>
-                <stringProp name="Argument.value">scenario_tch_std_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -815,6 +815,18 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <stringProp name="IncludeController.includepath">Fragements/create_new_instructor_led_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">10000</stringProp>
+              <stringProp name="RandomTimer.range">5000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="true">
             <stringProp name="IncludeController.includepath">Fragements/associate_a_product_with_class2.jmx</stringProp>
           </IncludeController>
@@ -829,75 +841,6 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
               <stringProp name="ConstantTimer.delay">300000</stringProp>
               <stringProp name="RandomTimer.range">30000</stringProp>
             </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 20 students and join using classcode of current teacher" enabled="false">
-            <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">20</stringProp>
-          </LoopController>
-          <hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_name" enabled="true">
-              <stringProp name="BeanShellSampler.query">import java.util.Date;
-
-Date date = new Date();
-prefix2 = date.getTime();
-prefix3 = ctx.getThread().getThreadNum() + 1;
-
-studentextuserid = &quot;std&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
-
-vars.put(&quot;studentextuserid&quot;, studentextuserid);
-</stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-20]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">10000</stringProp>
-                <stringProp name="RandomTimer.range">10000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with product_code and class_code" enabled="true">
-              <stringProp name="IncludeController.includepath">Fragements/Join_Spaces_with_product_code_and_class_code.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space" enabled="false">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">90000</stringProp>
-                <stringProp name="RandomTimer.range">45000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_output_csv_creation" enabled="true">
-              <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
-
-FileOutputStream out = new FileOutputStream(timestamp + &quot;_students.csv&quot;, true);
-String SEPARATOR = &quot;,&quot;;
-String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
-out.write(SEPARATOR.getBytes());
-out.write(vars.get(&quot;classcode&quot;).getBytes());
-out.write(LineSEPARATOR.getBytes());
-
-out.flush();
-out.close();
-</stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
             <hashTree/>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 5 assignments" enabled="true">
