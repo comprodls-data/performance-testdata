@@ -21,7 +21,7 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
   &quot;context&quot;: &quot;class_enrollment&quot;,&#xd;
-  &quot;created&quot;: ${assignmentstartdate},&#xd;
+  &quot;created&quot;: ${startDate},&#xd;
   &quot;class_enrollment&quot;: {&#xd;
     &quot;classid&quot;: &quot;${classid}&quot;&#xd;
   },&#xd;
@@ -31,7 +31,7 @@
       &quot;dls_org_status&quot;: &quot;existing&quot;,&#xd;
       &quot;ext_user_id&quot;: &quot;${studentextuserid}&quot;,&#xd;
       &quot;first_name&quot;: &quot;${studentextuserid}&quot;,&#xd;
-      &quot;last_name&quot;: &quot;test&quot;,&#xd;
+      &quot;last_name&quot;: &quot;Perf Test&quot;,&#xd;
       &quot;role&quot;: &quot;student&quot;,&#xd;
       &quot;rowId&quot;: &quot;${rowid}&quot;&#xd;
     }&#xd;
@@ -41,11 +41,11 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${auth_url}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/org/${orgid}/invitations</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/invitations</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
