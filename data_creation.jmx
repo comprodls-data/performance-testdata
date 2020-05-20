@@ -859,7 +859,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <hashTree/>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
               <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
-apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
+apList = vars.get(&quot;assigned_path_id&quot;) + &quot;,&quot; + apList;
 vars.put(&quot;assignedPathList&quot;, apList);
 </stringProp>
               <stringProp name="BeanShellSampler.filename"></stringProp>
