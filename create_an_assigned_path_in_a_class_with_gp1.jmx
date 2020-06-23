@@ -11,16 +11,48 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Update user&apos;s application state for a product or class (product)" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Create an assigned path in a class" enabled="true"/>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an assigned path in a class" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;recentlyAccessedItem&quot;: &quot;${task}&quot;&#xd;
+  &quot;title&quot;: &quot;${assignmenttitle}&quot;,&#xd;
+  &quot;duedate&quot;: ${assignmentenddate},&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${gp1_itemcode1}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${groupproduct1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${gp1_itemcode2}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${groupproduct1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${gp1_itemcode3}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${groupproduct1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${gp1_itemcode4}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${groupproduct1}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${gp1_itemcode5}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${groupproduct1}&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;startdate&quot;: ${assignmentstartdate},&#xd;
+  &quot;shared_progress&quot;: true,&#xd;
+  &quot;path_type&quot;: &quot;flat&quot;,&#xd;
+  &quot;rules&quot;: {}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -30,9 +62,9 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state?userid=${userid}&amp;productcode=${productcode}&amp;classid=${classid}</stringProp>
-          <stringProp name="HTTPSampler.method">PUT</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/classes/${classid}/assigned-paths</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
@@ -44,6 +76,10 @@
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">authorization</stringProp>
                 <stringProp name="Header.value">${access_token}</stringProp>
               </elementProp>
@@ -51,17 +87,28 @@
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
               </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">test-perf-id</stringProp>
+                <stringProp name="Header.value">${date}</stringProp>
+              </elementProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">$.recentlyAccessedItem</stringProp>
-            <stringProp name="EXPECTED_VALUE">${task}</stringProp>
-            <boolProp name="JSONVALIDATION">true</boolProp>
+            <stringProp name="JSON_PATH">$.assigned_path_id</stringProp>
+            <stringProp name="EXPECTED_VALUE"></stringProp>
+            <boolProp name="JSONVALIDATION">false</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">false</boolProp>
           </JSONPathAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">assigned_path_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.assigned_path_id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+          </JSONPostProcessor>
           <hashTree/>
         </hashTree>
       </hashTree>

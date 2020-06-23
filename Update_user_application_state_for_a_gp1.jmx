@@ -20,7 +20,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;recentlyAccessedItem&quot;: &quot;${task}&quot;&#xd;
+  &quot;recentlyAccessedItem&quot;: &quot;${grouptask}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -30,7 +30,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state?userid=${userid}&amp;productcode=${productcode}&amp;classid=${classid}</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state?userid=${userid}&amp;productcode=${groupproduct1}&amp;classid=${classid}</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -56,7 +56,7 @@
           <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
             <stringProp name="JSON_PATH">$.recentlyAccessedItem</stringProp>
-            <stringProp name="EXPECTED_VALUE">${task}</stringProp>
+            <stringProp name="EXPECTED_VALUE">${grouptask}</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
