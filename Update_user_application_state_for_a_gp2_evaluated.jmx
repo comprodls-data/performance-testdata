@@ -20,7 +20,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;recentlyAccessedItem&quot;: &quot;${grouptask1}&quot;&#xd;
+  &quot;recentlyAccessedItem&quot;: &quot;${grouptask}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>

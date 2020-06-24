@@ -32,7 +32,7 @@
     {&#xd;
       &quot;timestamp&quot;: ${__time()},&#xd;
       &quot;verb&quot;: &quot;redo&quot;,&#xd;
-      &quot;item-code&quot;: &quot;${grouptask1}&quot;&#xd;
+      &quot;item-code&quot;: &quot;${grouptask}&quot;&#xd;
     }&#xd;
   ],&#xd;
    &quot;group&quot;: {&#xd;

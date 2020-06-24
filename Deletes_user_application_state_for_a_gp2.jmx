@@ -28,7 +28,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state?userid=${studentuserid1}&amp;productcode=${groupproduct2}&amp;classid=${classid}&amp;itemcode=${grouptask1}</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state?userid=${studentuserid1}&amp;productcode=${groupproduct2}&amp;classid=${classid}&amp;itemcode=${grouptask}</stringProp>
           <stringProp name="HTTPSampler.method">DELETE</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>

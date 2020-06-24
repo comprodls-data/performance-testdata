@@ -67,7 +67,7 @@
           </JSONPathAssertion>
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">userid</stringProp>
+            <stringProp name="JSONPostProcessor.referenceNames">studentuserid</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].dls_user_id</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
           </JSONPostProcessor>

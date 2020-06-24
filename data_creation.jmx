@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">3000</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -2674,10 +2674,6 @@ out.close();
             <boolProp name="displaySystemProperties">false</boolProp>
           </DebugSampler>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class GP1" enabled="true">
-            <stringProp name="IncludeController.includepath">associate_a_product_with_class_With_GP1.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Issue fix" enabled="false"/>
         <hashTree>
@@ -2879,7 +2875,7 @@ out.close();
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilename" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilename</stringProp>
-                <stringProp name="Argument.value">scenario_grp_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.value">scenario_1052_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="startDate" elementType="Argument">
@@ -2945,13 +2941,15 @@ out.close();
               </elementProp>
               <elementProp name="gp2_itemcode1" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode1</stringProp>
-                <stringProp name="Argument.value">1591682031312/1591682043471/1591682172773</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696666059/1592290303751</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
               </elementProp>
               <elementProp name="gp2_itemcode2" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode2</stringProp>
-                <stringProp name="Argument.value">1591682031312/1591682579562/1591687339198</stringProp>
+                <stringProp name="Argument.value">1591699076637/1591699159245/1592290677943</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
               </elementProp>
               <elementProp name="gp2_itemcode3" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode3</stringProp>
@@ -2961,13 +2959,15 @@ out.close();
               </elementProp>
               <elementProp name="gp2_itemcode4" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode4</stringProp>
-                <stringProp name="Argument.value">1591696007973/1591696048196/1591696710116</stringProp>
+                <stringProp name="Argument.value">1591701506515/1591701516122/1592290727442</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
               </elementProp>
               <elementProp name="gp2_itemcode5" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode5</stringProp>
-                <stringProp name="Argument.value">1591696007973/1591696663679/1591697711509</stringProp>
+                <stringProp name="Argument.value">1591701928122/1591701946681/1592291282828</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
               </elementProp>
             </collectionProp>
           </Arguments>
@@ -3034,6 +3034,10 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class GP1" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_With_GP1.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class GP2" enabled="true">
             <stringProp name="IncludeController.includepath">associate_a_product_with_class_With_GP2.jmx</stringProp>
           </IncludeController>
@@ -3186,13 +3190,13 @@ out.close();
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1055 : T1-C1-GP1-GP2 GP2_A1-GP2_A5 || S1-S20_entitled to GP1 and GP2 in C1 || G1 - S1-S5" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1055 : T1-C1-GP1-GP2 GP2_A1-GP2_A5 || S1-S20_entitled to GP1 and GP2 in C1 || G1 - S1-S5" enabled="false"/>
         <hashTree>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilename" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilename</stringProp>
-                <stringProp name="Argument.value">scenario_grp_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.value">scenario_1055_asnmt_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="startDate" elementType="Argument">
@@ -3258,12 +3262,14 @@ out.close();
               </elementProp>
               <elementProp name="gp2_itemcode1" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode1</stringProp>
-                <stringProp name="Argument.value">1591682031312/1591682043471/1591682172773</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696666059/1592290303751</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="gp2_itemcode2" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode2</stringProp>
-                <stringProp name="Argument.value">1591682031312/1591682579562/1591687339198</stringProp>
+                <stringProp name="Argument.value">1591699076637/1591699159245/1592290677943</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="gp2_itemcode3" elementType="Argument">
@@ -3274,12 +3280,14 @@ out.close();
               </elementProp>
               <elementProp name="gp2_itemcode4" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode4</stringProp>
-                <stringProp name="Argument.value">1591696007973/1591696048196/1591696710116</stringProp>
+                <stringProp name="Argument.value">1591701506515/1591701516122/1592290727442</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="gp2_itemcode5" elementType="Argument">
                 <stringProp name="Argument.name">gp2_itemcode5</stringProp>
-                <stringProp name="Argument.value">1591696007973/1591696663679/1591697711509</stringProp>
+                <stringProp name="Argument.value">1591701928122/1591701946681/1592291282828</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -3464,10 +3472,6 @@ vars.put(&quot;studentextuserid&quot;, studentextuserid);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="false">
-            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a new group" enabled="true">
             <stringProp name="IncludeController.includepath">Create_a_new_group.jmx</stringProp>
           </IncludeController>
@@ -3518,6 +3522,380 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
             <hashTree/>
           </hashTree>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;groupid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+//out.write(SEPARATOR.getBytes());
+//out.write(vars.get(&quot;assignedGroupPathList&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1054 : 1055 + Student attempts Group Pskill" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilename" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                <stringProp name="Argument.value">scenario_grp_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startDate" elementType="Argument">
+                <stringProp name="Argument.name">startDate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="endDate" elementType="Argument">
+                <stringProp name="Argument.name">endDate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedGroupPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedGroupPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="ext_groupproduct_id" elementType="Argument">
+                <stringProp name="Argument.name">ext_groupproduct_id</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perfpealpha1234)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="ext_groupproduct_id2" elementType="Argument">
+                <stringProp name="Argument.name">ext_groupproduct_id2</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perfpwalpha1234)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="groupproduct1" elementType="Argument">
+                <stringProp name="Argument.name">groupproduct1</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perf_alpha_pe1)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="groupproduct2" elementType="Argument">
+                <stringProp name="Argument.name">groupproduct2</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perf_alpha_pw1)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode1" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode1</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682043471/1591682172773</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode2" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode2</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682579562/1591687339198</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode3" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode3</stringProp>
+                <stringProp name="Argument.value">1591699076637/1591699159245/1591701334683</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode4" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode4</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696048196/1591696710116</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode5" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode5</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696663679/1591697711509</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode1" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode1</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696666059/1592290303751</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode2" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode2</stringProp>
+                <stringProp name="Argument.value">1591699076637/1591699159245/1592290677943</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode3" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode3</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682585541/1592290089703</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode4" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode4</stringProp>
+                <stringProp name="Argument.value">1591701506515/1591701516122/1592290727442</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode5" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode5</stringProp>
+                <stringProp name="Argument.value">1591701928122/1591701946681/1592291282828</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">1054.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid,groupid,tchextuserid</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
+            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the memberships of the specific group" enabled="false">
+            <stringProp name="IncludeController.includepath">Get_all_the_memberships_of_the_specific_group.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">3</stringProp>
+          </LoopController>
+          <hashTree>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename">group_pskills_e1.csv</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames">grouptask,verb</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">true</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.thread</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
+              <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
+              <stringProp name="IncludeController.includepath">Add_group_statements_pskill.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">${userProgress_max}</stringProp>
+                <stringProp name="RandomTimer.range">${userProgress_max}</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+              <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_gp2.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+          </hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="false">
+            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;groupid&quot;).getBytes());
+//out.write(SEPARATOR.getBytes());
+//out.write(vars.get(&quot;classcode&quot;).getBytes());
+//out.write(SEPARATOR.getBytes());
+//out.write(vars.get(&quot;assignedGroupPathList&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1056 : 1055 + 1054 + Teacher mark the feedback" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilename" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                <stringProp name="Argument.value">scenario_grp_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startDate" elementType="Argument">
+                <stringProp name="Argument.name">startDate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="endDate" elementType="Argument">
+                <stringProp name="Argument.name">endDate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedGroupPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedGroupPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="ext_groupproduct_id" elementType="Argument">
+                <stringProp name="Argument.name">ext_groupproduct_id</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perfpealpha1234)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="ext_groupproduct_id2" elementType="Argument">
+                <stringProp name="Argument.name">ext_groupproduct_id2</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perfpwalpha1234)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="groupproduct1" elementType="Argument">
+                <stringProp name="Argument.name">groupproduct1</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perf_alpha_pe1)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="groupproduct2" elementType="Argument">
+                <stringProp name="Argument.name">groupproduct2</stringProp>
+                <stringProp name="Argument.value">${__P(product_code,perf_alpha_pw1)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode1" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode1</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682043471/1591682172773</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode2" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode2</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682579562/1591687339198</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode3" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode3</stringProp>
+                <stringProp name="Argument.value">1591699076637/1591699159245/1591701334683</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode4" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode4</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696048196/1591696710116</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp1_itemcode5" elementType="Argument">
+                <stringProp name="Argument.name">gp1_itemcode5</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696663679/1591697711509</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="grouptask" elementType="Argument">
+                <stringProp name="Argument.name">grouptask</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682585541/1592290089703</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="grouptask1" elementType="Argument">
+                <stringProp name="Argument.name">grouptask1</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682585541/1592290089703</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode1" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode1</stringProp>
+                <stringProp name="Argument.value">1591696007973/1591696666059/1592290303751</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode2" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode2</stringProp>
+                <stringProp name="Argument.value">1591699076637/1591699159245/1592290677943</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode3" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode3</stringProp>
+                <stringProp name="Argument.value">1591682031312/1591682585541/1592290089703</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode4" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode4</stringProp>
+                <stringProp name="Argument.value">1591701506515/1591701516122/1592290727442</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gp2_itemcode5" elementType="Argument">
+                <stringProp name="Argument.name">gp2_itemcode5</stringProp>
+                <stringProp name="Argument.value">1591701928122/1591701946681/1592291282828</stringProp>
+                <stringProp name="Argument.desc">pskill</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">1056.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">studentextuserid,groupid,extuserid</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
+            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the memberships of the specific group" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_memberships_of_the_specific_group_1056.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Class Group Recent Pending Submission" enabled="true">
+            <stringProp name="IncludeController.includepath">class_group_pending_submissions.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Product items and their progress analytic (default)" enabled="true">
+            <stringProp name="IncludeController.includepath">Product_items_and_their_progress_analytic_default_Group_True.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+            <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_gp2_evaluated.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Evaluate pskill - EVALUATE statement" enabled="true">
+            <stringProp name="IncludeController.includepath">Add_gp2_statements_pskill_evaluated.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Enable Re-submission for student - REDO statement" enabled="true">
+            <stringProp name="IncludeController.includepath">Add_gp2_statements_pskill_redo.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Deletes user&apos;s application state for a product or class (product) - By Teacher" enabled="true">
+            <stringProp name="IncludeController.includepath">Deletes_user_application_state_for_a_gp2.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="false">
             <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
@@ -4193,7 +4571,11 @@ out.close();
             <stringProp name="IncludeController.includepath">class_group_pending_submissions.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="teacher_view_student_pskill_Item_progress_analytics" enabled="true">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Product items and their progress analytic (default)" enabled="true">
+            <stringProp name="IncludeController.includepath">Product_items_and_their_progress_analytic_default_Group_True.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="teacher_view_student_pskill_Item_progress_analytics" enabled="false">
             <stringProp name="IncludeController.includepath">teacher_view_student_pskill_Item_progress_analytics.jmx</stringProp>
           </IncludeController>
           <hashTree/>
@@ -4242,44 +4624,7 @@ out.close();
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename"></stringProp>
-        <boolProp name="useGroupName">true</boolProp>
-      </ResultCollector>
-      <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -4312,6 +4657,42 @@ out.close();
             <hostname>true</hostname>
             <threadCounts>true</threadCounts>
             <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
             <idleTime>true</idleTime>
             <connectTime>true</connectTime>
           </value>
