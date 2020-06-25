@@ -76,7 +76,7 @@
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Link statement id" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">group_linkstatementid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.result[0]..statementId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..[?(@.item-code == &apos;${grouptask}&apos;)]..statementId</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">LINK_STATEMENT_NOT_FOUND</stringProp>
           </JSONPostProcessor>
