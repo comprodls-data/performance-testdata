@@ -62,7 +62,7 @@
           </JSONPostProcessor>
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract UserId" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">studentuserid</stringProp>
+            <stringProp name="JSONPostProcessor.referenceNames">studentuserid2</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$.user.uuid</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">USERID_NOT_FOUND</stringProp>

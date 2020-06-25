@@ -49,7 +49,10 @@
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+            <stringProp name="script">import java.util.Date;
+
+Date date = new Date();
+prefix2 = date.getTime();
 prefix3 = ctx.getThread().getThreadNum() + 1;
 
 grouptitle = &quot;Grp&quot; + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3;
