@@ -3586,6 +3586,18 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 <stringProp name="IncludeController.includepath">Enroll_a_user_in_a_group.jmx</stringProp>
               </IncludeController>
               <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Enrolling user [3-5 sec]" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">2000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -3607,6 +3619,18 @@ out.close();
               <stringProp name="BeanShellSampler.parameters"></stringProp>
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Between group creation [10-15 sec]" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">10000</stringProp>
+              <stringProp name="RandomTimer.range">5000</stringProp>
+            </UniformRandomTimer>
             <hashTree/>
           </hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Group 2" enabled="true"/>
@@ -3659,6 +3683,18 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 <stringProp name="IncludeController.includepath">Enroll_a_user_in_a_group.jmx</stringProp>
               </IncludeController>
               <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Enrolling user [3-5 sec]" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">2000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -3680,6 +3716,18 @@ out.close();
               <stringProp name="BeanShellSampler.parameters"></stringProp>
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Between group creation [10-15 sec]" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">10000</stringProp>
+              <stringProp name="RandomTimer.range">5000</stringProp>
+            </UniformRandomTimer>
             <hashTree/>
           </hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Group 3" enabled="true"/>
@@ -3732,6 +3780,18 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 <stringProp name="IncludeController.includepath">Enroll_a_user_in_a_group.jmx</stringProp>
               </IncludeController>
               <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Enrolling user [3-5 sec]" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">2000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -3753,6 +3813,18 @@ out.close();
               <stringProp name="BeanShellSampler.parameters"></stringProp>
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Between group creation [10-15 sec]" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">10000</stringProp>
+              <stringProp name="RandomTimer.range">5000</stringProp>
+            </UniformRandomTimer>
             <hashTree/>
           </hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Group 4" enabled="true"/>
@@ -3805,6 +3877,18 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 <stringProp name="IncludeController.includepath">Enroll_a_user_in_a_group.jmx</stringProp>
               </IncludeController>
               <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Enrolling user [3-5 sec]" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">3000</stringProp>
+                  <stringProp name="RandomTimer.range">2000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -6133,7 +6217,7 @@ out.close();
           </hashTree>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
