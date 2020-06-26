@@ -3217,6 +3217,11 @@ out.close();
                 <stringProp name="Argument.value">TchClassDetails_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
+              <elementProp name="outputCsvFilename_all_group" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilename_all_group</stringProp>
+                <stringProp name="Argument.value">GroupMembers_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
               <elementProp name="startDate" elementType="Argument">
                 <stringProp name="Argument.name">startDate</stringProp>
                 <stringProp name="Argument.value">${__time(,)}</stringProp>
@@ -3598,6 +3603,27 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+                <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename_all_group&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;uuid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;groupid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -3695,6 +3721,27 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+                <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename_all_group&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;uuid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;groupid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -3792,6 +3839,27 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+                <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename_all_group&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;uuid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;groupid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
@@ -3889,6 +3957,27 @@ vars.put(&quot;email&quot;, memberObj[Parameters].email);
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+                <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename_all_group&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;uuid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;groupid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
