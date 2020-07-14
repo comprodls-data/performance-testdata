@@ -744,7 +744,7 @@ out.close();
           <hashTree/>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${Data_Creation_Scenario} == &quot;T1C1P1&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;T1C1P1&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -955,7 +955,7 @@ out.close();
           </hashTree>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${Data_Creation_Scenario} == &quot;dummy1&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;dummy1&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
