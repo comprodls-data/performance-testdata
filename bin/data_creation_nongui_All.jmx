@@ -963,8 +963,8 @@ out.close();
           <hashTree>
             <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments">
-                <elementProp name="outputCsvFilename" elementType="Argument">
-                  <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                <elementProp name="outputCsvFilename_dummy1" elementType="Argument">
+                  <stringProp name="Argument.name">outputCsvFilename_dummy1</stringProp>
                   <stringProp name="Argument.value">test_${__time()}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1137,10 +1137,10 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
               </hashTree>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
-              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename_dummy1&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;outputCsvFilename&quot;).getBytes());
+out.write(vars.get(&quot;Data_Creation_Scenario&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
 
 out.flush();
@@ -1168,8 +1168,8 @@ out.close();
           <hashTree>
             <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments">
-                <elementProp name="outputCsvFilename" elementType="Argument">
-                  <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                <elementProp name="outputCsvFilename_dummy2" elementType="Argument">
+                  <stringProp name="Argument.name">outputCsvFilename_dummy2</stringProp>
                   <stringProp name="Argument.value">test2_${__time()}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1342,10 +1342,10 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
               </hashTree>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
-              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename_dummy2&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;outputCsvFilename&quot;).getBytes());
+out.write(vars.get(&quot;Data_Creation_Scenario&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
 
 out.flush();
