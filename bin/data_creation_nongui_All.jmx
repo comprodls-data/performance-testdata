@@ -1140,7 +1140,7 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;Data_Creation_Scenario&quot;).getBytes());
+out.write(vars.get(&quot;outputCsvFilename&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
 
 out.flush();
@@ -1345,7 +1345,7 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;Data_Creation_Scenario&quot;).getBytes());
+out.write(vars.get(&quot;outputCsvFilename&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
 
 out.flush();
