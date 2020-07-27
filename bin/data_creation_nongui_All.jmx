@@ -22,6 +22,7 @@
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha" enabled="true">
@@ -743,8 +744,59 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - 1001" enabled="true">
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1001&quot; ||&quot;${Data_Creation_Scenario}&quot; == &quot;1002&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Student Name" enabled="true"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="outputFile" elementType="Argument">
+                  <stringProp name="Argument.name">outputFile</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_1001)}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="student_name" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+
+extuserid = &quot;std&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
+vars.put(&quot;extuserid&quot;, extuserid);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputFile&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+              <boolProp name="displayJMeterProperties">false</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - T1C1" enabled="true">
-          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;T1C1&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;Teacher_class&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -754,7 +806,7 @@ out.close();
               <collectionProp name="Arguments.arguments">
                 <elementProp name="outputCsvFilename_T1C1" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_T1C1</stringProp>
-                  <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(outputfile1,default.csv)}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -858,7 +910,7 @@ out.close();
           </hashTree>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - T1C1P1" enabled="true">
-          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;T1C1P1&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;Teacher_class_product&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -1004,7 +1056,7 @@ out.close();
           </hashTree>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - T1C1P1A5" enabled="true">
-          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;T1C1P1A5&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;Teacher_class_product_Assignments&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -1014,7 +1066,7 @@ out.close();
               <collectionProp name="Arguments.arguments">
                 <elementProp name="outputCsvFilename_T1C1P1A5" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_T1C1P1A5</stringProp>
-                  <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_TCPA)}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1106,19 +1158,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
               <stringProp name="IncludeController.includepath">associate_a_product_with_class2.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">60000</stringProp>
-                <stringProp name="RandomTimer.range">5000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [300-330]" enabled="false">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [300-330]" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -1135,25 +1175,13 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
               <stringProp name="LoopController.loops">5</stringProp>
             </LoopController>
             <hashTree>
-              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
-                <intProp name="ActionProcessor.action">1</intProp>
-                <intProp name="ActionProcessor.target">0</intProp>
-                <stringProp name="ActionProcessor.duration">0</stringProp>
-              </TestAction>
-              <hashTree>
-                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                  <stringProp name="ConstantTimer.delay">10000</stringProp>
-                  <stringProp name="RandomTimer.range">5000</stringProp>
-                </UniformRandomTimer>
-                <hashTree/>
-              </hashTree>
               <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
                 <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class.jmx</stringProp>
               </IncludeController>
               <hashTree/>
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
                 <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
-apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
+apList = vars.get(&quot;assigned_path_id&quot;) + &quot;,&quot; + apList;
 vars.put(&quot;assignedPathList&quot;, apList);
 </stringProp>
                 <stringProp name="BeanShellSampler.filename"></stringProp>
@@ -1214,8 +1242,87 @@ out.close();
             <hashTree/>
           </hashTree>
         </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Create 20 Students" enabled="true">
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;20_Students&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create 20 students in each class" enabled="true"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="outputCsvFilename" elementType="Argument">
+                  <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_Sudents)}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="inputCsvFilename" elementType="Argument">
+                  <stringProp name="Argument.name">inputCsvFilename</stringProp>
+                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND)}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="delimiter">,</stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="filename">${inputCsvFilename}</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="variableNames">teacherextuserid,classtitle,classcode,ap1,ap2,ap3,ap4,ap5</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_name" enabled="true">
+              <stringProp name="BeanShellSampler.query">import java.util.Date;
+
+Date date = new Date();
+prefix2 = date.getTime();
+prefix3 = ctx.getThread().getThreadNum() + 1;
+
+studentextuserid = &quot;std&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
+
+vars.put(&quot;studentextuserid&quot;, studentextuserid);
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with product_code and class_code" enabled="true">
+              <stringProp name="IncludeController.includepath">Join_Spaces_with_product_code_and_class_code.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_output_csv_creation" enabled="true">
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+              <boolProp name="displayJMeterProperties">false</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - 1006_private_students" enabled="true">
-          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1006&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1006&quot; || &quot;${Data_Creation_Scenario}&quot; == &quot;1050&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -1225,7 +1332,7 @@ out.close();
               <collectionProp name="Arguments.arguments">
                 <elementProp name="outputCsvFilename_1006" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_1006</stringProp>
-                  <stringProp name="Argument.value">scenario_1006_std_pvt_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_1006)}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -1324,7 +1431,7 @@ out.close();
           </hashTree>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Final Group Data Creation Script" enabled="true">
-          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;Group_Data&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1055&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -1334,22 +1441,22 @@ out.close();
               <collectionProp name="Arguments.arguments">
                 <elementProp name="outputCsvFilename_Users" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_Users</stringProp>
-                  <stringProp name="Argument.value">Users_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1055)}_1.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
                 <elementProp name="outputCsvFilename_all" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_all</stringProp>
-                  <stringProp name="Argument.value">All_info_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1055)}_2.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
                 <elementProp name="outputCsvFilename_Tch" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_Tch</stringProp>
-                  <stringProp name="Argument.value">TchClassDetails_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1055)}_3.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
                 <elementProp name="outputCsvFilename_all_group" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_all_group</stringProp>
-                  <stringProp name="Argument.value">GroupMembers_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1055)}_4.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
                 <elementProp name="startDate" elementType="Argument">
@@ -2133,7 +2240,7 @@ out.close();
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Final -&gt; 1054 : 1055 + Student attempts 1 Group Pskill" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Final -&gt; 1054 Student attempts 1 Group Pskill" enabled="true">
           <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1054&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
@@ -2238,14 +2345,19 @@ out.close();
                   <stringProp name="Argument.desc">pskill</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
+                <elementProp name="inputCsvFilename" elementType="Argument">
+                  <stringProp name="Argument.name">inputCsvFilename</stringProp>
+                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND)}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
               </collectionProp>
             </Arguments>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
               <stringProp name="delimiter">,</stringProp>
               <stringProp name="fileEncoding"></stringProp>
-              <stringProp name="filename">Users_Combined.csv</stringProp>
-              <boolProp name="ignoreFirstLine">true</boolProp>
+              <stringProp name="filename">${inputCsvFilename}</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
               <boolProp name="quotedData">false</boolProp>
               <boolProp name="recycle">true</boolProp>
               <stringProp name="shareMode">shareMode.all</stringProp>
@@ -2330,7 +2442,7 @@ out.close();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Final -&gt; 4 more students enrolled in class with GP1 and GP2" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Final (1052) -&gt;  4 more students created and enrolled in class with GP1 and GP2" enabled="true">
           <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1052&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
@@ -2341,7 +2453,7 @@ out.close();
               <collectionProp name="Arguments.arguments">
                 <elementProp name="outputCsvFilename_Std" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename_Std</stringProp>
-                  <stringProp name="Argument.value">StdDetails_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1052)}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
                 <elementProp name="startDate" elementType="Argument">
@@ -2435,14 +2547,19 @@ out.close();
                   <stringProp name="Argument.metadata">=</stringProp>
                   <stringProp name="Argument.desc">pskill</stringProp>
                 </elementProp>
+                <elementProp name="inputCsvFilename" elementType="Argument">
+                  <stringProp name="Argument.name">inputCsvFilename</stringProp>
+                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND)}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
               </collectionProp>
             </Arguments>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">TchClassDetails_Combined.csv</stringProp>
+              <stringProp name="filename">${inputCsvFilename}</stringProp>
               <stringProp name="fileEncoding"></stringProp>
               <stringProp name="variableNames">extuserid,classcode</stringProp>
-              <boolProp name="ignoreFirstLine">true</boolProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">,</stringProp>
               <boolProp name="quotedData">false</boolProp>
               <boolProp name="recycle">true</boolProp>
@@ -2548,7 +2665,7 @@ out.close();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - 1041 - Teacher invited existing students" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - 1041 - Teacher invites existing students" enabled="true">
           <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;1041&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
@@ -2557,14 +2674,19 @@ out.close();
           <hashTree>
             <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments">
-                <elementProp name="studentFilename" elementType="Argument">
-                  <stringProp name="Argument.name">studentFilename</stringProp>
-                  <stringProp name="Argument.value">${__time()}_students.csv</stringProp>
+                <elementProp name="teacherdetails" elementType="Argument">
+                  <stringProp name="Argument.name">teacherdetails</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1041)}_1.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
-                <elementProp name="finalOutputFilename" elementType="Argument">
-                  <stringProp name="Argument.name">finalOutputFilename</stringProp>
-                  <stringProp name="Argument.value">invitation_scenario_1041_${__time()}.csv</stringProp>
+                <elementProp name="studentdetails" elementType="Argument">
+                  <stringProp name="Argument.name">studentdetails</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1041)}_2.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="invitationdetails" elementType="Argument">
+                  <stringProp name="Argument.name">invitationdetails</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1041)}_3.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2778,7 +2900,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
               <hashTree/>
             </hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Samplerteacher" enabled="true">
-              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;date&quot;) + &quot;5teachers.csv&quot;, true);
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;teacherdetails&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 out.write(vars.get(&quot;teachername&quot;).getBytes());
@@ -2932,7 +3054,7 @@ vars.put(&quot;studentextuserid&quot;, studentextuserid);
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Samplerteacher" enabled="true">
                 <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
 
-FileOutputStream out = new FileOutputStream(&quot;student_origclass_&quot; + vars.get(&quot;finalOutputFilename&quot;), true);
+FileOutputStream out = new FileOutputStream(vars.get(&quot;studentdetails&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 
@@ -2957,7 +3079,7 @@ out.close();
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
                 <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
 
-FileOutputStream out = new FileOutputStream(vars.get(&quot;finalOutputFilename&quot;), true);
+FileOutputStream out = new FileOutputStream(vars.get(&quot;invitationdetails&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 
@@ -3030,6 +3152,11 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
                 <elementProp name="enddate" elementType="Argument">
                   <stringProp name="Argument.name">enddate</stringProp>
                   <stringProp name="Argument.value">${__P(End_Date,1659960604000)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="invitationDetails1042" elementType="Argument">
+                  <stringProp name="Argument.name">invitationDetails1042</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_1042)}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -3174,7 +3301,7 @@ vars.put(&quot;studentextuserid&quot;, studentextuserid);
 // extuserid,class_code,classid,invitation_id,teacherextuserid
 
 
-FileOutputStream out = new FileOutputStream(timestamp + &quot;_invitations_1042.csv&quot;, true);
+FileOutputStream out = new FileOutputStream(vars.get(&quot;invitationDetails1042&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 
@@ -3215,14 +3342,19 @@ out.close();</stringProp>
           <hashTree>
             <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments">
-                <elementProp name="teacherFilename" elementType="Argument">
-                  <stringProp name="Argument.name">teacherFilename</stringProp>
-                  <stringProp name="Argument.value">${__time()}_teacher.csv</stringProp>
+                <elementProp name="invitedTchDetails" elementType="Argument">
+                  <stringProp name="Argument.name">invitedTchDetails</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1044)}_1.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
-                <elementProp name="finalOutputFilename" elementType="Argument">
-                  <stringProp name="Argument.name">finalOutputFilename</stringProp>
-                  <stringProp name="Argument.value">invitation_scenario_1044_${__time()}.csv</stringProp>
+                <elementProp name="invitingTchDetails" elementType="Argument">
+                  <stringProp name="Argument.name">invitingTchDetails</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1044)}_2.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="invitationDetails1044" elementType="Argument">
+                  <stringProp name="Argument.name">invitationDetails1044</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default1044)}_3.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -3296,7 +3428,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             </IncludeController>
             <hashTree/>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Samplerteacher" enabled="true">
-              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;date&quot;) + &quot;5teachers.csv&quot;, true);
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;invitedTchDetails&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 out.write(vars.get(&quot;teachername&quot;).getBytes());
@@ -3431,7 +3563,7 @@ vars.put(&quot;extuseridInvitation&quot;, extuserid);</stringProp>
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Samplerteacher" enabled="true">
                 <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
 
-FileOutputStream out = new FileOutputStream(&quot;invitingTeacher_origclass_&quot; + vars.get(&quot;finalOutputFilename&quot;), true);
+FileOutputStream out = new FileOutputStream(vars.get(&quot;invitingTchDetails&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 
@@ -3454,7 +3586,7 @@ out.close();
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler invitation list" enabled="true">
                 <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
 
-FileOutputStream out = new FileOutputStream(vars.get(&quot;finalOutputFilename&quot;), true);
+FileOutputStream out = new FileOutputStream(vars.get(&quot;invitationDetails1044&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 
@@ -3528,6 +3660,11 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
                 <elementProp name="enddate" elementType="Argument">
                   <stringProp name="Argument.name">enddate</stringProp>
                   <stringProp name="Argument.value">${__P(End_Date,1659960604000)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="invitationDetails1045" elementType="Argument">
+                  <stringProp name="Argument.name">invitationDetails1045</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_1045)}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -3648,7 +3785,7 @@ vars.put(&quot;studentextuserid&quot;, extuserid);
 // extuserid,class_code,classid,invitation_id,teacherextuserid
 
 
-FileOutputStream out = new FileOutputStream(timestamp + &quot;_invitations_1045_NEW_teachers.csv&quot;, true);
+FileOutputStream out = new FileOutputStream(vars.get(&quot;invitationDetails1045&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
 
@@ -4983,74 +5120,6 @@ out.close();</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create 20 students in each class" enabled="false"/>
-        <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="delimiter">,</stringProp>
-            <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">10141.csv</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <stringProp name="shareMode">shareMode.all</stringProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="variableNames">teacherextuserid,classtitle,classcode,ap1,ap2,ap3,ap4,ap5</stringProp>
-          </CSVDataSet>
-          <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="outputCsvFilename" elementType="Argument">
-                <stringProp name="Argument.name">outputCsvFilename</stringProp>
-                <stringProp name="Argument.value">std_class_5_${__time()}.csv</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </Arguments>
-          <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_name" enabled="true">
-            <stringProp name="BeanShellSampler.query">import java.util.Date;
-
-Date date = new Date();
-prefix2 = date.getTime();
-prefix3 = ctx.getThread().getThreadNum() + 1;
-
-studentextuserid = &quot;std&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
-
-vars.put(&quot;studentextuserid&quot;, studentextuserid);
-</stringProp>
-            <stringProp name="BeanShellSampler.filename"></stringProp>
-            <stringProp name="BeanShellSampler.parameters"></stringProp>
-            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-          </BeanShellSampler>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with product_code and class_code" enabled="true">
-            <stringProp name="IncludeController.includepath">Join_Spaces_with_product_code_and_class_code.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_output_csv_creation" enabled="true">
-            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
-String SEPARATOR = &quot;,&quot;;
-String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
-out.write(SEPARATOR.getBytes());
-out.write(vars.get(&quot;classcode&quot;).getBytes());
-out.write(LineSEPARATOR.getBytes());
-
-out.flush();
-out.close();
-</stringProp>
-            <stringProp name="BeanShellSampler.filename"></stringProp>
-            <stringProp name="BeanShellSampler.parameters"></stringProp>
-            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-          </BeanShellSampler>
-          <hashTree/>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
-            <boolProp name="displayJMeterProperties">false</boolProp>
-            <boolProp name="displayJMeterVariables">true</boolProp>
-            <boolProp name="displaySystemProperties">false</boolProp>
-          </DebugSampler>
-          <hashTree/>
-        </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Student studies non-pskill in class" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -5984,7 +6053,7 @@ out.close();
         <boolProp name="useGroupName">true</boolProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
