@@ -97,7 +97,7 @@ npm test %finalfname%&#xd;
         </hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
       </configuredTriggers>
       <contentType>text/html</contentType>
-      <defaultSubject>Data Creation: Bulk Invitation - $Count classes</defaultSubject>
+      <defaultSubject>Data Creation: Bulk Invitation - $Count Invitations</defaultSubject>
       <defaultContent>&lt;html&gt;
 &lt;body&gt;
 Output File Name: $FINALFNAME
