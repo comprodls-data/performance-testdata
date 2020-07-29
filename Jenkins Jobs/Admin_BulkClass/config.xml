@@ -1,0 +1,111 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>Count</name>
+          <description></description>
+          <defaultValue>1</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.3.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/comprodls-data/performance-testdata</url>
+        <credentialsId>49e5fc65-f207-417d-bdb5-ec44ec1509cb</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/jenkins-setup</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        <relativeTargetDir>jmeter</relativeTargetDir>
+      </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+    </extensions>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.BatchFile>
+      <command>cd jmeter/bin&#xd;
+if exist buildtime.txt del buildtime.txt&#xd;
+SET time=%BUILD_TIMESTAMP%&#xd;
+set var=%BUILD_TIMESTAMP: =%&#xd;
+set var1=%var::=%&#xd;
+echo %var1%&#xd;
+SET finalfname=Bulk_Class_%var1%&#xd;
+echo FINALFNAME=%finalfname% &gt;&gt; buildtime.txt&#xd;
+jmeter -n -t data_creation_nongui_All.jmx -Jusers=1 -Jrampup=1  -JCount=%Count% -JData_Creation_Scenario=&quot;Bulk_Class&quot; -JOutputFileName=%finalfname% -l outputfromjenkins.jtl</command>
+    </hudson.tasks.BatchFile>
+    <EnvInjectBuilder plugin="envinject@2.3.0">
+      <info>
+        <propertiesFilePath>jmeter/bin/buildtime.txt</propertiesFilePath>
+      </info>
+    </EnvInjectBuilder>
+    <hudson.tasks.BatchFile>
+      <command>cd jmeter/uploadFile&#xd;
+SET time=%BUILD_TIMESTAMP%&#xd;
+set var=%BUILD_TIMESTAMP: =%&#xd;
+set var1=%var::=%&#xd;
+echo %var1%&#xd;
+SET finalfname=Bulk_Class_%var1%.csv&#xd;
+echo %finalfname%&#xd;
+npm test %finalfname%</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.69">
+      <recipientList>piyush.mehta@comprotechnologies.com,lavish.mehta@comprotechnologies.com,jyoti.chaubey@comprotechnologies.com</recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
+          <email>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
+      </configuredTriggers>
+      <contentType>text/html</contentType>
+      <defaultSubject>Data Creation: Bulk Class - $Count classes</defaultSubject>
+      <defaultContent>&lt;html&gt;
+&lt;body&gt;
+Output File Name: $FINALFNAME
+&lt;/body&gt;
+&lt;/html&gt;</defaultContent>
+      <attachmentsPattern>jmeter\bin\outputfromjenkins.jtl</attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
+      <attachBuildLog>true</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo>$DEFAULT_REPLYTO</replyTo>
+      <from>cupprod1@gmail.com</from>
+      <saveOutput>false</saveOutput>
+      <disabled>false</disabled>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+  </publishers>
+  <buildWrappers/>
+</project>
