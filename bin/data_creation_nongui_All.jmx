@@ -4026,6 +4026,133 @@ fw.close();
             <hashTree/>
           </hashTree>
         </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Bulk Class" enabled="true">
+          <stringProp name="IfController.condition">&quot;${Data_Creation_Scenario}&quot; == &quot;Bulk_Class&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Bulk Class" enabled="true"/>
+          <hashTree>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="startdate" elementType="Argument">
+                  <stringProp name="Argument.name">startdate</stringProp>
+                  <stringProp name="Argument.value">${__time(,)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="enddate" elementType="Argument">
+                  <stringProp name="Argument.name">enddate</stringProp>
+                  <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="currentdate" elementType="Argument">
+                  <stringProp name="Argument.name">currentdate</stringProp>
+                  <stringProp name="Argument.value">${__time(ddMMyyyyHHmmss,)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="tomorrowdate" elementType="Argument">
+                  <stringProp name="Argument.name">tomorrowdate</stringProp>
+                  <stringProp name="Argument.value">${__timeShift(dd/MM/yyyy,,P1D,,)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="nextyeardate" elementType="Argument">
+                  <stringProp name="Argument.name">nextyeardate</stringProp>
+                  <stringProp name="Argument.value">${__timeShift(dd/MM/yyyy,,P365D,,)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="outputCsvFilename" elementType="Argument">
+                  <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                  <stringProp name="Argument.value">BulkClass_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+              <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(&quot;Class name&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Start date DD/MM/YYYY&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;End date DD/MM/YYYY&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 1&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 2 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 3 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 4 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 5 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 6 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 7 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 8 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 9 (optional)&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;Teacher 10 (optional)&quot;.getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__P(count,25)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">100</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">counter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">false</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+                <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write((&quot;PerfClass_&quot;+vars.get(&quot;currentdate&quot;)+&quot;_&quot;+vars.get(&quot;counter&quot;)).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;tomorrowdate&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;nextyeardate&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(&quot;demo_teacher_l1@yopmail.com&quot;.getBytes());
+out.write(SEPARATOR.getBytes());
+out.write((&quot;dt_&quot;+vars.get(&quot;currentdate&quot;)+&quot;_&quot;+vars.get(&quot;counter&quot;)+&quot;@yopmail.com&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
+            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+              <boolProp name="displayJMeterProperties">false</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="teacher-1class-class-product--NO ASSIGNMENTS" enabled="false"/>
         <hashTree>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
