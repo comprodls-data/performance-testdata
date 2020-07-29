@@ -3826,16 +3826,6 @@ out.close();</stringProp>
             <stringProp name="TestPlan.comments">Set number of thread count as 6</stringProp>
           </GenericController>
           <hashTree>
-            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="csvFileName" elementType="Argument">
-                  <stringProp name="Argument.name">csvFileName</stringProp>
-                  <stringProp name="Argument.value">${__P(OutputFileName,default_bulkInv)}.csv</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </Arguments>
-            <hashTree/>
             <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor - Teacher Name" enabled="true">
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -4024,6 +4014,16 @@ fw.close();
               <boolProp name="displaySystemProperties">false</boolProp>
             </DebugSampler>
             <hashTree/>
+            <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="csvFileName" elementType="Argument">
+                  <stringProp name="Argument.name">csvFileName</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_bulkInv)}.csv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </Arguments>
+            <hashTree/>
           </hashTree>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Bulk Class" enabled="true">
@@ -4062,7 +4062,7 @@ fw.close();
                 </elementProp>
                 <elementProp name="outputCsvFilename" elementType="Argument">
                   <stringProp name="Argument.name">outputCsvFilename</stringProp>
-                  <stringProp name="Argument.value">BulkClass_${__time()}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(OutputFileName,default_bulkClass)}.csv</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -4109,7 +4109,7 @@ out.close();
             <hashTree/>
             <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
               <boolProp name="LoopController.continue_forever">true</boolProp>
-              <stringProp name="LoopController.loops">${__P(count,25)}</stringProp>
+              <stringProp name="LoopController.loops">${__P(Count,25)}</stringProp>
             </LoopController>
             <hashTree>
               <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
