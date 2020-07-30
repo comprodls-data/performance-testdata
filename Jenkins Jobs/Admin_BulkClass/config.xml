@@ -50,7 +50,6 @@ if exist buildtime.txt del buildtime.txt&#xd;
 SET time=%BUILD_TIMESTAMP%&#xd;
 set var=%BUILD_TIMESTAMP: =%&#xd;
 set var1=%var::=%&#xd;
-echo %var1%&#xd;
 SET finalfname=Bulk_Class_%var1%&#xd;
 echo FINALFNAME=%finalfname% &gt;&gt; buildtime.txt&#xd;
 jmeter -n -t data_creation_nongui_All.jmx -Jusers=1 -Jrampup=1  -JCount=%Count% -JData_Creation_Scenario=&quot;Bulk_Class&quot; -JOutputFileName=%finalfname% -l outputfromjenkins.jtl</command>
@@ -66,9 +65,7 @@ cd jmeter/uploadFile&#xd;
 SET time=%BUILD_TIMESTAMP%&#xd;
 set var=%BUILD_TIMESTAMP: =%&#xd;
 set var1=%var::=%&#xd;
-echo %var1%&#xd;
 SET finalfname=Bulk_Class_%var1%.csv&#xd;
-echo %finalfname%&#xd;
 npm test %finalfname%</command>
     </hudson.tasks.BatchFile>
   </builders>
