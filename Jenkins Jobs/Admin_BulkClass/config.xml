@@ -44,7 +44,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.BatchFile>
-      <command>cd jmeter/bin&#xd;
+      <command>@echo off&#xd;
+cd jmeter/bin&#xd;
 if exist buildtime.txt del buildtime.txt&#xd;
 SET time=%BUILD_TIMESTAMP%&#xd;
 set var=%BUILD_TIMESTAMP: =%&#xd;
@@ -60,7 +61,8 @@ jmeter -n -t data_creation_nongui_All.jmx -Jusers=1 -Jrampup=1  -JCount=%Count% 
       </info>
     </EnvInjectBuilder>
     <hudson.tasks.BatchFile>
-      <command>cd jmeter/uploadFile&#xd;
+      <command>@echo off&#xd;
+cd jmeter/uploadFile&#xd;
 SET time=%BUILD_TIMESTAMP%&#xd;
 set var=%BUILD_TIMESTAMP: =%&#xd;
 set var1=%var::=%&#xd;

@@ -47,8 +47,8 @@
               <sandbox>false</sandbox>
             </secureFallbackScript>
           </script>
-          <projectName>DataCreation_Final</projectName>
-          <projectFullName>DataCreation_Final</projectFullName>
+          <projectName>Git_DataCreation</projectName>
+          <projectFullName>Git_DataCreation</projectFullName>
           <choiceType>PT_SINGLE_SELECT</choiceType>
           <filterable>false</filterable>
           <filterLength>1</filterLength>
@@ -76,8 +76,8 @@ inputBox=&quot;&lt;input type=&apos;text&apos; placeholder=&apos;NOT_REQUIRED&ap
               <sandbox>false</sandbox>
             </secureFallbackScript>
           </script>
-          <projectName>DataCreation_Final</projectName>
-          <projectFullName>DataCreation_Final</projectFullName>
+          <projectName>Git_DataCreation</projectName>
+          <projectFullName>Git_DataCreation</projectFullName>
           <parameters class="linked-hash-map"/>
           <referencedParameters>Data_Creation_Scenario</referencedParameters>
           <choiceType>ET_FORMATTED_HTML</choiceType>
@@ -115,7 +115,8 @@ inputBox=&quot;&lt;input type=&apos;text&apos; placeholder=&apos;NOT_REQUIRED&ap
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.BatchFile>
-      <command>if exist buildtime.txt del buildtime.txt&#xd;
+      <command>@echo off&#xd;
+if exist buildtime.txt del buildtime.txt&#xd;
 &#xd;
 tzutil /s &quot;UTC&quot;&#xd;
 &#xd;
@@ -136,15 +137,13 @@ echo START_TIME=%date:~6,4%-%date:~3,2%-%date:~0,2%T%hour%:%min%:%secs%.%time:~9
       </info>
     </EnvInjectBuilder>
     <hudson.tasks.BatchFile>
-      <command>cd jmeter/bin&#xd;
+      <command>@echo off&#xd;
+cd jmeter/bin&#xd;
 if exist outfilenames.txt del outfilenames.txt&#xd;
 SET time=%BUILD_TIMESTAMP%&#xd;
 set var=%BUILD_TIMESTAMP: =%&#xd;
 set var1=%var::=%&#xd;
-echo %var1%&#xd;
-echo %Input_File_Name%&#xd;
 SET finalfname=%Data_Creation_Scenario%_%var1%&#xd;
-echo %finalfname%&#xd;
 SET finalfname1=%Data_Creation_Scenario%_%var1%_1.csv&#xd;
 SET finalfname2=%Data_Creation_Scenario%_%var1%_2.csv&#xd;
 SET finalfname3=%Data_Creation_Scenario%_%var1%_3.csv&#xd;
@@ -174,7 +173,8 @@ jmeter -n -t data_creation_nongui_All.jmx -Jusers=%users% -Jrampup=%rampup% -JDa
       </info>
     </EnvInjectBuilder>
     <hudson.tasks.BatchFile>
-      <command>set hour=%time:~0,2%&#xd;
+      <command>@echo off&#xd;
+set hour=%time:~0,2%&#xd;
 if &quot;%hour:~0,1%&quot; == &quot; &quot; set hour=0%hour:~1,1%&#xd;
 &#xd;
 set min=%time:~3,2%&#xd;
@@ -185,7 +185,6 @@ if &quot;%secs:~0,1%&quot; == &quot; &quot; set secs=0%secs:~1,1%&#xd;
 &#xd;
 set END_TIME=%date:~6,4%-%date:~3,2%-%date:~0,2%T%hour%:%min%:%secs%.%time:~9,2%Z&#xd;
 &#xd;
-echo %END_TIME%&#xd;
 &#xd;
 echo KIBANA_URL=&quot;https://search-logs-cup-alpha-ga3wsaogpm2bgvkzkgtrww6cvy.us-west-2.es.amazonaws.com/_plugin/kibana/app/kibana#/discover/AXHqGgMUHa4ewHuvTBiF?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:&apos;%START_TIME%&apos;,mode:absolute,to:&apos;%END_TIME%&apos;))&amp;_a=(columns:!(err.message,request_path,ref_id),filters:!(),index:AXGIT8NoHa4ewHuvTBgb,interval:auto,query:(query_string:(analyze_wildcard:!t,query:&apos;%%22error%%22%%20NOT%%20%%22warning%%22&apos;)),sort:!(&apos;@timestamp&apos;,desc))&quot; &gt;&gt; buildtime.txt&#xd;
 &#xd;
@@ -197,17 +196,16 @@ tzutil /s &quot;India Standard Time&quot;</command>
       </info>
     </EnvInjectBuilder>
     <hudson.tasks.BatchFile>
-      <command>cd jmeter/uploadFile&#xd;
+      <command>@echo off&#xd;
+cd jmeter/uploadFile&#xd;
 SET time=%BUILD_TIMESTAMP%&#xd;
 set var=%BUILD_TIMESTAMP: =%&#xd;
 set var1=%var::=%&#xd;
-echo %var1%&#xd;
 SET finalfname=%Data_Creation_Scenario%_%var1%.csv&#xd;
 SET finalfname1=%Data_Creation_Scenario%_%var1%_1.csv&#xd;
 SET finalfname2=%Data_Creation_Scenario%_%var1%_2.csv&#xd;
 SET finalfname3=%Data_Creation_Scenario%_%var1%_3.csv&#xd;
 SET finalfname4=%Data_Creation_Scenario%_%var1%_4.csv&#xd;
-echo %finalfname%&#xd;
 if &quot;%Data_Creation_Scenario%&quot;==&quot;1055&quot; (&#xd;
 node uploadFile.js %finalfname1% %finalfname2% %finalfname3% %finalfname4%&#xd;
 ) else (&#xd;
