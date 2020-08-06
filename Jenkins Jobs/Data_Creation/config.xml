@@ -148,6 +148,8 @@ SET finalfname1=%Data_Creation_Scenario%_%var1%_1.csv&#xd;
 SET finalfname2=%Data_Creation_Scenario%_%var1%_2.csv&#xd;
 SET finalfname3=%Data_Creation_Scenario%_%var1%_3.csv&#xd;
 SET finalfname4=%Data_Creation_Scenario%_%var1%_4.csv&#xd;
+SET outputfileName=outputFromJenkins_%var1%.jtl&#xd;
+echo OUTPUTFILENAME=%outputfileName% &gt;&gt; outfilenames.txt&#xd;
 if &quot;%Data_Creation_Scenario%&quot;==&quot;1055&quot; (&#xd;
 echo FINALFNAME = %finalfname1%,%finalfname2%,%finalfname3%,%finalfname4% &gt;&gt; outfilenames.txt&#xd;
 ) else (&#xd;
@@ -165,7 +167,7 @@ node uploadFile.js NOT_REQUIRED&#xd;
           )&#xd;
    )&#xd;
 )&#xd;
-jmeter -n -t data_creation_nongui_All.jmx -Jusers=%users% -Jrampup=%rampup% -JData_Creation_Scenario=%Data_Creation_Scenario% -JInputFileName=%Input_File_Name% -JOutputFileName=%finalfname% -l outputfromjenkins.jtl</command>
+jmeter -n -t data_creation_nongui_All.jmx -Jusers=%users% -Jrampup=%rampup% -JData_Creation_Scenario=%Data_Creation_Scenario% -JInputFileName=%Input_File_Name% -JOutputFileName=%finalfname% -l %outputfileName%</command>
     </hudson.tasks.BatchFile>
     <EnvInjectBuilder plugin="envinject@2.3.0">
       <info>
@@ -249,7 +251,7 @@ node uploadFile.js NOT_REQUIRED&#xd;
       <ignoreFailedBuilds>false</ignoreFailedBuilds>
       <ignoreUnstableBuilds>false</ignoreUnstableBuilds>
       <persistConstraintLog>false</persistConstraintLog>
-      <sourceDataFiles>jmeter\bin\outputfromjenkins.jtl</sourceDataFiles>
+      <sourceDataFiles>jmeter\bin\$OUTPUTFILENAME</sourceDataFiles>
       <filterRegex></filterRegex>
       <junitOutput></junitOutput>
       <percentiles>0,50,90,100</percentiles>
@@ -281,7 +283,7 @@ node uploadFile.js NOT_REQUIRED&#xd;
 Output File Name: $FINALFNAME
 &lt;/body&gt;
 &lt;/html&gt;</defaultContent>
-      <attachmentsPattern>jmeter\bin\outputfromjenkins.jtl</attachmentsPattern>
+      <attachmentsPattern>jmeter\bin\$OUTPUTFILENAME</attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
       <attachBuildLog>true</attachBuildLog>
