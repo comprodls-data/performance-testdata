@@ -153,9 +153,6 @@ echo OUTPUTFILENAME=%outputfileName% &gt;&gt; outfilenames.txt&#xd;
 if &quot;%Data_Creation_Scenario%&quot;==&quot;1055&quot; (&#xd;
 echo FINALFNAME = %finalfname1%,%finalfname2%,%finalfname3%,%finalfname4% &gt;&gt; outfilenames.txt&#xd;
 ) else (&#xd;
-if &quot;%Data_Creation_Scenario%&quot;==&quot;1054&quot; (&#xd;
-node uploadFile.js NOT_REQUIRED&#xd;
-) else ( &#xd;
         if &quot;%Data_Creation_Scenario%&quot;==&quot;1041&quot; (&#xd;
           echo FINALFNAME = %finalfname1%,%finalfname2%,%finalfname3% &gt;&gt; outfilenames.txt&#xd;
         ) else (&#xd;
@@ -165,7 +162,6 @@ node uploadFile.js NOT_REQUIRED&#xd;
                       echo FINALFNAME = %finalfname1% &gt;&gt; outfilenames.txt&#xd;
                  )&#xd;
           )&#xd;
-   )&#xd;
 )&#xd;
 jmeter -n -t data_creation_nongui_All.jmx -Jusers=%users% -Jrampup=%rampup% -JData_Creation_Scenario=%Data_Creation_Scenario% -JInputFileName=%Input_File_Name% -JOutputFileName=%finalfname% -l %outputfileName%</command>
     </hudson.tasks.BatchFile>
@@ -212,7 +208,7 @@ if &quot;%Data_Creation_Scenario%&quot;==&quot;1055&quot; (&#xd;
 node uploadFile.js %finalfname1% %finalfname2% %finalfname3% %finalfname4%&#xd;
 ) else (&#xd;
 if &quot;%Data_Creation_Scenario%&quot;==&quot;1054&quot; (&#xd;
-node uploadFile.js NOT_REQUIRED&#xd;
+echo "NO FILE UPLOAD IS NEEDED IN THIS CASE"
 ) else ( &#xd;
         if &quot;%Data_Creation_Scenario%&quot;==&quot;1041&quot; (&#xd;
           node uploadFile.js %finalfname1% %finalfname2% %finalfname3%&#xd;
