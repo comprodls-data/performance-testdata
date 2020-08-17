@@ -1258,7 +1258,7 @@ out.close();
                 </elementProp>
                 <elementProp name="inputCsvFilename" elementType="Argument">
                   <stringProp name="Argument.name">inputCsvFilename</stringProp>
-                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND)}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND.csv)}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2347,7 +2347,7 @@ out.close();
                 </elementProp>
                 <elementProp name="inputCsvFilename" elementType="Argument">
                   <stringProp name="Argument.name">inputCsvFilename</stringProp>
-                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND)}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND.csv)}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2357,7 +2357,7 @@ out.close();
               <stringProp name="delimiter">,</stringProp>
               <stringProp name="fileEncoding"></stringProp>
               <stringProp name="filename">${inputCsvFilename}</stringProp>
-              <boolProp name="ignoreFirstLine">false</boolProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
               <boolProp name="quotedData">false</boolProp>
               <boolProp name="recycle">true</boolProp>
               <stringProp name="shareMode">shareMode.all</stringProp>
@@ -2549,7 +2549,7 @@ out.close();
                 </elementProp>
                 <elementProp name="inputCsvFilename" elementType="Argument">
                   <stringProp name="Argument.name">inputCsvFilename</stringProp>
-                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND)}.csv</stringProp>
+                  <stringProp name="Argument.value">${__P(InputFileName,NOT_FOUND.csv)}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2559,7 +2559,7 @@ out.close();
               <stringProp name="filename">${inputCsvFilename}</stringProp>
               <stringProp name="fileEncoding"></stringProp>
               <stringProp name="variableNames">extuserid,classcode</stringProp>
-              <boolProp name="ignoreFirstLine">false</boolProp>
+              <boolProp name="ignoreFirstLine">true</boolProp>
               <stringProp name="delimiter">,</stringProp>
               <boolProp name="quotedData">false</boolProp>
               <boolProp name="recycle">true</boolProp>
