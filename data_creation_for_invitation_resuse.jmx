@@ -178,12 +178,12 @@
             </elementProp>
             <elementProp name="assignmentstartdate" elementType="Argument">
               <stringProp name="Argument.name">assignmentstartdate</stringProp>
-              <stringProp name="Argument.value">${__P(Start_Date,1562938362000)}</stringProp>
+              <stringProp name="Argument.value">${__time(,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="assignmentenddate" elementType="Argument">
               <stringProp name="Argument.name">assignmentenddate</stringProp>
-              <stringProp name="Argument.value">${__P(End_Date,1594560762000)}</stringProp>
+              <stringProp name="Argument.value">${__timeShift(,,P1095D,,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="assigned_path_id" elementType="Argument">
@@ -243,7 +243,7 @@
             </elementProp>
             <elementProp name="endDate" elementType="Argument">
               <stringProp name="Argument.name">endDate</stringProp>
-              <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+              <stringProp name="Argument.value">${__timeShift(,,P1095D,,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="workflow_type" elementType="Argument">
