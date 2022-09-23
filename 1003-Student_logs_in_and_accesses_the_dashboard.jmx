@@ -34,11 +34,11 @@
           <stringProp name="IncludeController.includepath">API_to_grant_authkey_on_refid.jmx</stringProp>
         </IncludeController>
         <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Product Items and their Progress Analytics (default)" enabled="true">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Product Items and their Progress Analytics (default)" enabled="false">
           <stringProp name="IncludeController.includepath">Product_items_and_their_progress_analytic_default.jmx</stringProp>
         </IncludeController>
         <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get Assigned Paths of a user in a class" enabled="true">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get Assigned Paths of a user in a class" enabled="false">
           <stringProp name="IncludeController.includepath">Get_list_of_assignments_assigned_to_a_learner_in_class.jmx</stringProp>
         </IncludeController>
         <hashTree/>

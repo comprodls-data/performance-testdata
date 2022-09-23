@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="domainName" elementType="Argument">
+              <stringProp name="Argument.name">domainName</stringProp>
+              <stringProp name="Argument.value">dls-asgard-thor-1453383019.us-west-2.elb.amazonaws.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="extuserid" elementType="Argument">
+              <stringProp name="Argument.name">extuserid</stringProp>
+              <stringProp name="Argument.value">52a6963f461c457aa07cfc04b9297908</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="account" elementType="Argument">
+              <stringProp name="Argument.name">account</stringProp>
+              <stringProp name="Argument.value">cup1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invoke - Original" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="userId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">83ff06b6bade4cf4b5f8dda22ff4f9a4</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">userId</stringProp>
+              </elementProp>
+              <elementProp name="targetLinkUri" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://sandbox-api.cambridgeassessment.org.uk/metrica/v1/testplayer/redirect/IELTSi_T1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">targetLinkUri</stringProp>
+              </elementProp>
+              <elementProp name="testId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">IELTSi_T1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">testId</stringProp>
+              </elementProp>
+              <elementProp name="contextId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">sh_thor_cup1_1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">contextId</stringProp>
+              </elementProp>
+              <elementProp name="lineItemId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lineItemId</stringProp>
+              </elementProp>
+              <elementProp name="deploymentId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">7b39abb357</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">deploymentId</stringProp>
+              </elementProp>
+              <elementProp name="resLinkId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">resLinkId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/invoke</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://micro-nemo.comprodls.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="login_hint" enabled="true">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">login_hint</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;login_hint&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="clientID" enabled="true">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">clientID</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;client_id&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invoke" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="userId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">87736498cdc84409a57c4858b243eb19</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">userId</stringProp>
+              </elementProp>
+              <elementProp name="targetLinkUri" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://sandbox-api.cambridgeassessment.org.uk/metrica/v1/testplayer/redirect/IELTSi_T1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">targetLinkUri</stringProp>
+              </elementProp>
+              <elementProp name="testId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">IELTSi_T1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">testId</stringProp>
+              </elementProp>
+              <elementProp name="contextId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">sh_thor_cup1_1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">contextId</stringProp>
+              </elementProp>
+              <elementProp name="lineItemId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lineItemId</stringProp>
+              </elementProp>
+              <elementProp name="deploymentId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">7b39abb357</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">deploymentId</stringProp>
+              </elementProp>
+              <elementProp name="resLinkId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">resLinkId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/invoke</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://micro-nemo.comprodls.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="login_hint" enabled="true">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">login_hint</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;login_hint&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="clientID" enabled="true">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">clientID</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;client_id&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="oAuth" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="grant_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">client_credentials</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">grant_type</stringProp>
+              </elementProp>
+              <elementProp name="client_assertion_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">urn:ietf:params:oauth:client-assertion-type:jwt-bearer</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_assertion_type</stringProp>
+              </elementProp>
+              <elementProp name="client_assertion" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJ3S1Y0cW1Fekk2R2xjY09NNmV4aVFfVXR3ZFk4VHFSNkM5bnlQZ2R6MEkifQ.eyJpc3MiOiJkMzk2NzJiOTc1Iiwic3ViIjoiZDM5NjcyYjk3NSIsImF1ZCI6Imh0dHBzOi8vbHRpLWRldi5jb21wcm9kbHMuY29tL3YxL2x0aS9wbGF0Zm9ybXMvOTJlM2RhMTFiOC9vYXV0aCIsImp0aSI6ImNhNWIxYmQ0YjRhODUyZjQwOTQxNDA0Yzc4ZGI0YmQ3IiwiaWF0IjoxNTk4OTYxOTg2LCJleHAiOjE1OTkwNDgzODZ9.jZERTRwWOyArF5Ijp0FW9dmVf7wWkXtr3Zp6ukqlyv6dau6Yyd3VhFonXAbnPiF8hhVpkmNmbRMo1zycHTy4ZJ8jOomireM8nIbyD4jzLcbee21bTQSbR3o-4JBsXrQvqhQQvTHPHDnp52D0FVNSe9w9DUkudi5WVaIbnluRs2BlpheMsAwxBigk3XOSFHxA-tdTeXDM-lOCRpA3jv6j7B8Jm8T9JXL28k3s9JUpvWN5jjdVg4TomlxlnoCX5C0dJOWLhTxRk6ij04swTL9iVbFOAEHN-Xq6rUczGIwE4IausIXbMX8RgdLOP3uK9J8QnxjJ9cGjE8gKHAihZAIKtQ</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_assertion</stringProp>
+              </elementProp>
+              <elementProp name="scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://purl.imsglobal.org/spec/lti-ags/scope/score</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">scope</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/oauth</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://micro-nemo.comprodls.com</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">cookieId=${login_hint}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="login_hint" enabled="false">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">login_hint</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;login_hint&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="clientID" enabled="false">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">clientID</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;client_id&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Oidc" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="client_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${clientID}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_id</stringProp>
+              </elementProp>
+              <elementProp name="login_hint" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${login_hint}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">login_hint</stringProp>
+              </elementProp>
+              <elementProp name="redirect_uri" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://sandbox-api.cambridgeassessment.org.uk/metrica/v1/testplayer/redirect</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">redirect_uri</stringProp>
+              </elementProp>
+              <elementProp name="prompt" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">none</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">prompt</stringProp>
+              </elementProp>
+              <elementProp name="scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">openid</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">scope</stringProp>
+              </elementProp>
+              <elementProp name="response_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">id_token</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">response_type</stringProp>
+              </elementProp>
+              <elementProp name="response_mode" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">form_post</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">response_mode</stringProp>
+              </elementProp>
+              <elementProp name="state" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">state</stringProp>
+              </elementProp>
+              <elementProp name="lti_message_hint" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lti_message_hint</stringProp>
+              </elementProp>
+              <elementProp name="nonce" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">nonce</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/oidc</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://lti-dev.comprodls.com/v1/lti/platforms/92e3da11b8/invoke</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">cookieId=${login_hint}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="id_token" enabled="true">
+            <stringProp name="XPathExtractor.default">NOT FOUND</stringProp>
+            <stringProp name="XPathExtractor.refname">tokenId</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/div/form/input[@name=&apos;id_token&apos;]/@value</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="JWKS" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/jwks/${clientID}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://micro-nemo.comprodls.com</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">cookieId=${login_hint}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Return" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/returns</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://lti-dev.comprodls.com/v1/lti/platforms/92e3da11b8/invoke</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">cookieId=52a6963f461c457aa07cfc04b9297908__1597296359__a0207</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Oidc Post" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="client_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${clientID}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_id</stringProp>
+              </elementProp>
+              <elementProp name="login_hint" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${login_hint}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">login_hint</stringProp>
+              </elementProp>
+              <elementProp name="redirect_uri" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://sandbox-api.cambridgeassessment.org.uk/metrica/v1/testplayer/redirect</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">redirect_uri</stringProp>
+              </elementProp>
+              <elementProp name="prompt" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">none</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">prompt</stringProp>
+              </elementProp>
+              <elementProp name="scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">openid</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">scope</stringProp>
+              </elementProp>
+              <elementProp name="response_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">id_token</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">response_type</stringProp>
+              </elementProp>
+              <elementProp name="response_mode" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">form_post</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">response_mode</stringProp>
+              </elementProp>
+              <elementProp name="state" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">state</stringProp>
+              </elementProp>
+              <elementProp name="lti_message_hint" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lti_message_hint</stringProp>
+              </elementProp>
+              <elementProp name="nonce" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">nonce</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/oidc</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://lti-dev.comprodls.com/v1/lti/platforms/92e3da11b8/invoke</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">cookieId=${login_hint}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Publish Score - Post" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;https://www.cambridgeassessment.org.uk/lti/testId&quot;:&quot;IELTSiReadingMVP&quot;,&quot;userId&quot;:&quot;1877e81c019d4a7d906e6266b015aab4&quot;,&quot;scoreGiven&quot;:10,&quot;scoreMaximum&quot;:21,&quot;https://www.cambridgeassessment.org.uk/lti/totalTimeTaken&quot;:36090,&quot;comment&quot;:&quot;&quot;,&quot;timestamp&quot;:&quot;2020-08-28T11:20:44.833Z&quot;,&quot;activityProgress&quot;:&quot;Completed&quot;,&quot;gradingProgress&quot;:&quot;FullyGraded&quot;,&quot;https://www.cambridgeassessment.org.uk/lti/testInstanceId&quot;:201975,&quot;https://www.cambridgeassessment.org.uk/lti/items/result&quot;:{&quot;parts&quot;:[{&quot;id&quot;:&quot;Part 1&quot;,&quot;score&quot;:10,&quot;maxScore&quot;:21,&quot;items&quot;:[{&quot;id&quot;:&quot;IELTSiReadingMVP_1&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;af8dca77-c9ec-4eed-8356-91cf47e19a3c&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;A&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_2&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;6d0c3dd9-8f72-4eee-b32a-9295b54d8a98&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;B&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_3&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;2e00024a-0462-4ac5-8b74-5aa4ca62bb5d&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;B&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_4&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;b907b3f5-1ced-4377-a94e-9782ce47d0bc&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;A&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_5&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;dcc786db-0d04-458e-91ea-b98b495c32d3&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;A&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_6_7&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;0b4060ca-dfb3-4713-a1a9-c314783a006a&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;A&quot;},{&quot;id&quot;:&quot;799e46ce-7832-4524-9914-d4ba5aa32fab&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;C&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_8&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;160b810d-4e54-4f00-a122-346e54bb6662&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;B&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_9_10&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;7c4d7d1d-152b-4db3-b65f-012a94f27fe4&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;word&quot;},{&quot;id&quot;:&quot;91b7f645-32b8-44c7-8989-72aa04b77d0b&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;tombs&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_11_12&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;b00895e9-4e1a-4c87-a4f6-31f51bb7027a&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;lime&quot;},{&quot;id&quot;:&quot;61ad8209-05f9-43e2-8f38-fdd01a502037&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;diseases&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_13&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;73c3d999-0de0-4eff-a917-139dfffc2db7&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;B&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_14&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;579e1386-ba13-404f-b336-449e84a78617&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;C&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_15_16&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;d7268093-7132-4c06-946a-540048227173&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;compass&quot;},{&quot;id&quot;:&quot;22923f1c-9c79-4f8c-b140-dfebec0ddf45&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;railways&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_17&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;e804a9fb-790e-4b97-aa04-a2949e5bd4af&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;A&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_18_19&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;2ccca7e5-a75e-4224-bc31-0293802de006&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;B&quot;},{&quot;id&quot;:&quot;5a42d7fe-1b32-4b01-9d1b-0621e0933a03&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;A&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_20&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;c9a22410-825b-4f9a-a9ff-8d4c73373b55&quot;,&quot;score&quot;:1,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;B&quot;}]},{&quot;id&quot;:&quot;IELTSiReadingMVP_21&quot;,&quot;version&quot;:1,&quot;interactions&quot;:[{&quot;id&quot;:&quot;5967ab62-b8af-4372-bdd0-d967e16b34a0&quot;,&quot;score&quot;:0,&quot;maxScore&quot;:1,&quot;response&quot;:&quot;type&quot;}]}]}]}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/contexts/sh_thor_cup1_1/lineitems/ielts_pe__1594044177235__1/scores</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2x0aS1kZXYuY29tcHJvZGxzLmNvbSIsInN1YiI6ImQzOTY3MmI5NzUiLCJzY29wZSI6Imh0dHBzOi8vcHVybC5pbXNnbG9iYWwub3JnL3NwZWMvbHRpLWFncy9zY29wZS9zY29yZSIsImlhdCI6MTU5ODYyNTYyMSwiZXhwIjoxNTk4NjI2MjIxfQ.mAL_Lt_8dX7wKLavrzTjLJzHM-juUrG6B78XBuGoFTY3j-vIz1hix4SCThrA52AJZXlZJwDZPNqq1Swk015oz1U7PjgpJ_kCeylNTBLmEXChr_8uDFMRcR3dxkOk47alXAf0El44iEv8uJq4B_5dGtiJ1Uwx2oaXWKG3xEApwLH4Trark-cXdeB2QnxDjJIiSUEAazXdX9yanMw_7sDoQHsji9LpuL-InyBtHBc4zn-WvtLYN0Rlz19RtbgeCyXxjvJteXqaXwiVo2mUESyXWDqgZNiZia3rjsJ5sS-zrw_5t9nJUkJKHIDrvi3DQIKfuxi0ytucfAV148_JWEAgSQ</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Oidc" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="client_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">pgHo4mR5fyQaISazt5J85cAVB64P0kDK</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_id</stringProp>
+              </elementProp>
+              <elementProp name="login_hint" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">52a6963f461c457aa07cfc04b9297908__1597296359__a0207e</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">login_hint</stringProp>
+              </elementProp>
+              <elementProp name="redirect_uri" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://sandbox-api.cambridgeassessment.org.uk/metrica/v1/testplayer/redirect</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">redirect_uri</stringProp>
+              </elementProp>
+              <elementProp name="prompt" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">none</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">prompt</stringProp>
+              </elementProp>
+              <elementProp name="scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">openid</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">scope</stringProp>
+              </elementProp>
+              <elementProp name="response_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">id_token</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">response_type</stringProp>
+              </elementProp>
+              <elementProp name="response_mode" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">form_post</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">response_mode</stringProp>
+              </elementProp>
+              <elementProp name="state" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1597255626569</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">state</stringProp>
+              </elementProp>
+              <elementProp name="lti_message_hint" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ielts_pe__1594044177235__1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lti_message_hint</stringProp>
+              </elementProp>
+              <elementProp name="nonce" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1597255626569</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">nonce</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/oidc</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://lti-dev.comprodls.com/v1/lti/platforms/92e3da11b8/invoke</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">cookie</stringProp>
+                <stringProp name="Header.value">cookieId=52a6963f461c457aa07cfc04b9297908__1597296359__a0207e</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Submit" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">dev-jetpack-api.dnpd.cloud</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/testInstances/metrica_8017371/submit</stringProp>
+          <stringProp name="HTTPSampler.method">OPTIONS</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://dev-jetpack.dnpd.cloud/?return_url=https%3A%2F%2Flti-dev.comprodls.com%2Fv1%2Flti%2Fplatforms%2F92e3da11b8%2Freturns&amp;test=IELTSi_T1&amp;testInstance=metrica_8017371</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">origin</stringProp>
+                <stringProp name="Header.value">https://dev-jetpack.dnpd.cloud</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ReturnOrig" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">dev-jetpack.dnpd.cloud</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/?return_url=https%3A%2F%2Flti-dev.comprodls.com%2Fv1%2Flti%2Fplatforms%2F92e3da11b8%2Freturns&amp;test=IELTSi_T1&amp;testInstance=metrica_8017026</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Return" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="return_url" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://www.google.com/</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">return_url</stringProp>
+              </elementProp>
+              <elementProp name="test" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">abc</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">test</stringProp>
+              </elementProp>
+              <elementProp name="testInstance" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">def</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">testInstance</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">dev-jetpack.dnpd.cloud</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Return" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">dev-jetpack.dnpd.cloud</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Return-CMP-LTIGW" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="test" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">IELTSi_T1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">test</stringProp>
+              </elementProp>
+              <elementProp name="testInstance" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">metrica_8017026</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">testInstance</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">lti-dev.comprodls.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/lti/platforms/92e3da11b8/returns</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

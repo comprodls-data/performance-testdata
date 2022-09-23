@@ -11,18 +11,18 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Create New Instructor Led Class" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Entitle user with product code" enabled="true"/>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create New Instructor Led Class" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Entitle user with product code" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;title&quot;: &quot;${classname}&quot;,&#xd;
-  &quot;startdate&quot;: ${startDate},&#xd;
-  &quot;enddate&quot;: ${endDate}&#xd;
+  &quot;ext_user_id&quot;: &quot;${ext_user_id}&quot;,&#xd;
+  &quot;ext_role&quot;: &quot;student&quot;,&#xd;
+  &quot;productcode&quot;: &quot;ielts_pe&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -32,7 +32,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/classes</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/accounts/cup1/entitle-user</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -43,7 +43,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">accept</stringProp>
@@ -64,48 +64,9 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Class ID" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">classid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.classid</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
-            <stringProp name="Scope.variable"></stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract ClassCode" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">classcode</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.class_code</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">Class_Code_NOT_FOUND</stringProp>
-            <stringProp name="Scope.variable"></stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract ClassTitle" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">classtitle</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.title</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">CLASS_TITLE_NOT_FOUND</stringProp>
-            <stringProp name="Scope.variable"></stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract TeacherName" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">teachername</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.class.instructor.first_name</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">TEACHER_NAME_NOT_FOUND</stringProp>
-            <stringProp name="Scope.variable"></stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Space Role" enabled="false">
-            <stringProp name="JSONPostProcessor.referenceNames">space_role</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].space_role</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
-            <stringProp name="JSON_PATH">$.entities[0].dls_account_id</stringProp>
-            <stringProp name="EXPECTED_VALUE">${accountid}</stringProp>
+            <stringProp name="JSON_PATH">$.classid</stringProp>
+            <stringProp name="EXPECTED_VALUE">${classid}</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>

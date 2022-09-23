@@ -11,32 +11,38 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="send invitation" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Add statements" enabled="true"/>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="send invitation" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add statements" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;context&quot;: &quot;class_enrollment&quot;,&#xd;
-  &quot;created&quot;: ${startDate},&#xd;
-  &quot;class_enrollment&quot;: {&#xd;
-    &quot;classid&quot;: &quot;${classid}&quot;&#xd;
-  },&#xd;
-  &quot;invitation_data&quot;: [&#xd;
-    {&#xd;
-      &quot;email&quot;: &quot;${studentextuserid}@yopmail.com&quot;,&#xd;
-      &quot;dls_org_status&quot;: &quot;new&quot;,&#xd;
-      &quot;ext_user_id&quot;: &quot;${studentextuserid}&quot;,&#xd;
-      &quot;first_name&quot;: &quot;${studentextuserid}&quot;,&#xd;
-      &quot;last_name&quot;: &quot;test&quot;,&#xd;
-      &quot;role&quot;: &quot;student&quot;,&#xd;
-      &quot;rowId&quot;: &quot;${rowid}&quot;&#xd;
-    }&#xd;
-  ]&#xd;
-}</stringProp>
+    &quot;actor&quot;: {&#xd;
+      &quot;uuid&quot;: &quot;${userid}&quot;&#xd;
+    },&#xd;
+    &quot;platform&quot;: {&#xd;
+      &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36&quot;&#xd;
+    },&#xd;
+    &quot;entities&quot;: [&#xd;
+      {&#xd;
+        &quot;verb&quot;: &quot;settings-updated&quot;,&#xd;
+    &quot;item-code&quot;: &quot;classes&quot;,&#xd;
+        &quot;timestamp&quot;: ${__time()},&#xd;
+        &quot;user_data&quot;: {&#xd;
+              &quot;type&quot;: &quot;settings-updated&quot;,&#xd;
+              &quot;action&quot;: &quot;create&quot;,&#xd;
+              &quot;folderid&quot;: &quot;settings/global-prefs/teacher/dashboard&quot;,&#xd;
+              &quot;documentid&quot;: &quot;classes&quot;,&#xd;
+              &quot;payload&quot;: &quot;{}&quot;&#xd;
+&#xd;
+         }&#xd;
+      }&#xd;
+    ],&#xd;
+    &quot;space_key&quot;: &quot;${spacekey}&quot;&#xd;
+  }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -45,9 +51,9 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/invitations</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-xapi/${orgid}/statements</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
@@ -59,28 +65,20 @@
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">accept</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">authorization</stringProp>
-                <stringProp name="Header.value">${access_token}</stringProp>
+                <stringProp name="Header.value">${userid}</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
               </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">test-perf-id</stringProp>
-                <stringProp name="Header.value">${date}</stringProp>
-              </elementProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">$.jobId</stringProp>
-            <stringProp name="EXPECTED_VALUE"></stringProp>
-            <boolProp name="JSONVALIDATION">false</boolProp>
+            <stringProp name="JSON_PATH">$.actor.uuid</stringProp>
+            <stringProp name="EXPECTED_VALUE">${userid}</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">false</boolProp>
