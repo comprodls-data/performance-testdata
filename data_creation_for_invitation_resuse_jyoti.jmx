@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">510</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2040</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -178,12 +178,12 @@
             </elementProp>
             <elementProp name="assignmentstartdate" elementType="Argument">
               <stringProp name="Argument.name">assignmentstartdate</stringProp>
-              <stringProp name="Argument.value">${__time(,)}</stringProp>
+              <stringProp name="Argument.value">${__P(Start_Date,1562938362000)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="assignmentenddate" elementType="Argument">
               <stringProp name="Argument.name">assignmentenddate</stringProp>
-              <stringProp name="Argument.value">${__timeShift(,,P1095D,,)}</stringProp>
+              <stringProp name="Argument.value">${__P(End_Date,1594560762000)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="assigned_path_id" elementType="Argument">
@@ -243,7 +243,7 @@
             </elementProp>
             <elementProp name="endDate" elementType="Argument">
               <stringProp name="Argument.name">endDate</stringProp>
-              <stringProp name="Argument.value">${__timeShift(,,P1095D,,)}</stringProp>
+              <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="workflow_type" elementType="Argument">
@@ -581,28 +581,28 @@
         <hashTree/>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - Multi Umbrella" enabled="true">
           <collectionProp name="Arguments.arguments">
-            <elementProp name="multiProduct1" elementType="Argument">
-              <stringProp name="Argument.name">multiProduct1</stringProp>
+            <elementProp name="bundle1Products1" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products1</stringProp>
               <stringProp name="Argument.value">perfb1pe1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="multiProduct2" elementType="Argument">
-              <stringProp name="Argument.name">multiProduct2</stringProp>
+            <elementProp name="bundle1Products2" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products2</stringProp>
               <stringProp name="Argument.value">perfb1pe2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="multiProduct3" elementType="Argument">
-              <stringProp name="Argument.name">multiProduct3</stringProp>
+            <elementProp name="bundle1Products3" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products3</stringProp>
               <stringProp name="Argument.value">perfb1test</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="multiProduct4" elementType="Argument">
-              <stringProp name="Argument.name">multiProduct4</stringProp>
+            <elementProp name="bundle2Products1" elementType="Argument">
+              <stringProp name="Argument.name">bundle2Products1</stringProp>
               <stringProp name="Argument.value">perfb2pe2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="multiProduct5" elementType="Argument">
-              <stringProp name="Argument.name">multiProduct5</stringProp>
+            <elementProp name="bundle2Products2" elementType="Argument">
+              <stringProp name="Argument.name">bundle2Products2</stringProp>
               <stringProp name="Argument.value">perfb2pe1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
@@ -694,6 +694,222 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - Bundle Details" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="bundleCount" elementType="Argument">
+              <stringProp name="Argument.name">bundleCount</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle-code1" elementType="Argument">
+              <stringProp name="Argument.name">bundle-code1</stringProp>
+              <stringProp name="Argument.value">perf_bundle_1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle-code2" elementType="Argument">
+              <stringProp name="Argument.name">bundle-code2</stringProp>
+              <stringProp name="Argument.value">perf_bundle_2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle-code3" elementType="Argument">
+              <stringProp name="Argument.name">bundle-code3</stringProp>
+              <stringProp name="Argument.value">perf_bundle_3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle-code4" elementType="Argument">
+              <stringProp name="Argument.name">bundle-code4</stringProp>
+              <stringProp name="Argument.value">perf_bundle_4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle1Products1" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products1</stringProp>
+              <stringProp name="Argument.value">perfb1pe1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle1Products2" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products2</stringProp>
+              <stringProp name="Argument.value">perfb1pe2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle1Products3" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products3</stringProp>
+              <stringProp name="Argument.value">perfb1test</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle1Products4" elementType="Argument">
+              <stringProp name="Argument.name">bundle1Products4</stringProp>
+              <stringProp name="Argument.value">perfb1rb</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle2Products1" elementType="Argument">
+              <stringProp name="Argument.name">bundle2Products1</stringProp>
+              <stringProp name="Argument.value">perfb2pe2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle2Products2" elementType="Argument">
+              <stringProp name="Argument.name">bundle2Products2</stringProp>
+              <stringProp name="Argument.value">perfb2pe1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle2Products3" elementType="Argument">
+              <stringProp name="Argument.name">bundle2Products3</stringProp>
+              <stringProp name="Argument.value">perfb2ebook</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle2Products4" elementType="Argument">
+              <stringProp name="Argument.name">bundle2Products4</stringProp>
+              <stringProp name="Argument.value">perfb2rb</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle3Products1" elementType="Argument">
+              <stringProp name="Argument.name">bundle3Products1</stringProp>
+              <stringProp name="Argument.value">perfb3pe1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle3Products2" elementType="Argument">
+              <stringProp name="Argument.name">bundle3Products2</stringProp>
+              <stringProp name="Argument.value">perfb3pe2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle3Products3" elementType="Argument">
+              <stringProp name="Argument.name">bundle3Products3</stringProp>
+              <stringProp name="Argument.value">perfb3test</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle3Products4" elementType="Argument">
+              <stringProp name="Argument.name">bundle3Products4</stringProp>
+              <stringProp name="Argument.value">perfb3rb</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle3Products5" elementType="Argument">
+              <stringProp name="Argument.name">bundle3Products5</stringProp>
+              <stringProp name="Argument.value">perfb3pplus</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle4Products1" elementType="Argument">
+              <stringProp name="Argument.name">bundle4Products1</stringProp>
+              <stringProp name="Argument.value">perfb4pe1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle4Products2" elementType="Argument">
+              <stringProp name="Argument.name">bundle4Products2</stringProp>
+              <stringProp name="Argument.value">perfb4pe2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle4Products3" elementType="Argument">
+              <stringProp name="Argument.name">bundle4Products3</stringProp>
+              <stringProp name="Argument.value">perfb4ebook</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle4Products4" elementType="Argument">
+              <stringProp name="Argument.name">bundle4Products4</stringProp>
+              <stringProp name="Argument.value">perfb4rb</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle4Products5" elementType="Argument">
+              <stringProp name="Argument.name">bundle4Products5</stringProp>
+              <stringProp name="Argument.value">perfb4pplus</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle1ProductCount" elementType="Argument">
+              <stringProp name="Argument.name">bundle1ProductCount</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle2ProductCount" elementType="Argument">
+              <stringProp name="Argument.name">bundle2ProductCount</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle3ProductCount" elementType="Argument">
+              <stringProp name="Argument.name">bundle3ProductCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="bundle4ProductCount" elementType="Argument">
+              <stringProp name="Argument.name">bundle4ProductCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get class id from class code and Associate product with class" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilename" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                <stringProp name="Argument.value">scenario_1006_std_pvt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="orgid" elementType="Argument">
+                <stringProp name="Argument.name">orgid</stringProp>
+                <stringProp name="Argument.value">cup_DAuZNjREhwNF5M6_jXwuh</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="access_token" elementType="Argument">
+                <stringProp name="Argument.name">access_token</stringProp>
+                <stringProp name="Argument.value">06883619-65b6-4bc2-8120-ab1b27843066</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">Teachers1.csv</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">classcode</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Validate classcode" enabled="true">
+            <stringProp name="IncludeController.includepath">validate_classcode.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_m4.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="5-10sec" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">6000</stringProp>
+              <stringProp name="RandomTimer.range">5000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv" enabled="false">
+            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String LineSEPARATOR = &quot;\n&quot;;
+
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="1006_private_students" enabled="false"/>
         <hashTree>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -959,19 +1175,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">5000</stringProp>
-              <stringProp name="RandomTimer.range">5000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">5000</stringProp>
+              <stringProp name="ConstantTimer.delay">20000</stringProp>
               <stringProp name="RandomTimer.range">5000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
@@ -995,19 +1199,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">3000</stringProp>
-              <stringProp name="RandomTimer.range">5000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">3000</stringProp>
+              <stringProp name="ConstantTimer.delay">10000</stringProp>
               <stringProp name="RandomTimer.range">5000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
@@ -1023,20 +1215,8 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">8000</stringProp>
-              <stringProp name="RandomTimer.range">10000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [300-330]" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">8000</stringProp>
-              <stringProp name="RandomTimer.range">10000</stringProp>
+              <stringProp name="ConstantTimer.delay">20000</stringProp>
+              <stringProp name="RandomTimer.range">30000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
@@ -1059,18 +1239,6 @@ vars.put(&quot;assignedPathList&quot;, apList);
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">8000</stringProp>
-                <stringProp name="RandomTimer.range">5000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
             <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -1446,7 +1614,7 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="T1-C1-P1" enabled="false">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="T1-C1-P1" enabled="true">
           <stringProp name="TestPlan.comments">Set number of thread count as 6</stringProp>
         </GenericController>
         <hashTree>
@@ -2020,18 +2188,6 @@ vars.put(&quot;classname2&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space_teacher2" enabled="false">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">6000</stringProp>
-              <stringProp name="RandomTimer.range">4000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces_teacher2" enabled="true">
             <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces_teacher2.jmx</stringProp>
           </IncludeController>
@@ -2044,35 +2200,22 @@ vars.put(&quot;classname2&quot;, classname);</stringProp>
             <stringProp name="IncludeController.includepath">create_new_instructor_led_class_teacher2.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class_teacher2" enabled="false">
-            <stringProp name="IncludeController.includepath">associate_a_product_with_class2_teacher2.jmx</stringProp>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">6000</stringProp>
+              <stringProp name="RandomTimer.range">6000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate m1 product with a class_teacher2" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_c2m1.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-            <stringProp name="ForeachController.inputVal">multiProduct</stringProp>
-            <stringProp name="ForeachController.returnVal">multiProduct</stringProp>
-            <boolProp name="ForeachController.useSeparator">false</boolProp>
-            <stringProp name="ForeachController.startIndex">0</stringProp>
-            <stringProp name="ForeachController.endIndex">10</stringProp>
-          </ForeachController>
-          <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class_teacher2" enabled="true">
-              <stringProp name="IncludeController.includepath">associate_a_product_with_class_MultiProduct_teacher2.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">10000</stringProp>
-                <stringProp name="RandomTimer.range">5000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-          </hashTree>
           <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
@@ -2085,27 +2228,35 @@ vars.put(&quot;classname2&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="false">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class_teacher2" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class2_teacher2.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">6000</stringProp>
-              <stringProp name="RandomTimer.range">6000</stringProp>
+              <stringProp name="ConstantTimer.delay">9000</stringProp>
+              <stringProp name="RandomTimer.range">7000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="false">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate m2 product with a class_teacher2" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_c2m2.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">6000</stringProp>
-              <stringProp name="RandomTimer.range">4000</stringProp>
+              <stringProp name="ConstantTimer.delay">9000</stringProp>
+              <stringProp name="RandomTimer.range">7000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
@@ -2177,18 +2328,6 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class_teacher2" enabled="false">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">9000</stringProp>
-              <stringProp name="RandomTimer.range">7000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Samplerteacher" enabled="true">
             <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;date&quot;) + &quot;5teachers.csv&quot;, true);
 String SEPARATOR = &quot;,&quot;;
@@ -2208,30 +2347,6 @@ out.close();
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">9000</stringProp>
-              <stringProp name="RandomTimer.range">7000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class" enabled="false">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">9000</stringProp>
-              <stringProp name="RandomTimer.range">7000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 20 students and join using classcode of current teacher" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
             <stringProp name="LoopController.loops">20</stringProp>
@@ -2453,35 +2568,22 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <stringProp name="IncludeController.includepath">create_new_instructor_led_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="false">
-            <stringProp name="IncludeController.includepath">associate_a_product_with_class2.jmx</stringProp>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">6000</stringProp>
+              <stringProp name="RandomTimer.range">6000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate P1 with the class" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-            <stringProp name="ForeachController.inputVal">multiProduct</stringProp>
-            <stringProp name="ForeachController.returnVal">multiProduct</stringProp>
-            <boolProp name="ForeachController.useSeparator">false</boolProp>
-            <stringProp name="ForeachController.startIndex">0</stringProp>
-            <stringProp name="ForeachController.endIndex">10</stringProp>
-          </ForeachController>
-          <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class_teacher2" enabled="true">
-              <stringProp name="IncludeController.includepath">associate_a_product_with_class_MultiProduct.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">10000</stringProp>
-                <stringProp name="RandomTimer.range">5000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-          </hashTree>
           <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
@@ -2494,6 +2596,10 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate M1 with class" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_m1.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
           <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
@@ -2506,6 +2612,10 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate M2 with class" enabled="true">
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_m2.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
           <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
@@ -3075,13 +3185,13 @@ out.close();</stringProp>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">create20Std.csv</stringProp>
+            <stringProp name="filename">D:\Office\Cup\GITRepos\performance-testdata\Teachers1.csv</stringProp>
             <boolProp name="ignoreFirstLine">false</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
             <boolProp name="stopThread">false</boolProp>
-            <stringProp name="variableNames">teacherextuserid,classtitle,classcode</stringProp>
+            <stringProp name="variableNames">teacherextuserid,b,classtitle,classcode</stringProp>
           </CSVDataSet>
           <hashTree/>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3094,7 +3204,23 @@ out.close();</stringProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_name" enabled="true">
+            <stringProp name="BeanShellSampler.query">import java.util.Date;
+
+Date date = new Date();
+prefix2 = date.getTime();
+prefix3 = ctx.getThread().getThreadNum() + 1;
+
+studentextuserid = &quot;std&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
+
+vars.put(&quot;studentextuserid&quot;, studentextuserid);
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
             <stringProp name="BeanShellSampler.query">
 System.out.println(vars.get(&quot;studentextuserid&quot;));
 System.out.println(vars.get(&quot;classcode&quot;));</stringProp>
@@ -3103,11 +3229,11 @@ System.out.println(vars.get(&quot;classcode&quot;));</stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with product_code and class_code" enabled="false">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with product_code and class_code" enabled="true">
             <stringProp name="IncludeController.includepath">Join_Spaces_with_product_code_and_class_code.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_output_csv_creation" enabled="false">
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_output_csv_creation" enabled="true">
             <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
@@ -3124,87 +3250,6 @@ out.close();
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-20]" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">12000</stringProp>
-              <stringProp name="RandomTimer.range">8000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 20 students and join using classcode of current teacher" enabled="true">
-            <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">20</stringProp>
-          </LoopController>
-          <hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_name" enabled="true">
-              <stringProp name="BeanShellSampler.query">import java.util.Date;
-
-Date date = new Date();
-prefix2 = date.getTime();
-prefix3 = ctx.getThread().getThreadNum() + 1;
-
-studentextuserid = &quot;std&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
-
-vars.put(&quot;studentextuserid&quot;, studentextuserid);
-</stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-20]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">15000</stringProp>
-                <stringProp name="RandomTimer.range">10000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with product_code and class_code" enabled="true">
-              <stringProp name="IncludeController.includepath">join_Spaces_with_product_code_and_class_code.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-20]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">2000</stringProp>
-                <stringProp name="RandomTimer.range">1000</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-              <stringProp name="BeanShellSampler.query">timestamp = vars.get(&quot;date&quot;);
-
-FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
-String SEPARATOR = &quot;,&quot;;
-String LineSEPARATOR = &quot;\n&quot;;
-out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
-out.write(SEPARATOR.getBytes());
-out.write(vars.get(&quot;classcode&quot;).getBytes());
-out.write(LineSEPARATOR.getBytes());
-
-out.flush();
-out.close();
-</stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
-          </hashTree>
           <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
             <boolProp name="displayJMeterProperties">false</boolProp>
             <boolProp name="displayJMeterVariables">true</boolProp>
