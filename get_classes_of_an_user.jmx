@@ -59,7 +59,7 @@
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Class Id" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">classid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].uuid </stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].uuid</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">CLASSID_NOT_FOUND</stringProp>
           </JSONPostProcessor>
@@ -71,10 +71,10 @@
             <stringProp name="JSONPostProcessor.defaultValues">CLASS_CODE_NOT_FOUND</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
             <stringProp name="JSON_PATH">$.entities[0].uuid </stringProp>
-            <stringProp name="EXPECTED_VALUE">${classid}</stringProp>
-            <boolProp name="JSONVALIDATION">true</boolProp>
+            <stringProp name="EXPECTED_VALUE"></stringProp>
+            <boolProp name="JSONVALIDATION">false</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">false</boolProp>

@@ -26,11 +26,11 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${analytics_url}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/${orgid}/user/product/progress/state?userid=${userid}&amp;productcode=${productcode}&amp;classid=${classid}</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state?userid=${userid}&amp;productcode=${productcode}&amp;classid=${classid}</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>

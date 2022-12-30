@@ -66,7 +66,7 @@
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Class ID" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">classid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.uuid</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.classid</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
             <stringProp name="Scope.variable"></stringProp>

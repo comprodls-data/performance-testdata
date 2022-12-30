@@ -1,0 +1,1005 @@
+2022-12-30 17:57:13,895 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2022-12-30 17:57:14,002 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2022-12-30 17:57:14,018 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2022-12-30 17:57:14,027 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: Version 4.0 r1823414
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: java.version=1.8.0_201
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: os.name=Windows 10
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: os.arch=amd64
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: os.version=10.0
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: file.encoding=Cp1252
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: Max memory     =4294967296
+2022-12-30 17:57:14,028 INFO o.a.j.JMeter: Available Processors =8
+2022-12-30 17:57:14,036 INFO o.a.j.JMeter: Default Locale=English (EN)
+2022-12-30 17:57:14,036 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2022-12-30 17:57:14,036 INFO o.a.j.JMeter: JMeterHome=D:\CUP\Latest_TestDataCreation
+2022-12-30 17:57:14,037 INFO o.a.j.JMeter: user.dir  =D:\CUP\Latest_TestDataCreation\bin
+2022-12-30 17:57:14,037 INFO o.a.j.JMeter: PWD       =D:\CUP\Latest_TestDataCreation\bin
+2022-12-30 17:57:14,038 INFO o.a.j.JMeter: IP: 192.168.1.16 Name: LAPTOP-047NH8AP FullName: LAPTOP-047NH8AP
+2022-12-30 17:57:15,434 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2022-12-30 17:57:15,726 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: javax.swing.plaf.nimbus.NimbusLookAndFeel [Darcula]
+2022-12-30 17:57:15,726 INFO o.a.j.JMeter: Setting LAF to: javax.swing.plaf.nimbus.NimbusLookAndFeel
+2022-12-30 17:57:15,836 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-12-30 17:57:19,211 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2022-12-30 17:57:19,211 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2022-12-30 17:57:30,349 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-30 17:57:30,350 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-30 17:57:30,351 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-30 17:57:30,351 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-12-30 17:57:30,351 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-12-30 17:57:30,351 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-12-30 17:57:33,975 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2022-12-30 17:57:33,976 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\CUP\Latest_TestDataCreation\bin\proxyserver.jks
+2022-12-30 17:57:34,429 INFO o.a.j.s.FileServer: Default base='D:\CUP\Latest_TestDataCreation\bin'
+2022-12-30 17:57:36,291 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-12-30 17:57:36,291 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-12-30 17:57:36,291 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-12-30 17:57:36,292 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-12-30 18:00:17,672 INFO o.a.j.g.a.Load: Loading file: D:\CUP\Latest_TestDataCreation\bin\data_creation.jmx
+2022-12-30 18:00:17,673 INFO o.a.j.s.FileServer: Set new base='D:\CUP\Latest_TestDataCreation\bin'
+2022-12-30 18:00:18,089 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-12-30 18:00:18,270 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-12-30 18:00:18,271 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2022-12-30 18:00:18,274 INFO o.a.j.s.SaveService: Loading file: D:\CUP\Latest_TestDataCreation\bin\data_creation.jmx
+2022-12-30 18:00:20,326 INFO o.a.j.s.FileServer: Set new base='D:\CUP\Latest_TestDataCreation\bin'
+2022-12-30 18:00:20,570 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_temp.jmx
+2022-12-30 18:00:20,609 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_temp.jmx
+2022-12-30 18:00:20,728 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:20,728 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:20,848 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:20,848 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:20,916 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:20,916 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:20,961 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:20,961 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:20,968 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1003-Student_logs_in_and_accesses_the_dashboard_ebook.jmx
+2022-12-30 18:00:20,969 INFO o.a.j.s.SaveService: Loading file: 1003-Student_logs_in_and_accesses_the_dashboard_ebook.jmx
+2022-12-30 18:00:21,014 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:21,081 INFO o.a.j.s.SaveService: Loading file: 1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:21,198 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,199 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,266 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,266 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,269 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,270 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,272 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,273 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,276 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,276 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,279 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,279 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,282 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,283 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:21,305 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,382 INFO o.a.j.s.SaveService: Loading file: join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,415 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,437 INFO o.a.j.s.SaveService: Loading file: get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,472 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,473 INFO o.a.j.s.SaveService: Loading file: get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,488 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,512 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,556 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,557 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,586 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:21,587 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:21,644 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,644 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,646 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,646 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,648 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,648 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,650 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,651 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,653 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,654 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,656 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:21,656 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:21,735 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,735 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,737 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,737 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,739 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,740 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,741 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,741 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,751 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,751 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,763 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_product_code_and_class_code_private.jmx
+2022-12-30 18:00:21,763 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_product_code_and_class_code_private.jmx
+2022-12-30 18:00:21,768 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,768 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,788 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,789 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,790 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,791 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,792 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,793 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,823 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code_teacher2.jmx
+2022-12-30 18:00:21,824 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code_teacher2.jmx
+2022-12-30 18:00:21,861 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces_teacher2.jmx
+2022-12-30 18:00:21,861 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces_teacher2.jmx
+2022-12-30 18:00:21,894 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_teacher2.jmx
+2022-12-30 18:00:21,895 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_teacher2.jmx
+2022-12-30 18:00:21,909 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class_teacher2.jmx
+2022-12-30 18:00:21,910 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class_teacher2.jmx
+2022-12-30 18:00:21,923 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2_teacher2.jmx
+2022-12-30 18:00:21,923 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2_teacher2.jmx
+2022-12-30 18:00:21,948 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,948 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:21,950 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,950 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:21,951 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,951 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:21,952 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,952 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:21,960 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,960 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:21,967 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:21,968 INFO o.a.j.s.SaveService: Loading file: Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:21,969 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_existing_students_from_teacher2.jmx
+2022-12-30 18:00:21,970 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_existing_students_from_teacher2.jmx
+2022-12-30 18:00:21,984 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid_existing_student.jmx
+2022-12-30 18:00:21,985 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid_existing_student.jmx
+2022-12-30 18:00:22,039 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,039 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,040 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,040 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,041 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,042 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,043 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,043 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,045 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,045 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,054 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_new_students.jmx
+2022-12-30 18:00:22,054 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_new_students.jmx
+2022-12-30 18:00:22,067 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:22,067 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:22,102 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,102 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,103 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,103 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,104 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,104 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,105 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,105 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,112 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,113 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,119 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code_invitation.jmx
+2022-12-30 18:00:22,120 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code_invitation.jmx
+2022-12-30 18:00:22,133 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces_invitation.jmx
+2022-12-30 18:00:22,133 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces_invitation.jmx
+2022-12-30 18:00:22,146 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_invitation.jmx
+2022-12-30 18:00:22,147 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_invitation.jmx
+2022-12-30 18:00:22,160 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_existing_teacher.jmx
+2022-12-30 18:00:22,160 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_existing_teacher.jmx
+2022-12-30 18:00:22,173 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid_existing_teacher.jmx
+2022-12-30 18:00:22,173 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid_existing_teacher.jmx
+2022-12-30 18:00:22,209 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,209 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,209 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,209 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,210 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,210 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,211 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,211 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,213 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,213 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,220 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_new_teacher.jmx
+2022-12-30 18:00:22,221 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_new_teacher.jmx
+2022-12-30 18:00:22,234 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:22,234 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:22,254 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:22,254 INFO o.a.j.s.SaveService: Loading file: Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:22,261 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:22,262 INFO o.a.j.s.SaveService: Loading file: 1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:22,277 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:22,278 INFO o.a.j.s.SaveService: Loading file: 1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:22,291 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements.jmx
+2022-12-30 18:00:22,291 INFO o.a.j.s.SaveService: Loading file: Add_statements.jmx
+2022-12-30 18:00:22,305 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:22,306 INFO o.a.j.s.SaveService: Loading file: 1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:22,306 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:22,307 INFO o.a.j.s.SaveService: Loading file: 1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:22,307 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_pskill.jmx
+2022-12-30 18:00:22,308 INFO o.a.j.s.SaveService: Loading file: Add_statements_pskill.jmx
+2022-12-30 18:00:22,356 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Pskill_Item_progress_analytic_progress_true.jmx
+2022-12-30 18:00:22,358 INFO o.a.j.s.SaveService: Loading file: Pskill_Item_progress_analytic_progress_true.jmx
+2022-12-30 18:00:22,370 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,371 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,372 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:22,372 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:22,373 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:22,373 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:22,380 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,380 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,381 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:22,382 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:22,383 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:22,383 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:22,384 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Teacher.jmx
+2022-12-30 18:00:22,384 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Teacher.jmx
+2022-12-30 18:00:22,454 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:22,454 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:22,463 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:22,463 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:22,481 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,481 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,482 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,483 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,483 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,484 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,484 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,485 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,486 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,486 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:22,487 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:22,487 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:22,519 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,520 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:22,521 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,521 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:22,522 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,523 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:22,524 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,524 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:22,525 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:22,526 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:22,638 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:22,638 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:22,758 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:22,759 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:22,829 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:22,829 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:22,887 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:22,888 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:22,952 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:22,952 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:23,009 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:23,009 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:23,010 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:23,010 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:23,011 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,011 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,012 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:23,012 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:23,020 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:23,021 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:23,022 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:23,022 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:23,029 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:23,029 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:23,041 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:23,041 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:23,042 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:23,042 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:23,043 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:23,043 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:23,050 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:23,050 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:23,068 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,068 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,081 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,082 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,106 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,106 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,130 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:23,130 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:23,134 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,135 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,135 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,136 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,136 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,137 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,149 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:23,149 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:23,153 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,154 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,155 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,155 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,157 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,157 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,170 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:23,170 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:23,176 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,177 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,178 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,178 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:23,179 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,179 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,192 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,192 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,193 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:23,213 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:23,260 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:23,260 INFO o.a.j.s.SaveService: Loading file: Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:23,274 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,275 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,275 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_group_statements_pskill.jmx
+2022-12-30 18:00:23,276 INFO o.a.j.s.SaveService: Loading file: Add_group_statements_pskill.jmx
+2022-12-30 18:00:23,299 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:23,299 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:23,407 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:23,407 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:23,408 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:23,408 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:23,409 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:23,409 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:23,423 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:23,423 INFO o.a.j.s.SaveService: Loading file: 1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:23,424 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_teacher.jmx
+2022-12-30 18:00:23,425 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_teacher.jmx
+2022-12-30 18:00:23,437 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:23,438 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:23,441 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\class_group_pending_submissions_details_true_1054.jmx
+2022-12-30 18:00:23,442 INFO o.a.j.s.SaveService: Loading file: class_group_pending_submissions_details_true_1054.jmx
+2022-12-30 18:00:23,481 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_memberships_of_a_specific_group.jmx
+2022-12-30 18:00:23,481 INFO o.a.j.s.SaveService: Loading file: Get_all_memberships_of_a_specific_group.jmx
+2022-12-30 18:00:23,503 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_group_record_of_a_class.jmx
+2022-12-30 18:00:23,504 INFO o.a.j.s.SaveService: Loading file: Get_group_record_of_a_class.jmx
+2022-12-30 18:00:23,522 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:23,523 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:23,523 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\add_items_to_showcase_datacreation.jmx
+2022-12-30 18:00:23,524 INFO o.a.j.s.SaveService: Loading file: add_items_to_showcase_datacreation.jmx
+2022-12-30 18:00:23,549 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_showcase_of_a_class.jmx
+2022-12-30 18:00:23,549 INFO o.a.j.s.SaveService: Loading file: get_showcase_of_a_class.jmx
+2022-12-30 18:00:23,572 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces_no_spaces.jmx
+2022-12-30 18:00:23,592 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces_no_spaces.jmx
+2022-12-30 18:00:23,605 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_a_Particular_Bundle_ielts.jmx
+2022-12-30 18:00:23,606 INFO o.a.j.s.SaveService: Loading file: Get_a_Particular_Bundle_ielts.jmx
+2022-12-30 18:00:23,635 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_product_by_product_code_ielts.jmx
+2022-12-30 18:00:23,635 INFO o.a.j.s.SaveService: Loading file: Get_product_by_product_code_ielts.jmx
+2022-12-30 18:00:23,648 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\API_to_grant_authkey_on_refid.jmx
+2022-12-30 18:00:23,649 INFO o.a.j.s.SaveService: Loading file: API_to_grant_authkey_on_refid.jmx
+2022-12-30 18:00:23,661 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_Spaces_with_product_code_and_class_code_private_ielts.jmx
+2022-12-30 18:00:23,662 INFO o.a.j.s.SaveService: Loading file: Join_Spaces_with_product_code_and_class_code_private_ielts.jmx
+2022-12-30 18:00:23,696 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:23,696 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:23,697 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,697 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,697 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_ielts_statements_launched.jmx
+2022-12-30 18:00:23,698 INFO o.a.j.s.SaveService: Loading file: Add_ielts_statements_launched.jmx
+2022-12-30 18:00:23,716 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\invoke.jmx
+2022-12-30 18:00:23,717 INFO o.a.j.s.SaveService: Loading file: invoke.jmx
+2022-12-30 18:00:23,746 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\oidc.jmx
+2022-12-30 18:00:23,746 INFO o.a.j.s.SaveService: Loading file: oidc.jmx
+2022-12-30 18:00:23,761 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\keyset.jmx
+2022-12-30 18:00:23,761 INFO o.a.j.s.SaveService: Loading file: keyset.jmx
+2022-12-30 18:00:23,776 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_a_space_with_space_code.jmx
+2022-12-30 18:00:23,776 INFO o.a.j.s.SaveService: Loading file: join_a_space_with_space_code.jmx
+2022-12-30 18:00:23,777 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_all_the_User_Spaces.jmx
+2022-12-30 18:00:23,777 INFO o.a.j.s.SaveService: Loading file: get_all_the_User_Spaces.jmx
+2022-12-30 18:00:23,778 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,778 INFO o.a.j.s.SaveService: Loading file: get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,779 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:23,780 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:23,786 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:23,786 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:23,793 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_product_code_and_class_code_ebook.jmx
+2022-12-30 18:00:23,793 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_product_code_and_class_code_ebook.jmx
+2022-12-30 18:00:23,833 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:23,833 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:23,834 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct2_and_class_code.jmx
+2022-12-30 18:00:23,834 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct2_and_class_code.jmx
+2022-12-30 18:00:23,852 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,853 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,854 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:23,854 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:23,855 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:23,855 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:23,860 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,860 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:23,861 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:23,861 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:23,862 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,862 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:23,869 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,869 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,870 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:23,870 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:23,871 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:23,872 INFO o.a.j.s.SaveService: Loading file: Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:23,873 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,873 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,874 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_group_statements_pskill.jmx
+2022-12-30 18:00:23,874 INFO o.a.j.s.SaveService: Loading file: Add_group_statements_pskill.jmx
+2022-12-30 18:00:23,875 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:23,875 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:23,931 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,931 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,932 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:23,932 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:23,933 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_memberships_of_the_specific_group_1056.jmx
+2022-12-30 18:00:23,933 INFO o.a.j.s.SaveService: Loading file: Get_all_the_memberships_of_the_specific_group_1056.jmx
+2022-12-30 18:00:23,947 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,947 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:23,948 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_group_statements_pskill.jmx
+2022-12-30 18:00:23,948 INFO o.a.j.s.SaveService: Loading file: Add_group_statements_pskill.jmx
+2022-12-30 18:00:23,949 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:23,949 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:23,950 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\class_group_pending_submissions.jmx
+2022-12-30 18:00:23,950 INFO o.a.j.s.SaveService: Loading file: class_group_pending_submissions.jmx
+2022-12-30 18:00:23,963 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Product_items_and_their_progress_analytic_default_Group_True.jmx
+2022-12-30 18:00:23,963 INFO o.a.j.s.SaveService: Loading file: Product_items_and_their_progress_analytic_default_Group_True.jmx
+2022-12-30 18:00:23,976 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\teacher_view_student_pskill_Item_progress_analytics.jmx
+2022-12-30 18:00:23,976 INFO o.a.j.s.SaveService: Loading file: teacher_view_student_pskill_Item_progress_analytics.jmx
+2022-12-30 18:00:24,007 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp2_evaluated.jmx
+2022-12-30 18:00:24,008 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp2_evaluated.jmx
+2022-12-30 18:00:24,048 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_gp2_statements_pskill_evaluated.jmx
+2022-12-30 18:00:24,048 INFO o.a.j.s.SaveService: Loading file: Add_gp2_statements_pskill_evaluated.jmx
+2022-12-30 18:00:24,061 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_gp2_statements_pskill_redo.jmx
+2022-12-30 18:00:24,061 INFO o.a.j.s.SaveService: Loading file: Add_gp2_statements_pskill_redo.jmx
+2022-12-30 18:00:24,075 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Deletes_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:24,075 INFO o.a.j.s.SaveService: Loading file: Deletes_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:24,107 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,107 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,108 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,108 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,109 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,109 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,110 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,110 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,112 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:24,112 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:24,181 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:24,181 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:24,222 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:24,223 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:24,240 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:24,240 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:24,241 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:24,241 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:24,242 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:24,242 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:24,250 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:24,250 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:24,254 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,254 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,255 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,255 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,256 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,256 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,265 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:24,266 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:24,271 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,271 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,274 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,274 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,275 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,276 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,283 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:24,283 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:24,288 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,288 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,289 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,289 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,290 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,290 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,296 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:24,297 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:24,301 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,301 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:24,302 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,302 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:24,303 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,303 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:24,320 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,320 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,321 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,321 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,322 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,322 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,323 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:24,323 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:24,324 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:24,324 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:24,325 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,325 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,325 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:24,326 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:24,326 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:24,326 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:24,327 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:24,327 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:24,344 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,344 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,345 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:24,345 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:24,346 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_members_of_the_group.jmx
+2022-12-30 18:00:24,346 INFO o.a.j.s.SaveService: Loading file: Get_all_members_of_the_group.jmx
+2022-12-30 18:00:24,391 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_groups_by_path_LM.jmx
+2022-12-30 18:00:24,391 INFO o.a.j.s.SaveService: Loading file: Get_all_the_groups_by_path_LM.jmx
+2022-12-30 18:00:24,465 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,465 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,465 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,465 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,467 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,467 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,467 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,467 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,468 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,469 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,469 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:24,469 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:24,487 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:24,487 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:24,651 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_temp.jmx
+2022-12-30 18:00:24,651 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_temp.jmx
+2022-12-30 18:00:24,652 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:24,652 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:24,653 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:24,653 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:24,654 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:24,654 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:24,655 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:24,655 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:24,662 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1003-Student_logs_in_and_accesses_the_dashboard_ebook.jmx
+2022-12-30 18:00:24,662 INFO o.a.j.s.SaveService: Loading file: 1003-Student_logs_in_and_accesses_the_dashboard_ebook.jmx
+2022-12-30 18:00:24,663 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:24,664 INFO o.a.j.s.SaveService: Loading file: 1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:24,665 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,665 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,667 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,667 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,668 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,668 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,669 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,669 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,669 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,670 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,670 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,670 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,671 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,671 INFO o.a.j.s.SaveService: Loading file: Add_statements_drawing_50kB.jmx
+2022-12-30 18:00:24,684 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,685 INFO o.a.j.s.SaveService: Loading file: join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,686 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,686 INFO o.a.j.s.SaveService: Loading file: get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,687 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,687 INFO o.a.j.s.SaveService: Loading file: get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,688 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,688 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,696 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,696 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,703 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:24,703 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:24,723 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,723 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,724 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,724 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,725 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,725 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,726 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,726 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,727 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,727 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,728 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:24,728 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:24,757 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,757 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,758 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,759 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,759 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,760 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,760 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,761 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,767 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,767 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,776 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_product_code_and_class_code_private.jmx
+2022-12-30 18:00:24,776 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_product_code_and_class_code_private.jmx
+2022-12-30 18:00:24,777 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,777 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,796 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,796 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,798 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,798 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,799 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,799 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,827 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code_teacher2.jmx
+2022-12-30 18:00:24,828 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code_teacher2.jmx
+2022-12-30 18:00:24,829 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces_teacher2.jmx
+2022-12-30 18:00:24,829 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces_teacher2.jmx
+2022-12-30 18:00:24,830 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_teacher2.jmx
+2022-12-30 18:00:24,830 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_teacher2.jmx
+2022-12-30 18:00:24,831 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class_teacher2.jmx
+2022-12-30 18:00:24,831 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class_teacher2.jmx
+2022-12-30 18:00:24,833 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2_teacher2.jmx
+2022-12-30 18:00:24,833 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2_teacher2.jmx
+2022-12-30 18:00:24,845 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,845 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,846 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,846 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,847 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,847 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,848 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,848 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,855 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,855 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,861 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:24,861 INFO o.a.j.s.SaveService: Loading file: Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:24,862 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_existing_students_from_teacher2.jmx
+2022-12-30 18:00:24,862 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_existing_students_from_teacher2.jmx
+2022-12-30 18:00:24,863 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid_existing_student.jmx
+2022-12-30 18:00:24,863 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid_existing_student.jmx
+2022-12-30 18:00:24,886 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,886 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,887 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,887 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,888 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,888 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,888 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,888 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,889 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,889 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,895 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_new_students.jmx
+2022-12-30 18:00:24,896 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_new_students.jmx
+2022-12-30 18:00:24,897 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:24,897 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:24,915 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,915 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,916 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,916 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,917 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,917 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,917 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,917 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,924 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,924 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,930 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code_invitation.jmx
+2022-12-30 18:00:24,931 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code_invitation.jmx
+2022-12-30 18:00:24,932 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces_invitation.jmx
+2022-12-30 18:00:24,932 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces_invitation.jmx
+2022-12-30 18:00:24,932 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_invitation.jmx
+2022-12-30 18:00:24,932 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_invitation.jmx
+2022-12-30 18:00:24,933 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_existing_teacher.jmx
+2022-12-30 18:00:24,933 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_existing_teacher.jmx
+2022-12-30 18:00:24,934 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid_existing_teacher.jmx
+2022-12-30 18:00:24,934 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid_existing_teacher.jmx
+2022-12-30 18:00:24,956 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,956 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:24,957 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,957 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:24,958 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,958 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:24,958 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,958 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:24,959 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,959 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:24,965 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\send_invitation_to_new_teacher.jmx
+2022-12-30 18:00:24,965 INFO o.a.j.s.SaveService: Loading file: send_invitation_to_new_teacher.jmx
+2022-12-30 18:00:24,966 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:24,966 INFO o.a.j.s.SaveService: Loading file: Get_multiple_invitations_by_contextid.jmx
+2022-12-30 18:00:24,986 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:24,986 INFO o.a.j.s.SaveService: Loading file: Join_Spaces_with_product_code_and_class_code.jmx
+2022-12-30 18:00:24,996 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:24,996 INFO o.a.j.s.SaveService: Loading file: 1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:24,997 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:24,997 INFO o.a.j.s.SaveService: Loading file: 1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:24,997 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements.jmx
+2022-12-30 18:00:24,997 INFO o.a.j.s.SaveService: Loading file: Add_statements.jmx
+2022-12-30 18:00:24,998 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:24,998 INFO o.a.j.s.SaveService: Loading file: 1003-Student_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:24,999 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:24,999 INFO o.a.j.s.SaveService: Loading file: 1009-Student_accesses_the_learning_path_of_a_product_as_part_of_a_teacher-led_class.jmx
+2022-12-30 18:00:24,999 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_statements_pskill.jmx
+2022-12-30 18:00:24,999 INFO o.a.j.s.SaveService: Loading file: Add_statements_pskill.jmx
+2022-12-30 18:00:25,000 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Pskill_Item_progress_analytic_progress_true.jmx
+2022-12-30 18:00:25,000 INFO o.a.j.s.SaveService: Loading file: Pskill_Item_progress_analytic_progress_true.jmx
+2022-12-30 18:00:25,001 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,001 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,002 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:25,002 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class_All_Details.jmx
+2022-12-30 18:00:25,003 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,003 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,010 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,010 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,011 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,011 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,012 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:25,012 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:25,012 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Teacher.jmx
+2022-12-30 18:00:25,013 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Teacher.jmx
+2022-12-30 18:00:25,018 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:25,018 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user_All_Details.jmx
+2022-12-30 18:00:25,025 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,026 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,042 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,043 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,043 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,043 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,044 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,044 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,045 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,045 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,046 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:25,046 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:25,046 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:25,046 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:25,074 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,074 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,075 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,075 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,076 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,076 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,077 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,077 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,078 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,078 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,079 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,079 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,087 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:25,087 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:25,099 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,099 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,100 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,100 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,101 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,101 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,126 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,126 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,127 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,127 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,128 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,128 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,128 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,128 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,136 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,136 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,137 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,137 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,144 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:25,144 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:25,156 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,156 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,157 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,157 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,158 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,158 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,164 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,164 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,169 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,169 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,170 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,170 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,171 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,171 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,183 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,183 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,188 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,188 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,189 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,189 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,190 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,190 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,202 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,202 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,207 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,208 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,208 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,209 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,209 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,209 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,221 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,221 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,226 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,226 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,227 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,227 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,228 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,228 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,242 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,242 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,243 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:25,243 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:25,244 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:25,244 INFO o.a.j.s.SaveService: Loading file: Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:25,245 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,245 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,245 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_group_statements_pskill.jmx
+2022-12-30 18:00:25,245 INFO o.a.j.s.SaveService: Loading file: Add_group_statements_pskill.jmx
+2022-12-30 18:00:25,246 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:25,246 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:25,260 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,260 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,260 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,261 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,261 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,261 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,273 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:25,273 INFO o.a.j.s.SaveService: Loading file: 1014-Teacher_logs_in_and_accesses_the_dashboard.jmx
+2022-12-30 18:00:25,274 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_teacher.jmx
+2022-12-30 18:00:25,274 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_teacher.jmx
+2022-12-30 18:00:25,275 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:25,275 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:25,276 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\class_group_pending_submissions_details_true_1054.jmx
+2022-12-30 18:00:25,276 INFO o.a.j.s.SaveService: Loading file: class_group_pending_submissions_details_true_1054.jmx
+2022-12-30 18:00:25,277 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_memberships_of_a_specific_group.jmx
+2022-12-30 18:00:25,278 INFO o.a.j.s.SaveService: Loading file: Get_all_memberships_of_a_specific_group.jmx
+2022-12-30 18:00:25,279 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_group_record_of_a_class.jmx
+2022-12-30 18:00:25,279 INFO o.a.j.s.SaveService: Loading file: Get_group_record_of_a_class.jmx
+2022-12-30 18:00:25,280 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:25,280 INFO o.a.j.s.SaveService: Loading file: Get_details_for_a_specific_class.jmx
+2022-12-30 18:00:25,280 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\add_items_to_showcase_datacreation.jmx
+2022-12-30 18:00:25,281 INFO o.a.j.s.SaveService: Loading file: add_items_to_showcase_datacreation.jmx
+2022-12-30 18:00:25,281 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_showcase_of_a_class.jmx
+2022-12-30 18:00:25,282 INFO o.a.j.s.SaveService: Loading file: get_showcase_of_a_class.jmx
+2022-12-30 18:00:25,282 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces_no_spaces.jmx
+2022-12-30 18:00:25,282 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces_no_spaces.jmx
+2022-12-30 18:00:25,283 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_a_Particular_Bundle_ielts.jmx
+2022-12-30 18:00:25,283 INFO o.a.j.s.SaveService: Loading file: Get_a_Particular_Bundle_ielts.jmx
+2022-12-30 18:00:25,284 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_product_by_product_code_ielts.jmx
+2022-12-30 18:00:25,284 INFO o.a.j.s.SaveService: Loading file: Get_product_by_product_code_ielts.jmx
+2022-12-30 18:00:25,284 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\API_to_grant_authkey_on_refid.jmx
+2022-12-30 18:00:25,284 INFO o.a.j.s.SaveService: Loading file: API_to_grant_authkey_on_refid.jmx
+2022-12-30 18:00:25,285 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_Spaces_with_product_code_and_class_code_private_ielts.jmx
+2022-12-30 18:00:25,285 INFO o.a.j.s.SaveService: Loading file: Join_Spaces_with_product_code_and_class_code_private_ielts.jmx
+2022-12-30 18:00:25,286 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,286 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,286 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,286 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,287 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_ielts_statements_launched.jmx
+2022-12-30 18:00:25,287 INFO o.a.j.s.SaveService: Loading file: Add_ielts_statements_launched.jmx
+2022-12-30 18:00:25,288 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\invoke.jmx
+2022-12-30 18:00:25,288 INFO o.a.j.s.SaveService: Loading file: invoke.jmx
+2022-12-30 18:00:25,289 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\oidc.jmx
+2022-12-30 18:00:25,290 INFO o.a.j.s.SaveService: Loading file: oidc.jmx
+2022-12-30 18:00:25,291 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\keyset.jmx
+2022-12-30 18:00:25,291 INFO o.a.j.s.SaveService: Loading file: keyset.jmx
+2022-12-30 18:00:25,303 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,303 INFO o.a.j.s.SaveService: Loading file: join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,304 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,304 INFO o.a.j.s.SaveService: Loading file: get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,305 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,305 INFO o.a.j.s.SaveService: Loading file: get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,306 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,306 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,314 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:25,314 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:25,320 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_product_code_and_class_code_ebook.jmx
+2022-12-30 18:00:25,320 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_product_code_and_class_code_ebook.jmx
+2022-12-30 18:00:25,338 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,338 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,339 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct2_and_class_code.jmx
+2022-12-30 18:00:25,339 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct2_and_class_code.jmx
+2022-12-30 18:00:25,346 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,346 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,347 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:25,347 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:25,348 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,348 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,352 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,352 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,353 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,353 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user.jmx
+2022-12-30 18:00:25,354 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,354 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,360 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,360 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,361 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:25,361 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:25,362 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:25,362 INFO o.a.j.s.SaveService: Loading file: Get_all_the_memberships_of_the_specific_group.jmx
+2022-12-30 18:00:25,363 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,363 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,363 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_group_statements_pskill.jmx
+2022-12-30 18:00:25,363 INFO o.a.j.s.SaveService: Loading file: Add_group_statements_pskill.jmx
+2022-12-30 18:00:25,364 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:25,364 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:25,373 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,374 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,375 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:25,375 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:25,376 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_memberships_of_the_specific_group_1056.jmx
+2022-12-30 18:00:25,376 INFO o.a.j.s.SaveService: Loading file: Get_all_the_memberships_of_the_specific_group_1056.jmx
+2022-12-30 18:00:25,377 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,378 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,379 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_group_statements_pskill.jmx
+2022-12-30 18:00:25,379 INFO o.a.j.s.SaveService: Loading file: Add_group_statements_pskill.jmx
+2022-12-30 18:00:25,380 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:25,380 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp1.jmx
+2022-12-30 18:00:25,381 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\class_group_pending_submissions.jmx
+2022-12-30 18:00:25,381 INFO o.a.j.s.SaveService: Loading file: class_group_pending_submissions.jmx
+2022-12-30 18:00:25,382 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Product_items_and_their_progress_analytic_default_Group_True.jmx
+2022-12-30 18:00:25,382 INFO o.a.j.s.SaveService: Loading file: Product_items_and_their_progress_analytic_default_Group_True.jmx
+2022-12-30 18:00:25,383 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\teacher_view_student_pskill_Item_progress_analytics.jmx
+2022-12-30 18:00:25,384 INFO o.a.j.s.SaveService: Loading file: teacher_view_student_pskill_Item_progress_analytics.jmx
+2022-12-30 18:00:25,389 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Update_user_application_state_for_a_gp2_evaluated.jmx
+2022-12-30 18:00:25,389 INFO o.a.j.s.SaveService: Loading file: Update_user_application_state_for_a_gp2_evaluated.jmx
+2022-12-30 18:00:25,390 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_gp2_statements_pskill_evaluated.jmx
+2022-12-30 18:00:25,390 INFO o.a.j.s.SaveService: Loading file: Add_gp2_statements_pskill_evaluated.jmx
+2022-12-30 18:00:25,391 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Add_gp2_statements_pskill_redo.jmx
+2022-12-30 18:00:25,391 INFO o.a.j.s.SaveService: Loading file: Add_gp2_statements_pskill_redo.jmx
+2022-12-30 18:00:25,392 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Deletes_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:25,392 INFO o.a.j.s.SaveService: Loading file: Deletes_user_application_state_for_a_gp2.jmx
+2022-12-30 18:00:25,410 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,410 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,411 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,412 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,412 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,412 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,413 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,413 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,414 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,414 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,414 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,415 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,421 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:25,421 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class_with_gp2.jmx
+2022-12-30 18:00:25,439 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,440 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,441 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,441 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,442 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,442 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user_student.jmx
+2022-12-30 18:00:25,452 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,453 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,459 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,459 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,460 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,460 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,461 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,461 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,473 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,473 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,478 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,478 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,478 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,479 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,479 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,479 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,486 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,486 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,491 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,491 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,492 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,492 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,494 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,494 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,500 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Create_a_new_group.jmx
+2022-12-30 18:00:25,500 INFO o.a.j.s.SaveService: Loading file: Create_a_new_group.jmx
+2022-12-30 18:00:25,505 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,505 INFO o.a.j.s.SaveService: Loading file: Get_members_of_a_class_All.jmx
+2022-12-30 18:00:25,506 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,506 INFO o.a.j.s.SaveService: Loading file: Get_information_for_a_specific_user_Group.jmx
+2022-12-30 18:00:25,506 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,506 INFO o.a.j.s.SaveService: Loading file: Enroll_a_user_in_a_group.jmx
+2022-12-30 18:00:25,529 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,529 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,530 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,530 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,530 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,531 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,531 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,531 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP1.jmx
+2022-12-30 18:00:25,532 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,532 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class_With_GP2.jmx
+2022-12-30 18:00:25,532 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,532 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,533 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,533 INFO o.a.j.s.SaveService: Loading file: join_Spaces_with_groupproduct1_and_class_code.jmx
+2022-12-30 18:00:25,534 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,534 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,535 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:25,535 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:25,553 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,553 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,554 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\get_classes_of_an_user.jmx
+2022-12-30 18:00:25,554 INFO o.a.j.s.SaveService: Loading file: get_classes_of_an_user.jmx
+2022-12-30 18:00:25,554 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_members_of_the_group.jmx
+2022-12-30 18:00:25,554 INFO o.a.j.s.SaveService: Loading file: Get_all_members_of_the_group.jmx
+2022-12-30 18:00:25,555 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_groups_by_path_LM.jmx
+2022-12-30 18:00:25,555 INFO o.a.j.s.SaveService: Loading file: Get_all_the_groups_by_path_LM.jmx
+2022-12-30 18:00:25,586 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,586 INFO o.a.j.s.SaveService: Loading file: Join_a_space_with_space_code.jmx
+2022-12-30 18:00:25,587 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,588 INFO o.a.j.s.SaveService: Loading file: Get_all_the_User_Spaces.jmx
+2022-12-30 18:00:25,588 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,588 INFO o.a.j.s.SaveService: Loading file: Get_an_access_token_for_an_external_user.jmx
+2022-12-30 18:00:25,589 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,589 INFO o.a.j.s.SaveService: Loading file: create_new_instructor_led_class.jmx
+2022-12-30 18:00:25,589 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\associate_a_product_with_class2.jmx
+2022-12-30 18:00:25,589 INFO o.a.j.s.SaveService: Loading file: associate_a_product_with_class2.jmx
+2022-12-30 18:00:25,590 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:25,590 INFO o.a.j.s.SaveService: Loading file: create_an_assigned_path_in_a_class.jmx
+2022-12-30 18:00:25,641 INFO o.a.j.c.IncludeController: loadIncludedElements -- try to load included module: D:\CUP\Latest_TestDataCreation\bin\Entitle_User_With_GP2.jmx
+2022-12-30 18:00:25,642 INFO o.a.j.s.SaveService: Loading file: Entitle_User_With_GP2.jmx
