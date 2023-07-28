@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">3</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2000</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -1922,6 +1922,31 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
                 <stringProp name="Argument.value">1544596644314/1544597008306/1544597032165</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
+              <elementProp name="itemcode11" elementType="Argument">
+                <stringProp name="Argument.name">itemcode11</stringProp>
+                <stringProp name="Argument.value">1544596644314/1544597091060/1544597104557</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="itemcode12" elementType="Argument">
+                <stringProp name="Argument.name">itemcode12</stringProp>
+                <stringProp name="Argument.value">1544596644314/1544597091060/1544597121860</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="itemcode13" elementType="Argument">
+                <stringProp name="Argument.name">itemcode13</stringProp>
+                <stringProp name="Argument.value">1544596644314/1544597220792/1544597245750</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="itemcode14" elementType="Argument">
+                <stringProp name="Argument.name">itemcode14</stringProp>
+                <stringProp name="Argument.value">1544596644314/1544597220792/1544597262426</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="itemcode15" elementType="Argument">
+                <stringProp name="Argument.name">itemcode15</stringProp>
+                <stringProp name="Argument.value">1544596644314/1544597220792/1544597275965</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
@@ -2015,7 +2040,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Bundle Association Count - ForEach Controller" enabled="true">
             <stringProp name="ForeachController.inputVal">multiProduct</stringProp>
             <stringProp name="ForeachController.returnVal">multiProduct</stringProp>
             <boolProp name="ForeachController.useSeparator">false</boolProp>
