@@ -11,38 +11,17 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Get user&apos;s application state for a product or class (product)" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Get a particular document of a folder.jmx" enabled="true"/>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get user&apos;s application state for a product or class (product)" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get a particular document of a folder.jmx" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
-              <elementProp name="userid" elementType="HTTPArgument">
+              <elementProp name="folderid" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${userid}</stringProp>
+                <stringProp name="Argument.value">settings/org/perf-test1-alpha/class/${classidGetDocument}/product/${productcode}/prefs</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">userid</stringProp>
-              </elementProp>
-              <elementProp name="productcode" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${productcode}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">productcode</stringProp>
-              </elementProp>
-              <elementProp name="classid" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${classid}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">classid</stringProp>
-              </elementProp>
-              <elementProp name="itemcode" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${itemcode}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">itemcode</stringProp>
+                <stringProp name="Argument.name">folderid</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -50,9 +29,9 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-analytics/${orgid}/user/product/progress/state</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-drive/accounts/${accountid}/users/${extUserIdHideToc}/documents/hideTOCOnLaunch</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
@@ -64,24 +43,32 @@
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">authorization</stringProp>
-                <stringProp name="Header.value">${access_token}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">$.dbErrorBody</stringProp>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
+            <stringProp name="JSON_PATH">$.documentid</stringProp>
             <stringProp name="EXPECTED_VALUE"></stringProp>
             <boolProp name="JSONVALIDATION">false</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
-            <boolProp name="INVERT">true</boolProp>
+            <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">false</boolProp>
           </JSONPathAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">documentid</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].documentid</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">folderid</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].folderid</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
           <hashTree/>
         </hashTree>
       </hashTree>

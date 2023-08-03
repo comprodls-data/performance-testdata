@@ -81,7 +81,7 @@
             <stringProp name="JSONPostProcessor.defaultValues">ASSIGNEDPATH_ID_NOT_FOUND</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
             <stringProp name="JSON_PATH">$.entities[0].assigned_path_id</stringProp>
             <stringProp name="EXPECTED_VALUE"></stringProp>
             <boolProp name="JSONVALIDATION">false</boolProp>

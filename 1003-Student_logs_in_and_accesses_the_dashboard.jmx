@@ -18,6 +18,10 @@
           <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
         </IncludeController>
         <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+          <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
         <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get Global Entitlements of a user" enabled="true">
           <stringProp name="IncludeController.includepath">Get_global_entitlements_of_a_user.jmx</stringProp>
         </IncludeController>
@@ -27,10 +31,10 @@
         </IncludeController>
         <hashTree/>
         <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
-          <stringProp name="IncludeController.includepath">Get_classes_of_an_user.jmx</stringProp>
+          <stringProp name="IncludeController.includepath">Get_classes_of_an_user_institution.jmx</stringProp>
         </IncludeController>
         <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="API to grant authkey on refid" enabled="false">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="API to grant authkey on refid" enabled="true">
           <stringProp name="IncludeController.includepath">API_to_grant_authkey_on_refid.jmx</stringProp>
         </IncludeController>
         <hashTree/>

@@ -26,7 +26,7 @@
           <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
         </IncludeController>
         <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get user&apos;s application state for a product or class (product)" enabled="false">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get user&apos;s application state for a product or class (product)" enabled="true">
           <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
         </IncludeController>
         <hashTree/>
@@ -34,16 +34,24 @@
           <stringProp name="IncludeController.includepath"></stringProp>
         </IncludeController>
         <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get user&apos;s application state for a product or class (product)" enabled="false">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get user&apos;s application state for a product or class (product)" enabled="true">
           <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
         </IncludeController>
         <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
           <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
         </IncludeController>
         <hashTree/>
         <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
           <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add statements (settings-updated)" enabled="true">
+          <stringProp name="IncludeController.includepath">Add_statements_settingsUpdated_institutional.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get a particular document of a folder" enabled="true">
+          <stringProp name="IncludeController.includepath">Get_a_particular_document_of_a_folder_hideTOCOnLaunch.jmx</stringProp>
         </IncludeController>
         <hashTree/>
       </hashTree>
