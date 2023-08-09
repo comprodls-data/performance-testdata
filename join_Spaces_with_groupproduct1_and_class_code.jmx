@@ -29,7 +29,11 @@
   &quot;class_code&quot;: &quot;${classcode}&quot;,&#xd;
   &quot;products&quot;: [&#xd;
     {&#xd;
-      &quot;productcode&quot;: &quot;${groupproduct1}&quot;&#xd;
+      &quot;productcode&quot;: &quot;${groupproduct1}&quot;,&#xd;
+      &quot;ext_product_meta&quot;: {&#xd;
+        &quot;startdate&quot;: ${startDate},&#xd;
+        &quot;enddate&quot;: ${endDate}&#xd;
+      }&#xd;
     }&#xd;
   ]&#xd;
 }</stringProp>
