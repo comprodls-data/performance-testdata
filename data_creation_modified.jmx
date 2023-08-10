@@ -18,7 +18,7 @@
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">3000</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10000</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -704,6 +704,16 @@
             <elementProp name="userProgress_max_1038nps" elementType="Argument">
               <stringProp name="Argument.name">userProgress_max_1038nps</stringProp>
               <stringProp name="Argument.value">800</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ruleType" elementType="Argument">
+              <stringProp name="Argument.name">ruleType</stringProp>
+              <stringProp name="Argument.value">content-access</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="endTimeForRule" elementType="Argument">
+              <stringProp name="Argument.name">endTimeForRule</stringProp>
+              <stringProp name="Argument.value">${__timeShift(,,PT9M,,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -3689,6 +3699,185 @@ vars.put(&quot;assignedPathList&quot;, apList);
                 <hashTree/>
               </hashTree>
             </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="false">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${noOfAccessRulesInClass}</stringProp>
+            </LoopController>
+            <hashTree>
+              <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+                <stringProp name="maximumValue">9999</stringProp>
+                <stringProp name="minimumValue">0000</stringProp>
+                <stringProp name="outputFormat">0000</stringProp>
+                <boolProp name="perThread">true</boolProp>
+                <stringProp name="randomSeed"></stringProp>
+                <stringProp name="variableName">randomNo</stringProp>
+              </RandomVariableConfig>
+              <hashTree/>
+              <InterleaveControl guiclass="InterleaveControlGui" testclass="InterleaveControl" testname="Interleave Controller" enabled="true">
+                <intProp name="InterleaveControl.style">1</intProp>
+                <boolProp name="InterleaveControl.accrossThreads">false</boolProp>
+              </InterleaveControl>
+              <hashTree>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;evpel1&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfb1pe1&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfb1pe2&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfprod21&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfprod22&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfprod23&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfprod24&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                  <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfprod25&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+                <stringProp name="IfController.condition">&quot;${noOfLOsInAccessRule}&quot; == &quot;100&quot;;</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a rule" enabled="true">
+                  <stringProp name="IncludeController.includepath">Create_a_rule_100LOs.jmx</stringProp>
+                </IncludeController>
+                <hashTree/>
+              </hashTree>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">10000</stringProp>
+                  <stringProp name="RandomTimer.range">5000</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
             <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher" enabled="true">
               <boolProp name="LoopController.continue_forever">true</boolProp>
               <stringProp name="LoopController.loops">${noOfStudentsInClass}</stringProp>
@@ -3732,15 +3921,15 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
                 <stringProp name="IncludeController.includepath">join_Spaces_with_product_code_and_class_code.jmx</stringProp>
               </IncludeController>
               <hashTree/>
-              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [20-30 sec]" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
                 <intProp name="ActionProcessor.target">0</intProp>
                 <stringProp name="ActionProcessor.duration">0</stringProp>
               </TestAction>
               <hashTree>
                 <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                  <stringProp name="ConstantTimer.delay">10000</stringProp>
-                  <stringProp name="RandomTimer.range">5000</stringProp>
+                  <stringProp name="ConstantTimer.delay">20000</stringProp>
+                  <stringProp name="RandomTimer.range">10000</stringProp>
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
@@ -3757,19 +3946,19 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
                 </IncludeController>
                 <hashTree/>
               </hashTree>
-              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [15-25 sec]" enabled="true">
                 <intProp name="ActionProcessor.action">1</intProp>
                 <intProp name="ActionProcessor.target">0</intProp>
                 <stringProp name="ActionProcessor.duration">0</stringProp>
               </TestAction>
               <hashTree>
                 <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                  <stringProp name="ConstantTimer.delay">10000</stringProp>
-                  <stringProp name="RandomTimer.range">5000</stringProp>
+                  <stringProp name="ConstantTimer.delay">15000</stringProp>
+                  <stringProp name="RandomTimer.range">10000</stringProp>
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
                 <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_student.jmx</stringProp>
               </IncludeController>
               <hashTree/>
@@ -4198,7 +4387,7 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
                 <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_student.jmx</stringProp>
               </IncludeController>
               <hashTree/>
@@ -4716,7 +4905,7 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
                 <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_student.jmx</stringProp>
               </IncludeController>
               <hashTree/>
@@ -5232,7 +5421,7 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
                 </UniformRandomTimer>
                 <hashTree/>
               </hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
                 <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_student.jmx</stringProp>
               </IncludeController>
               <hashTree/>
@@ -10676,7 +10865,7 @@ vars.put(&quot;productcode&quot;, &quot;evpel1&quot;);</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Associate multi products to a class" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create a rule" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
             <stringProp name="delimiter">,</stringProp>
@@ -10690,6 +10879,32 @@ vars.put(&quot;productcode&quot;, &quot;evpel1&quot;);</stringProp>
             <stringProp name="variableNames">extuserid,classtitle,classCode</stringProp>
           </CSVDataSet>
           <hashTree/>
+          <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+            <stringProp name="maximumValue">9999</stringProp>
+            <stringProp name="minimumValue">0000</stringProp>
+            <stringProp name="outputFormat">0000</stringProp>
+            <boolProp name="perThread">true</boolProp>
+            <stringProp name="randomSeed"></stringProp>
+            <stringProp name="variableName">randomNo</stringProp>
+          </RandomVariableConfig>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1544524003551/1544524012478/1544524030068&quot;,&quot;1544524003551/1544524012478/1544524044427&quot;,&quot;1544524003551/1544524012478/1544524057691&quot;,&quot;1544524003551/1544524012478/1544524071582&quot;,&quot;1544524003551/1544524012478/1544524084276&quot;,&quot;1544524003551/1544524012478/1544524099346&quot;,&quot;1544524003551/1544524304922/1544524313700&quot;,&quot;1544524003551/1544524304922/1544524324762&quot;,&quot;1544524003551/1544524304922/1544524341184&quot;,&quot;1544524003551/1544524304922/1544524359136&quot;,&quot;1544524003551/1544524304922/1544524376121&quot;,&quot;1544524003551/1544524304922/1544524387792&quot;,&quot;1544525043137/1544525058289/1544525090848&quot;,&quot;1544525043137/1544525058289/1544525097148&quot;,&quot;1544525043137/1544525058289/1544525114886&quot;,&quot;1544525043137/1544525058289/1544525125172&quot;,&quot;1544525043137/1544525058289/1544525137957&quot;,&quot;1544525043137/1544525058289/1544525143762&quot;,&quot;1544525043137/1544525159358/1544525175677&quot;,&quot;1544525043137/1544525159358/1544525192972&quot;,&quot;1544525043137/1544525159358/1544525217177&quot;,&quot;1544525043137/1544525159358/1544525239184&quot;,&quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;
+};
+
+vars.put(&quot;productcode&quot;, &quot;perfprod9&quot;);
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="access_token" elementType="Argument">
@@ -10699,13 +10914,22 @@ vars.put(&quot;productcode&quot;, &quot;evpel1&quot;);</stringProp>
               </elementProp>
               <elementProp name="classid" elementType="Argument">
                 <stringProp name="Argument.name">classid</stringProp>
-                <stringProp name="Argument.value">685352f8-769c-4f13-890a-a72d00373c21</stringProp>
+                <stringProp name="Argument.value">2ff354ba-5f0e-4c4d-9de7-78c3b66b45c9</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="extuserid" elementType="Argument">
+                <stringProp name="Argument.name">extuserid</stringProp>
+                <stringProp name="Argument.value">tch_20230807-140355_1_5</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="create a rule" enabled="true">
+            <stringProp name="IncludeController.includepath">Create_a_rule_100LOs.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="false">
             <stringProp name="scriptLanguage">groovy</stringProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
@@ -10746,65 +10970,6 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="false">
-            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="false">
-            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Validate Class Code" enabled="false">
-            <stringProp name="IncludeController.includepath">validate_classcode.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="true">
-            <stringProp name="IncludeController.includepath">associate_multi_products_with_class.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [300-330]" enabled="false">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">300000</stringProp>
-              <stringProp name="RandomTimer.range">30000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 5 assignments" enabled="false">
-            <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">5</stringProp>
-          </LoopController>
-          <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
-              <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
-              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
-apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
-vars.put(&quot;assignedPathList&quot;, apList);
-</stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
-            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
-              <stringProp name="filename"></stringProp>
-              <stringProp name="parameters"></stringProp>
-              <boolProp name="resetInterpreter">false</boolProp>
-              <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
-prefix3 = ctx.getThread().getThreadNum() + 1;
-
-assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3;
-vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
-            </BeanShellPreProcessor>
-            <hashTree/>
-          </hashTree>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="false">
             <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
 String SEPARATOR = &quot;,&quot;;

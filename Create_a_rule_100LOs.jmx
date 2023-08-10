@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Create a rule" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create a rule" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;ruleid&quot;: &quot;${extuserid}_${randomNo}&quot;,&#xd;
+  &quot;scope&quot;: &quot;GLOBAL-ALL-USERS&quot;,&#xd;
+  &quot;entities&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode1}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode2}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode3}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode4}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode5}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode6}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode7}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode8}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode9}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode10}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode11}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode12}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode13}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode14}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode15}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode16}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode17}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode18}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode19}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode20}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode21}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode22}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode23}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode24}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode25}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode26}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode27}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode28}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode29}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode30}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode31}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode32}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode33}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode34}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode35}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode36}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode37}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode38}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode39}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode40}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode41}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode42}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode43}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode44}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode45}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode46}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode47}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode48}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode49}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode50}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode51}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode52}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode53}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode54}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode55}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode56}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode57}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode58}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode59}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode60}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode61}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode62}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode63}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode64}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode65}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode66}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode67}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode68}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode69}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode70}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode71}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode72}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode73}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode74}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode75}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode76}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode77}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode78}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode79}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode80}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode81}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode82}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode83}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode84}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode85}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode86}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode87}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode88}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode89}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode90}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode91}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode92}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode93}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode94}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode95}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode96}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+     {&#xd;
+      &quot;id&quot;: &quot;${itemcode97}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode98}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode99}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;id&quot;: &quot;${itemcode100}&quot;,&#xd;
+      &quot;type&quot;: &quot;resource&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;rule_data_common&quot;: {&#xd;
+    &quot;access&quot;: &quot;lock&quot;,&#xd;
+    &quot;startTime&quot;: ${__time()},&#xd;
+    &quot;endTime&quot;: ${endTimeForRule},&#xd;
+    &quot;notificationsEnabled&quot;: {&#xd;
+             &quot;BEFORE-START-DATE&quot;: true,&#xd;
+             &quot;START-DATE&quot;: true,&#xd;
+             &quot;BEFORE-END-DATE&quot;: true&#xd;
+		}&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/context/${accountid}%23${orgid}%23${classid}%23${productcode}/rule_type/${ruleType}/rules</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">authorization</stringProp>
+                <stringProp name="Header.value">${access_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">test-perf-id</stringProp>
+                <stringProp name="Header.value">${date}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.status</stringProp>
+            <stringProp name="EXPECTED_VALUE"></stringProp>
+            <boolProp name="JSONVALIDATION">false</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
