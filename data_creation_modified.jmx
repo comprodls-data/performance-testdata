@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">4</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">100</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1000</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2000</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -3608,7 +3608,7 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Template" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Template" enabled="false"/>
         <hashTree>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
@@ -12712,7 +12712,7 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1011_attemptActivities" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1011_attemptActivities" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -12795,7 +12795,7 @@ out.close();
                     <stringProp name="shareMode">shareMode.thread</stringProp>
                   </CSVDataSet>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -12811,7 +12811,7 @@ out.close();
                     <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -12823,7 +12823,7 @@ out.close();
                     </UniformRandomTimer>
                     <hashTree/>
                   </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
                     <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
@@ -12860,7 +12860,7 @@ out.close();
                     <stringProp name="shareMode">shareMode.thread</stringProp>
                   </CSVDataSet>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -12876,7 +12876,7 @@ out.close();
                     <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -12888,7 +12888,7 @@ out.close();
                     </UniformRandomTimer>
                     <hashTree/>
                   </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
                     <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
@@ -12925,7 +12925,7 @@ out.close();
                     <stringProp name="shareMode">shareMode.thread</stringProp>
                   </CSVDataSet>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -12941,7 +12941,7 @@ out.close();
                     <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -12953,7 +12953,7 @@ out.close();
                     </UniformRandomTimer>
                     <hashTree/>
                   </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
                     <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
@@ -12990,7 +12990,7 @@ out.close();
                     <stringProp name="shareMode">shareMode.thread</stringProp>
                   </CSVDataSet>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -13006,7 +13006,7 @@ out.close();
                     <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="true">
+                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
                     <intProp name="ActionProcessor.action">1</intProp>
                     <intProp name="ActionProcessor.target">0</intProp>
                     <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -13018,7 +13018,7 @@ out.close();
                     </UniformRandomTimer>
                     <hashTree/>
                   </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
                     <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
                   </IncludeController>
                   <hashTree/>
@@ -13030,7 +13030,7 @@ out.close();
             <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
             <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
           </IncludeController>
           <hashTree/>
@@ -13144,7 +13144,7 @@ out.close();
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
