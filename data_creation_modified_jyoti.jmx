@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ComproDLS Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -1360,6 +1360,26 @@
             <elementProp name="cat4" elementType="Argument">
               <stringProp name="Argument.name">cat4</stringProp>
               <stringProp name="Argument.value">2B15PE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="learningprogressnps_1011_cat1" elementType="Argument">
+              <stringProp name="Argument.name">learningprogressnps_1011_cat1</stringProp>
+              <stringProp name="Argument.value">400</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="learningprogressnps_1011_cat2" elementType="Argument">
+              <stringProp name="Argument.name">learningprogressnps_1011_cat2</stringProp>
+              <stringProp name="Argument.value">600</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="learningprogressnps_1011_cat3" elementType="Argument">
+              <stringProp name="Argument.name">learningprogressnps_1011_cat3</stringProp>
+              <stringProp name="Argument.value">600</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="learningprogressnps_1011_cat4" elementType="Argument">
+              <stringProp name="Argument.name">learningprogressnps_1011_cat4</stringProp>
+              <stringProp name="Argument.value">800</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -11264,7 +11284,7 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1011_attemptActivities" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1011_attemptActivities" enabled="false">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -11327,16 +11347,16 @@ out.close();
                 <stringProp name="ForeachController.returnVal">productcode</stringProp>
                 <boolProp name="ForeachController.useSeparator">false</boolProp>
                 <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">8</stringProp>
+                <stringProp name="ForeachController.endIndex">1</stringProp>
               </ForeachController>
               <hashTree>
                 <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
                   <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011}</stringProp>
+                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat1}</stringProp>
                 </LoopController>
                 <hashTree>
                   <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">C:/Office/GitRepos/performance testing/local/test-performance/p_cat1.csv</stringProp>
+                    <stringProp name="filename">p_cat1.csv</stringProp>
                     <stringProp name="fileEncoding"></stringProp>
                     <stringProp name="variableNames">task,verb</stringProp>
                     <boolProp name="ignoreFirstLine">false</boolProp>
@@ -11392,12 +11412,12 @@ out.close();
                 <stringProp name="ForeachController.returnVal">productcode</stringProp>
                 <boolProp name="ForeachController.useSeparator">false</boolProp>
                 <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">10</stringProp>
+                <stringProp name="ForeachController.endIndex">1</stringProp>
               </ForeachController>
               <hashTree>
                 <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
                   <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011}</stringProp>
+                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat2}</stringProp>
                 </LoopController>
                 <hashTree>
                   <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -11457,12 +11477,12 @@ out.close();
                 <stringProp name="ForeachController.returnVal">productcode</stringProp>
                 <boolProp name="ForeachController.useSeparator">false</boolProp>
                 <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">15</stringProp>
+                <stringProp name="ForeachController.endIndex">1</stringProp>
               </ForeachController>
               <hashTree>
                 <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
                   <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011}</stringProp>
+                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat3}</stringProp>
                 </LoopController>
                 <hashTree>
                   <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -11522,12 +11542,12 @@ out.close();
                 <stringProp name="ForeachController.returnVal">productcode</stringProp>
                 <boolProp name="ForeachController.useSeparator">false</boolProp>
                 <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">15</stringProp>
+                <stringProp name="ForeachController.endIndex">1</stringProp>
               </ForeachController>
               <hashTree>
                 <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
                   <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011}</stringProp>
+                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat4}</stringProp>
                 </LoopController>
                 <hashTree>
                   <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
