@@ -5122,7 +5122,7 @@ out.close();
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Final -&gt; Add Showcase" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Final -&gt; Add Showcase" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
