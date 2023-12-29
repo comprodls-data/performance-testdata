@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">3</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <stringProp name="ThreadGroup.num_threads">90</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2400</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -981,6 +981,126 @@
               <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="L3" elementType="Argument">
+              <stringProp name="Argument.name">L3</stringProp>
+              <stringProp name="Argument.value">&quot;perf29_100lo_1&quot;, &quot;perf29_100lo_2&quot;, &quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;, &quot;perf31_100lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L3_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L3_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L4" elementType="Argument">
+              <stringProp name="Argument.name">L4</stringProp>
+              <stringProp name="Argument.value">&quot;perf29_100lo_1&quot;, &quot;perf29_100lo_2&quot;, &quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;, &quot;perf31_100lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L4_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L4_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L5" elementType="Argument">
+              <stringProp name="Argument.name">L5</stringProp>
+              <stringProp name="Argument.value">&quot;perf29_100lo_1&quot;, &quot;perf29_100lo_2&quot;, &quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;, &quot;perf31_100lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L5_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L5_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1" elementType="Argument">
+              <stringProp name="Argument.name">M1</stringProp>
+              <stringProp name="Argument.value">&quot;perf32_300lo_1&quot;, &quot;perf32_300lo_2&quot;, &quot;perf32_300lo_3&quot;, &quot;perf32_400lo_1&quot;, &quot;perf32_400lo_2&quot;,&quot;perf32_400lo_3&quot;, &quot;perf32_100lo_1&quot;,&quot;perfb1pe1&quot;,&quot;perfb1pe2&quot;,&quot;perf39_100lo_1&quot;, &quot;perf39_100lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">M1_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf32_300lo_1&quot;, &quot;perf32_300lo_2&quot;, &quot;perf32_300lo_3&quot;, &quot;perf32_400lo_1&quot;, &quot;perf32_400lo_2&quot;,&quot;perf32_400lo_3&quot;, &quot;perfb1pe1&quot;,&quot;perfb1pe2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2" elementType="Argument">
+              <stringProp name="Argument.name">M2</stringProp>
+              <stringProp name="Argument.value">&quot;perf32_300lo_1&quot;, &quot;perf32_300lo_2&quot;, &quot;perf32_300lo_3&quot;, &quot;perf32_400lo_1&quot;, &quot;perf32_400lo_2&quot;,&quot;perf32_400lo_3&quot;, &quot;perf32_100lo_1&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf34_400lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">M2_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf32_300lo_1&quot;, &quot;perf32_300lo_2&quot;, &quot;perf32_300lo_3&quot;, &quot;perf32_400lo_1&quot;, &quot;perf32_400lo_2&quot;,&quot;perf32_400lo_3&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf34_400lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3" elementType="Argument">
+              <stringProp name="Argument.name">M3</stringProp>
+              <stringProp name="Argument.value">&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perfb1pe1&quot;,&quot;perfb1pe2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">M3_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perfb1pe1&quot;,&quot;perfb1pe2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4" elementType="Argument">
+              <stringProp name="Argument.name">M4</stringProp>
+              <stringProp name="Argument.value">&quot;perf32_300lo_1&quot;, &quot;perf32_300lo_2&quot;, &quot;perf32_300lo_3&quot;, &quot;perf32_400lo_1&quot;, &quot;perf32_400lo_2&quot;,&quot;perf32_400lo_3&quot;, &quot;perf32_100lo_1&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf34_400lo_1&quot;,&quot;perfprod3&quot;,&quot;perfprod4&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">M4_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf32_300lo_1&quot;, &quot;perf32_300lo_2&quot;, &quot;perf32_300lo_3&quot;, &quot;perf32_400lo_1&quot;, &quot;perf32_400lo_2&quot;,&quot;perf32_400lo_3&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf34_400lo_1&quot;,&quot;perfprod3&quot;,&quot;perfprod4&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5" elementType="Argument">
+              <stringProp name="Argument.name">M5</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">M5_Assignment</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1" elementType="Argument">
+              <stringProp name="Argument.name">H1</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_100lo_1&quot;,&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf36_400lo_1&quot;,&quot;perf36_500lo_1&quot;,&quot;perf36_500lo_2&quot;,&quot;perf36_630lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">H1_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf36_400lo_1&quot;,&quot;perf36_500lo_1&quot;,&quot;perf36_500lo_2&quot;,&quot;perf36_630lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2" elementType="Argument">
+              <stringProp name="Argument.name">H2</stringProp>
+              <stringProp name="Argument.value">&quot;perf36_400lo_1&quot;,&quot;perf36_500lo_1&quot;,&quot;perf36_500lo_2&quot;,&quot;perf36_630lo_1&quot;,&quot;perf37_300lo_1&quot;,&quot;perf37_300lo_2&quot;,&quot;perf37_400lo_1&quot;,&quot;perf37_400lo_2&quot;,&quot;perf37_400lo_3&quot;,&quot;perf37_630lo_1&quot;,&quot;perf37_630lo_2&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perfb1pe1&quot;,&quot;perfb1pe2&quot;,&quot;evpel1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">H2_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf36_400lo_1&quot;,&quot;perf36_500lo_1&quot;,&quot;perf36_500lo_2&quot;,&quot;perf36_630lo_1&quot;,&quot;perf37_300lo_1&quot;,&quot;perf37_300lo_2&quot;,&quot;perf37_400lo_1&quot;,&quot;perf37_400lo_2&quot;,&quot;perf37_400lo_3&quot;,&quot;perf37_630lo_1&quot;,&quot;perf37_630lo_2&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perfb1pe1&quot;,&quot;perfb1pe2&quot;,&quot;evpel1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3" elementType="Argument">
+              <stringProp name="Argument.name">H3</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_100lo_1&quot;,&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">H3_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4" elementType="Argument">
+              <stringProp name="Argument.name">H4</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_100lo_1&quot;,&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perfprod3&quot;,&quot;perfprod4&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf40_630lo_1&quot;,&quot;perf40_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">H4_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perfprod3&quot;,&quot;perfprod4&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf40_630lo_1&quot;,&quot;perf40_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -1098,8 +1218,8 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">4200</stringProp>
-              <stringProp name="RandomTimer.range">300</stringProp>
+              <stringProp name="ConstantTimer.delay">420000</stringProp>
+              <stringProp name="RandomTimer.range">30000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
@@ -12419,7 +12539,7 @@ out.close();
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
