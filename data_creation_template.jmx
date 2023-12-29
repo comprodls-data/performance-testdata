@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">90</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">2400</stringProp>
+        <stringProp name="ThreadGroup.num_threads">15</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">4</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -463,7 +463,7 @@
             </elementProp>
             <elementProp name="endTimeForRule" elementType="Argument">
               <stringProp name="Argument.name">endTimeForRule</stringProp>
-              <stringProp name="Argument.value">${__timeShift(,,P180D,,)}</stringProp>
+              <stringProp name="Argument.value">${__timeShift(,,P360D,,)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -971,16 +971,6 @@
               <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;,  &quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="L6" elementType="Argument">
-              <stringProp name="Argument.name">L6</stringProp>
-              <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L6_Assignment" elementType="Argument">
-              <stringProp name="Argument.name">L6_Assignment</stringProp>
-              <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
             <elementProp name="L3" elementType="Argument">
               <stringProp name="Argument.name">L3</stringProp>
               <stringProp name="Argument.value">&quot;perf29_100lo_1&quot;, &quot;perf29_100lo_2&quot;, &quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;, &quot;perf31_100lo_1&quot;</stringProp>
@@ -1009,6 +999,16 @@
             <elementProp name="L5_Assignment" elementType="Argument">
               <stringProp name="Argument.name">L5_Assignment</stringProp>
               <stringProp name="Argument.value">&quot;perf29_300lo_1&quot;, &quot;perf29_300lo_2&quot;, &quot;perf29_300lo_3&quot;, &quot;perf29_300lo_4&quot;,&quot;perf31_300lo_1&quot;, &quot;perf31_300lo_2&quot;, &quot;perf31_300lo_3&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L6" elementType="Argument">
+              <stringProp name="Argument.name">L6</stringProp>
+              <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L6_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L6_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M1" elementType="Argument">
@@ -1104,12 +1104,147 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Template - Updated" enabled="true"/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Bundle Product (Required for custom grading)" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="perf30_300lo_1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perf30_300lo_1_bundle</stringProp>
+              <stringProp name="Argument.value">perfbundle30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf30_300lo_2_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perf30_300lo_2_bundle</stringProp>
+              <stringProp name="Argument.value">perfbundle30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf30_100lo_1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perf30_100lo_1_bundle</stringProp>
+              <stringProp name="Argument.value">perfbundle30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="evpel1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">evpel1_bundle</stringProp>
+              <stringProp name="Argument.value">evpel1_bundle</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb1pe1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb1pe1_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb1pe2_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb1pe2_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb2pe2_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb2pe2_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb2pe1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb2pe1_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Bundle Product (Required for attempts)" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="perf30_300lo_1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perf30_300lo_1_bundle</stringProp>
+              <stringProp name="Argument.value">perfbundle30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf30_300lo_2_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perf30_300lo_2_bundle</stringProp>
+              <stringProp name="Argument.value">perfbundle30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf30_100lo_1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perf30_100lo_1_bundle</stringProp>
+              <stringProp name="Argument.value">perfbundle30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="evpel1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">evpel1_bundle</stringProp>
+              <stringProp name="Argument.value">evpel1_bundle</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb1pe1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb1pe1_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb1pe2_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb1pe2_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb2pe2_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb2pe2_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perfb2pe1_bundle" elementType="Argument">
+              <stringProp name="Argument.name">perfb2pe1_bundle</stringProp>
+              <stringProp name="Argument.value">perf_bundle_2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Attempts" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="L1_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L1_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L1_Scorable</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L1_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L1_Pskill</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L2_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L2_Scorable</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L2_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L2_Pskill</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Template - Updated" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">template_new.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfStudentsInClass</stringProp>
+            <stringProp name="variableNames">category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount,noOfStudentsInClass</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
@@ -1143,6 +1278,16 @@
               <elementProp name="assignedPathList" elementType="Argument">
                 <stringProp name="Argument.name">assignedPathList</stringProp>
                 <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -1352,194 +1497,172 @@ vars.put(&quot;assignedPathList&quot;, apList);
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">${noOfAccessRulesInClass}</stringProp>
+            <stringProp name="LoopController.loops">${noOfLockRulesInClass}</stringProp>
           </LoopController>
           <hashTree>
-            <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
-              <stringProp name="maximumValue">9999</stringProp>
-              <stringProp name="minimumValue">0000</stringProp>
-              <stringProp name="outputFormat">0000</stringProp>
-              <boolProp name="perThread">true</boolProp>
-              <stringProp name="randomSeed"></stringProp>
-              <stringProp name="variableName">randomNo</stringProp>
-            </RandomVariableConfig>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end"></stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">lockRulesCount</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
             <hashTree/>
-            <InterleaveControl guiclass="InterleaveControlGui" testclass="InterleaveControl" testname="Interleave Controller" enabled="true">
-              <intProp name="InterleaveControl.style">1</intProp>
-              <boolProp name="InterleaveControl.accrossThreads">false</boolProp>
-            </InterleaveControl>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;
+};
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
+
+int randomIndex = (int) (Math.random() * stringArray.length);
+
+String randomValue = stringArray[randomIndex];
+
+vars.put(&quot;productcode&quot;, randomValue);</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">0</intProp>
+              <boolProp name="ThroughputController.perThread">true</boolProp>
+              <stringProp name="ThroughputController.maxThroughput">${50LOsLockRuleCount}</stringProp>
+              <stringProp name="ThroughputController.percentThroughput">${20LOsPercentage}</stringProp>
+            </ThroughputController>
             <hashTree>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;evpel1&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
+              <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+                <stringProp name="maximumValue">999999</stringProp>
+                <stringProp name="minimumValue">000000</stringProp>
+                <stringProp name="outputFormat">000000</stringProp>
+                <boolProp name="perThread">true</boolProp>
+                <stringProp name="randomSeed"></stringProp>
+                <stringProp name="variableName">randomNo</stringProp>
+              </RandomVariableConfig>
               <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfb1pe1&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
-              <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfb1pe2&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
-              <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfprod21&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
-              <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfprod22&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
-              <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfprod23&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
-              <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfprod24&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
-              <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
-    &quot;1544521486954/1544521507623/1544521559147&quot;,&quot;1544526345845/1544526961740/1544527585431&quot;,&quot;1544521486954/1544521507623/1544521662149&quot;,&quot;1544526345845/1544528319371/1544528402616&quot;,&quot;1544521486954/1544521507623/1544521675219&quot;,&quot;1544591089661/1544591412698/1544591582869&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591602655/1544591685696&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544591989858/1544592139063&quot;,&quot;1544521486954/1544521700309/1544521716919&quot;,&quot;1544591751639/1544592145731/1544592236677&quot;,&quot;1544521486954/1544521700309/1544521737765&quot;,&quot;1544592286221/1544592520233/1544592607117&quot;,&quot;1544521486954/1544521700309/1544521756511&quot;,&quot;1544592286221/1544592623523/1544592695775&quot;,&quot;1544521486954/1544521700309/1544521782572&quot;,&quot;1544592857014/1544593585947/1544593695538&quot;,&quot;1544521486954/1544521700309/1544521796490&quot;,&quot;1544592857014/1544593703192/1544593783453&quot;,&quot;1544521486954/1544521700309/1544521814257&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544522366063/1544522377911/1544522402777&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544522366063/1544522377911/1544522409366&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544522366063/1544522377911/1544522432187&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544522366063/1544522377911/1544522440008&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544522366063/1544522377911/1544522454993&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1544522366063/1544522377911/1544522473310&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1544522366063/1544522377911/1544522492959&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1544522366063/1544522377911/1544522512903&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1544522366063/1544522528807/1544522551328&quot;,&quot;1676462274659/1676462274660/1676462274665&quot;,&quot;1544522366063/1544522528807/1544522568979&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1544522366063/1544522528807/1544522579684&quot;,&quot;1676462274659/1676462274660/1676462274667&quot;,&quot;1544522366063/1544522528807/1544522585734&quot;,&quot;1676462274659/1676462274660/1676462274668&quot;,&quot;1544522366063/1544522528807/1544522609573&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1544522366063/1544522528807/1544522613530&quot;,&quot;1676462274659/1676462274660/1676462274670&quot;
-};
-
-vars.put(&quot;productcode&quot;, &quot;perfprod25&quot;);
-
-for (int i = 0; i &lt; itemCodes.length; i++) {
-    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
-}
-
-</stringProp>
-                <stringProp name="BeanShellSampler.filename"></stringProp>
-                <stringProp name="BeanShellSampler.parameters"></stringProp>
-                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-              </BeanShellSampler>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="create a rule" enabled="true">
+                <stringProp name="IncludeController.includepath">Create_a_rule_50LOs.jmx</stringProp>
+              </IncludeController>
               <hashTree/>
             </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${noOfLOsInAccessRule}&quot; == &quot;50&quot;;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">0</intProp>
+              <boolProp name="ThroughputController.perThread">true</boolProp>
+              <stringProp name="ThroughputController.maxThroughput">${100LOsLockRuleCount}</stringProp>
+              <stringProp name="ThroughputController.percentThroughput">${30LOsPercentage}</stringProp>
+            </ThroughputController>
             <hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a rule" enabled="true">
+              <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+                <stringProp name="maximumValue">999999</stringProp>
+                <stringProp name="minimumValue">000000</stringProp>
+                <stringProp name="outputFormat">000000</stringProp>
+                <boolProp name="perThread">true</boolProp>
+                <stringProp name="randomSeed"></stringProp>
+                <stringProp name="variableName">randomNo</stringProp>
+              </RandomVariableConfig>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="create a rule" enabled="true">
                 <stringProp name="IncludeController.includepath">Create_a_rule_100LOs.jmx</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${noOfLOsInAccessRule}&quot; == &quot;100&quot;;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
+            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
+              <intProp name="ThroughputController.style">0</intProp>
+              <boolProp name="ThroughputController.perThread">true</boolProp>
+              <stringProp name="ThroughputController.maxThroughput">${150LOsLockRuleCount}</stringProp>
+              <stringProp name="ThroughputController.percentThroughput">${50LOsPercentage}</stringProp>
+            </ThroughputController>
             <hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a rule" enabled="true">
-                <stringProp name="IncludeController.includepath">Create_a_rule_100LOs.jmx</stringProp>
+              <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+                <stringProp name="maximumValue">999999</stringProp>
+                <stringProp name="minimumValue">000000</stringProp>
+                <stringProp name="outputFormat">000000</stringProp>
+                <boolProp name="perThread">true</boolProp>
+                <stringProp name="randomSeed"></stringProp>
+                <stringProp name="variableName">randomNo</stringProp>
+              </RandomVariableConfig>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="create a rule" enabled="true">
+                <stringProp name="IncludeController.includepath">Create_a_rule_150LOs.jmx</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
+          <hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
+              <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] multiProducts = {
+    ${__evalVar(${category})}
+};
+
+String mergedColumnJson = &quot;[&quot;;
+int customWeightage = 0;
+int pendingWeightage = 0;
+int remainingValue = 0;
+String bundle = &quot;&quot;;
+
+for (int i = 0; i &lt; multiProducts.length; i++) {
+	bundle = multiProducts[i] + &quot;_bundle&quot;;
+	mergedColumnJson += &quot;{\&quot;column_id\&quot;: \&quot;&quot; + multiProducts[i] + &quot;\&quot;,\&quot;type\&quot;: \&quot;product\&quot;,\&quot;weightage\&quot;: \&quot;5\&quot;,\&quot;bundle-codes\&quot;: [\&quot;&quot; + vars.get(bundle) + &quot;\&quot;],\&quot;productcode\&quot;: \&quot;&quot; + multiProducts[i] + &quot;\&quot;},&quot;;
+};
+
+remainingValue = 100 - (5*(multiProducts.length));
+
+customWeightage = remainingValue/${customGradingCount};
+pendingWeightage = remainingValue%${customGradingCount};
+
+for (int i = 1; i &lt;= ${customGradingCount}; i++) {
+	if(i != ${customGradingCount}) {
+		mergedColumnJson += &quot;{\&quot;column_id\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;,\&quot;type\&quot;: \&quot;custom\&quot;, \&quot;custom_component_code\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;, \&quot;title\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;, \&quot;weightage\&quot;: \&quot;&quot; + customWeightage + &quot;\&quot;,\&quot;scoring_type\&quot;: \&quot;SIMPLE\&quot;},&quot;;
+	} else {
+		int finalWeightage = customWeightage + pendingWeightage;
+		mergedColumnJson += &quot;{\&quot;column_id\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;,\&quot;type\&quot;: \&quot;custom\&quot;, \&quot;custom_component_code\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;, \&quot;title\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;, \&quot;weightage\&quot;: \&quot;&quot; + finalWeightage + &quot;\&quot;,\&quot;scoring_type\&quot;: \&quot;SIMPLE\&quot;},&quot;;
+	}
+};
+
+mergedColumnJson = mergedColumnJson.substring(0, mergedColumnJson.length() - 1) + &quot;]&quot;;
+
+vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
             </TestAction>
             <hashTree>
               <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">10000</stringProp>
-                <stringProp name="RandomTimer.range">5000</stringProp>
+                <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+                <stringProp name="RandomTimer.range">${minWait}</stringProp>
               </UniformRandomTimer>
               <hashTree/>
             </hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add columns to a particular gradebook of a class" enabled="true">
+              <stringProp name="IncludeController.includepath">Add_columns_to_a_particular_gradebook_of_a_class_with_custom_components.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -1641,6 +1764,255 @@ out.close();
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1011 and 1012 - Combined - Updated" enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>100.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="filename">1001.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">extuserid,cc,category</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};  
+
+for (int i = 0; i &lt; stringArray.length; i++) {
+    vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
+}
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_institution.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_classes_of_an_user_institution.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">${category}_productcode</stringProp>
+            <stringProp name="ForeachController.returnVal">productcode</stringProp>
+            <boolProp name="ForeachController.useSeparator">false</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex">${__evalVar(${category}_Scorable_PE_Count)}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__jexl2(${__evalVar(${category}_Scorable)}*4)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="filename">p_cat1.csv</stringProp>
+                <stringProp name="fileEncoding"></stringProp>
+                <stringProp name="variableNames">task,verb</stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <stringProp name="delimiter">,</stringProp>
+                <boolProp name="quotedData">false</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="shareMode">shareMode.thread</stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
+                  <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
+                <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+              <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
+                <intProp name="ActionProcessor.action">1</intProp>
+                <intProp name="ActionProcessor.target">0</intProp>
+                <stringProp name="ActionProcessor.duration">0</stringProp>
+              </TestAction>
+              <hashTree>
+                <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                  <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
+                  <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
+                </UniformRandomTimer>
+                <hashTree/>
+              </hashTree>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
+                <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
+            <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_multi_1011.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get users application state for a product or class(product) with item code" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">${category}_productcode</stringProp>
+            <stringProp name="ForeachController.returnVal">productcode</stringProp>
+            <boolProp name="ForeachController.useSeparator">false</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex">${__evalVar(${category}_Pskill_PE_Count)}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__jexl2(${__evalVar(${category}_Pskill)}*4)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+                <stringProp name="filename">product_sections_pskills_e1_4items_cat1.csv</stringProp>
+                <stringProp name="fileEncoding"></stringProp>
+                <stringProp name="variableNames">pstask,psverb</stringProp>
+                <boolProp name="ignoreFirstLine">false</boolProp>
+                <stringProp name="delimiter">,</stringProp>
+                <boolProp name="quotedData">true</boolProp>
+                <boolProp name="recycle">true</boolProp>
+                <boolProp name="stopThread">false</boolProp>
+                <stringProp name="shareMode"></stringProp>
+              </CSVDataSet>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
+                <stringProp name="IncludeController.includepath">Add_statements_pskill_contributesToCompletion.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get users application state for a product or class(product) with item code" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
+            <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
           <hashTree/>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Template" enabled="false"/>
@@ -6719,622 +7091,6 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
           <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
             <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="1011 and 1012 - Combined" enabled="false">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>100.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">1001.csv</stringProp>
-            <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">extuserid,cc,category</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
-            <stringProp name="delimiter">,</stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="shareMode">shareMode.group</stringProp>
-          </CSVDataSet>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_institution.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get classes of an user" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_classes_of_an_user_institution.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
-              <stringProp name="RandomTimer.range">${minWait}</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="true"/>
-          <hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat1}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat1pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">2</stringProp>
-                <stringProp name="ForeachController.endIndex">3</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat1}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">p_cat1.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">task,verb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">false</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode">shareMode.thread</stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                    <intProp name="ActionProcessor.action">1</intProp>
-                    <intProp name="ActionProcessor.target">0</intProp>
-                    <stringProp name="ActionProcessor.duration">0</stringProp>
-                  </TestAction>
-                  <hashTree>
-                    <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                      <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                      <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                    </UniformRandomTimer>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                    <intProp name="ActionProcessor.action">1</intProp>
-                    <intProp name="ActionProcessor.target">0</intProp>
-                    <stringProp name="ActionProcessor.duration">0</stringProp>
-                  </TestAction>
-                  <hashTree>
-                    <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                      <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                      <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                    </UniformRandomTimer>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
-                    <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat2}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat2pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">5</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat2}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">p_cat2.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">task,verb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">false</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode">shareMode.thread</stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                    <intProp name="ActionProcessor.action">1</intProp>
-                    <intProp name="ActionProcessor.target">0</intProp>
-                    <stringProp name="ActionProcessor.duration">0</stringProp>
-                  </TestAction>
-                  <hashTree>
-                    <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                      <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                      <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                    </UniformRandomTimer>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                    <intProp name="ActionProcessor.action">1</intProp>
-                    <intProp name="ActionProcessor.target">0</intProp>
-                    <stringProp name="ActionProcessor.duration">0</stringProp>
-                  </TestAction>
-                  <hashTree>
-                    <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                      <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                      <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                    </UniformRandomTimer>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
-                    <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat3}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat3pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">3</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogressnps_1011_cat3}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">p_cat3.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">task,verb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">false</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode">shareMode.thread</stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                    <intProp name="ActionProcessor.action">1</intProp>
-                    <intProp name="ActionProcessor.target">0</intProp>
-                    <stringProp name="ActionProcessor.duration">0</stringProp>
-                  </TestAction>
-                  <hashTree>
-                    <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                      <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                      <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                    </UniformRandomTimer>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                  <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                    <intProp name="ActionProcessor.action">1</intProp>
-                    <intProp name="ActionProcessor.target">0</intProp>
-                    <stringProp name="ActionProcessor.duration">0</stringProp>
-                  </TestAction>
-                  <hashTree>
-                    <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                      <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                      <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                    </UniformRandomTimer>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
-                    <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat4}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat4pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">2</stringProp>
-              </ForeachController>
-              <hashTree>
-                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-                  <stringProp name="IfController.condition">&quot;${productcode}&quot;==&quot;${cat4pe1}&quot;</stringProp>
-                  <boolProp name="IfController.evaluateAll">false</boolProp>
-                </IfController>
-                <hashTree>
-                  <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                    <boolProp name="LoopController.continue_forever">true</boolProp>
-                    <stringProp name="LoopController.loops">${learningprogressnps_1011_cat4_pe1}</stringProp>
-                  </LoopController>
-                  <hashTree>
-                    <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                      <stringProp name="filename">p_cat4.csv</stringProp>
-                      <stringProp name="fileEncoding"></stringProp>
-                      <stringProp name="variableNames">task,verb</stringProp>
-                      <boolProp name="ignoreFirstLine">false</boolProp>
-                      <stringProp name="delimiter">,</stringProp>
-                      <boolProp name="quotedData">false</boolProp>
-                      <boolProp name="recycle">true</boolProp>
-                      <boolProp name="stopThread">false</boolProp>
-                      <stringProp name="shareMode">shareMode.thread</stringProp>
-                    </CSVDataSet>
-                    <hashTree/>
-                    <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                      <intProp name="ActionProcessor.action">1</intProp>
-                      <intProp name="ActionProcessor.target">0</intProp>
-                      <stringProp name="ActionProcessor.duration">0</stringProp>
-                    </TestAction>
-                    <hashTree>
-                      <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                        <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                        <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                      </UniformRandomTimer>
-                      <hashTree/>
-                    </hashTree>
-                    <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                      <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
-                    </IncludeController>
-                    <hashTree/>
-                    <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                      <intProp name="ActionProcessor.action">1</intProp>
-                      <intProp name="ActionProcessor.target">0</intProp>
-                      <stringProp name="ActionProcessor.duration">0</stringProp>
-                    </TestAction>
-                    <hashTree>
-                      <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                        <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                        <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                      </UniformRandomTimer>
-                      <hashTree/>
-                    </hashTree>
-                    <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
-                      <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
-                    </IncludeController>
-                    <hashTree/>
-                  </hashTree>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
-                    <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_multi_1011.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-                  <stringProp name="IfController.condition">&quot;${productcode}&quot;==&quot;${cat4pe2}&quot;</stringProp>
-                  <boolProp name="IfController.evaluateAll">false</boolProp>
-                </IfController>
-                <hashTree>
-                  <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                    <boolProp name="LoopController.continue_forever">true</boolProp>
-                    <stringProp name="LoopController.loops">${learningprogressnps_1011_cat4_pe2}</stringProp>
-                  </LoopController>
-                  <hashTree>
-                    <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                      <stringProp name="filename">p_cat4.csv</stringProp>
-                      <stringProp name="fileEncoding"></stringProp>
-                      <stringProp name="variableNames">task,verb</stringProp>
-                      <boolProp name="ignoreFirstLine">false</boolProp>
-                      <stringProp name="delimiter">,</stringProp>
-                      <boolProp name="quotedData">false</boolProp>
-                      <boolProp name="recycle">true</boolProp>
-                      <boolProp name="stopThread">false</boolProp>
-                      <stringProp name="shareMode">shareMode.thread</stringProp>
-                    </CSVDataSet>
-                    <hashTree/>
-                    <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                      <intProp name="ActionProcessor.action">1</intProp>
-                      <intProp name="ActionProcessor.target">0</intProp>
-                      <stringProp name="ActionProcessor.duration">0</stringProp>
-                    </TestAction>
-                    <hashTree>
-                      <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                        <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                        <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                      </UniformRandomTimer>
-                      <hashTree/>
-                    </hashTree>
-                    <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                      <stringProp name="IncludeController.includepath">Add_statements.jmx</stringProp>
-                    </IncludeController>
-                    <hashTree/>
-                    <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on Learning Pathway" enabled="false">
-                      <intProp name="ActionProcessor.action">1</intProp>
-                      <intProp name="ActionProcessor.target">0</intProp>
-                      <stringProp name="ActionProcessor.duration">0</stringProp>
-                    </TestAction>
-                    <hashTree>
-                      <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                        <stringProp name="ConstantTimer.delay">${userProgress_min_1011}</stringProp>
-                        <stringProp name="RandomTimer.range">${userProgress_max_1011}</stringProp>
-                      </UniformRandomTimer>
-                      <hashTree/>
-                    </hashTree>
-                    <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="false">
-                      <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
-                    </IncludeController>
-                    <hashTree/>
-                  </hashTree>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-          </hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get users application state for a product or class(product) with item code" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="true"/>
-          <hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat1}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat1pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">1</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogress-ps_1012_cat1}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">product_sections_pskills_e1_4items_cat1.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">pstask,psverb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">true</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode"></stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements_pskill_contributesToCompletion.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat2}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat2pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">1</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogress-ps_1012_cat2}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">product_sections_pskills_e1_4items_cat2.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">pstask,psverb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">true</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode"></stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements_pskill_contributesToCompletion.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat3}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat3pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">1</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogress-ps_1012_cat3}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">product_sections_pskills_e1_4items_cat3.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">pstask,psverb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">true</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode"></stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements_pskill_contributesToCompletion.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-              <stringProp name="IfController.condition">&quot;${category}&quot;==&quot;${cat4}&quot;</stringProp>
-              <boolProp name="IfController.evaluateAll">false</boolProp>
-            </IfController>
-            <hashTree>
-              <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-                <stringProp name="ForeachController.inputVal">cat4pe</stringProp>
-                <stringProp name="ForeachController.returnVal">productcode</stringProp>
-                <boolProp name="ForeachController.useSeparator">false</boolProp>
-                <stringProp name="ForeachController.startIndex">0</stringProp>
-                <stringProp name="ForeachController.endIndex">3</stringProp>
-              </ForeachController>
-              <hashTree>
-                <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="A Student simulating reading (Multiple pages) and post the statements" enabled="true">
-                  <boolProp name="LoopController.continue_forever">true</boolProp>
-                  <stringProp name="LoopController.loops">${learningprogress-ps_1012_cat4}</stringProp>
-                </LoopController>
-                <hashTree>
-                  <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-                    <stringProp name="filename">product_sections_pskills_e1_4items_cat4.csv</stringProp>
-                    <stringProp name="fileEncoding"></stringProp>
-                    <stringProp name="variableNames">pstask,psverb</stringProp>
-                    <boolProp name="ignoreFirstLine">false</boolProp>
-                    <stringProp name="delimiter">,</stringProp>
-                    <boolProp name="quotedData">true</boolProp>
-                    <boolProp name="recycle">true</boolProp>
-                    <boolProp name="stopThread">false</boolProp>
-                    <stringProp name="shareMode"></stringProp>
-                  </CSVDataSet>
-                  <hashTree/>
-                  <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add a new statement" enabled="true">
-                    <stringProp name="IncludeController.includepath">Add_statements_pskill_contributesToCompletion.jmx</stringProp>
-                  </IncludeController>
-                  <hashTree/>
-                </hashTree>
-              </hashTree>
-            </hashTree>
-          </hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get users application state for a product or class(product) with item code" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_user_application_state_for_a_product_or_class_product_with_item_code.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Update user&apos;s application state for a product or class (product)" enabled="true">
-            <stringProp name="IncludeController.includepath">Update_user_application_state_for_a_product_or_class_product_.jmx</stringProp>
           </IncludeController>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
