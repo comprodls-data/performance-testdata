@@ -1149,51 +1149,6 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Bundle Product (Required for attempts)" enabled="true">
-          <collectionProp name="Arguments.arguments">
-            <elementProp name="perf30_300lo_1_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perf30_300lo_1_bundle</stringProp>
-              <stringProp name="Argument.value">perfbundle30</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="perf30_300lo_2_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perf30_300lo_2_bundle</stringProp>
-              <stringProp name="Argument.value">perfbundle30</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="perf30_100lo_1_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perf30_100lo_1_bundle</stringProp>
-              <stringProp name="Argument.value">perfbundle30</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="evpel1_bundle" elementType="Argument">
-              <stringProp name="Argument.name">evpel1_bundle</stringProp>
-              <stringProp name="Argument.value">evpel1_bundle</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="perfb1pe1_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perfb1pe1_bundle</stringProp>
-              <stringProp name="Argument.value">perf_bundle_1</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="perfb1pe2_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perfb1pe2_bundle</stringProp>
-              <stringProp name="Argument.value">perf_bundle_1</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="perfb2pe2_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perfb2pe2_bundle</stringProp>
-              <stringProp name="Argument.value">perf_bundle_2</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="perfb2pe1_bundle" elementType="Argument">
-              <stringProp name="Argument.name">perfb2pe1_bundle</stringProp>
-              <stringProp name="Argument.value">perf_bundle_2</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-          </collectionProp>
-        </Arguments>
-        <hashTree/>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Attempts" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_Scorable_PE_Count" elementType="Argument">
