@@ -20,7 +20,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;ruleid&quot;: &quot;${extuserid}_${randomNo}&quot;,&#xd;
+  &quot;ruleid&quot;: &quot;${extuserid}_${randomNo}_${lockRulesCount}&quot;,&#xd;
   &quot;scope&quot;: &quot;GLOBAL-ALL-USERS&quot;,&#xd;
   &quot;entities&quot;: [&#xd;
     {&#xd;
