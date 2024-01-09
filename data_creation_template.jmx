@@ -1434,12 +1434,12 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">template_new.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount,noOfStudentsInClass</stringProp>
+            <stringProp name="variableNames">category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfStudentsInClass,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
@@ -1558,7 +1558,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">420000</stringProp>
+              <stringProp name="ConstantTimer.delay">720000</stringProp>
               <stringProp name="RandomTimer.range">30000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
@@ -1692,7 +1692,7 @@ vars.put(&quot;assignedPathList&quot;, apList);
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="true">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="false">
             <boolProp name="LoopController.continue_forever">true</boolProp>
             <stringProp name="LoopController.loops">${noOfLockRulesInClass}</stringProp>
           </LoopController>
@@ -1798,7 +1798,7 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="false"/>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
@@ -2178,6 +2178,46 @@ for (int i = 0; i &lt; stringArray.length; i++) {
             <stringProp name="variableNames">extuserid,classtitle,classCode,category,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
           </CSVDataSet>
           <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
             <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
           </IncludeController>
@@ -2392,6 +2432,46 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             <stringProp name="variableNames">extuserid,classtitle,classCode,category,customGradingCount</stringProp>
           </CSVDataSet>
           <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
             <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
           </IncludeController>
@@ -2495,6 +2575,46 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             <boolProp name="stopThread">false</boolProp>
             <stringProp name="variableNames">extuserid,classtitle,classCode,category,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount</stringProp>
           </CSVDataSet>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
           <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
             <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
@@ -2744,7 +2864,7 @@ for (int i = 0; i &lt; stringArray.length; i++) {
           </IncludeController>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Class Assignments" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Class Assignments" enabled="true"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
