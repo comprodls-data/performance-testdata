@@ -2782,7 +2782,10 @@ for (int i = 0; i &lt; stringArray.length; i++) {
 }
 
 vars.put(&quot;productcode&quot;, stringArray[0]);
-</stringProp>
+
+vars.put(&quot;folderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&quot; + &quot;/&quot; + stringArray[0] + &quot;/1544525043137/1544525159358/1544525239184&quot;);
+vars.put(&quot;productfolderid&quot;, &quot;product-state/&quot; + &quot;${orgid}&quot; + &quot;/&quot; + stringArray[0]);
+vars.put(&quot;psfolderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&quot; + &quot;/&quot; + stringArray[0] + &quot;/1544592857014/1544593585947/1544593695538&quot;);</stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
@@ -2795,24 +2798,9 @@ vars.put(&quot;productcode&quot;, stringArray[0]);
                 <stringProp name="Argument.value">1544525043137/1544525159358/1544525239184</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
-              <elementProp name="folderid" elementType="Argument">
-                <stringProp name="Argument.name">folderid</stringProp>
-                <stringProp name="Argument.value">activity-state/${orgid}/${productcode}/1544525043137/1544525159358/1544525239184</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="productfolderid" elementType="Argument">
-                <stringProp name="Argument.name">productfolderid</stringProp>
-                <stringProp name="Argument.value">product-state/${orgid}/${productcode}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
               <elementProp name="psitemcode" elementType="Argument">
                 <stringProp name="Argument.name">psitemcode</stringProp>
                 <stringProp name="Argument.value">1544592857014/1544593585947/1544593695538</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="psfolderid" elementType="Argument">
-                <stringProp name="Argument.name">psfolderid</stringProp>
-                <stringProp name="Argument.value">activity-state/${orgid}/${productcode}/1544592857014/1544593585947/1544593695538</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="documentid" elementType="Argument">
@@ -3572,7 +3560,11 @@ for (int i = 0; i &lt; stringArray.length; i++) {
     vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
 }
 
-vars.put(&quot;productcode&quot;, stringArray[0]);</stringProp>
+vars.put(&quot;productcode&quot;, stringArray[0]);
+
+vars.put(&quot;folderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&quot; + &quot;/&quot; + stringArray[0] + &quot;/1544525043137/1544525159358/1544525239184&quot;);
+vars.put(&quot;productfolderid&quot;, &quot;product-state/&quot; + &quot;${orgid}&quot; + &quot;/&quot; + stringArray[0]);
+vars.put(&quot;psfolderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&quot; + &quot;/&quot; + stringArray[0] + &quot;/1544592857014/1544593585947/1544593695538&quot;);</stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
@@ -3585,24 +3577,9 @@ vars.put(&quot;productcode&quot;, stringArray[0]);</stringProp>
                 <stringProp name="Argument.value">1544525043137/1544525159358/1544525239184</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
-              <elementProp name="folderid" elementType="Argument">
-                <stringProp name="Argument.name">folderid</stringProp>
-                <stringProp name="Argument.value">activity-state/${orgid}/${productcode}/1544525043137/1544525159358/1544525239184</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="productfolderid" elementType="Argument">
-                <stringProp name="Argument.name">productfolderid</stringProp>
-                <stringProp name="Argument.value">product-state/${orgid}/${productcode}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
               <elementProp name="psitemcode" elementType="Argument">
                 <stringProp name="Argument.name">psitemcode</stringProp>
                 <stringProp name="Argument.value">1544592857014/1544593585947/1544593695538</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="psfolderid" elementType="Argument">
-                <stringProp name="Argument.name">psfolderid</stringProp>
-                <stringProp name="Argument.value">activity-state/${orgid}/${productcode}/1544592857014/1544593585947/1544593695538</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="documentid" elementType="Argument">
