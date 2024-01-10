@@ -2133,27 +2133,27 @@
             </elementProp>
             <elementProp name="H5_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H5_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">100</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">80</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">6</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">14</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_customGradingCount" elementType="Argument">
               <stringProp name="Argument.name">H5_customGradingCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_noOfAssignmentsInClass" elementType="Argument">
