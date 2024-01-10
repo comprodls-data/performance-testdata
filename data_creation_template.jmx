@@ -1183,7 +1183,7 @@
             </elementProp>
             <elementProp name="L2_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">L2_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L2_Pskill" elementType="Argument">
@@ -1203,12 +1203,12 @@
             </elementProp>
             <elementProp name="L3_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">L3_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L3_Pskill" elementType="Argument">
               <stringProp name="Argument.name">L3_Pskill</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L4_Scorable_PE_Count" elementType="Argument">
@@ -1223,12 +1223,12 @@
             </elementProp>
             <elementProp name="L4_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">L4_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L4_Pskill" elementType="Argument">
               <stringProp name="Argument.name">L4_Pskill</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L5_Scorable_PE_Count" elementType="Argument">
@@ -1243,12 +1243,12 @@
             </elementProp>
             <elementProp name="L5_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">L5_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L5_Pskill" elementType="Argument">
               <stringProp name="Argument.name">L5_Pskill</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L6_Scorable_PE_Count" elementType="Argument">
@@ -1263,12 +1263,12 @@
             </elementProp>
             <elementProp name="L6_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">L6_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L6_Pskill" elementType="Argument">
               <stringProp name="Argument.name">L6_Pskill</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M1_Scorable_PE_Count" elementType="Argument">
@@ -1283,12 +1283,12 @@
             </elementProp>
             <elementProp name="M1_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">M1_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M1_Pskill" elementType="Argument">
               <stringProp name="Argument.name">M1_Pskill</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M2_Scorable_PE_Count" elementType="Argument">
@@ -1303,12 +1303,12 @@
             </elementProp>
             <elementProp name="M2_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">M2_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M2_Pskill" elementType="Argument">
               <stringProp name="Argument.name">M2_Pskill</stringProp>
-              <stringProp name="Argument.value">6</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M3_Scorable_PE_Count" elementType="Argument">
@@ -1323,12 +1323,12 @@
             </elementProp>
             <elementProp name="M3_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">M3_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M3_Pskill" elementType="Argument">
               <stringProp name="Argument.name">M3_Pskill</stringProp>
-              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M4_Scorable_PE_Count" elementType="Argument">
@@ -1343,12 +1343,12 @@
             </elementProp>
             <elementProp name="M4_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">M4_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M4_Pskill" elementType="Argument">
               <stringProp name="Argument.name">M4_Pskill</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_Scorable_PE_Count" elementType="Argument">
@@ -1363,12 +1363,12 @@
             </elementProp>
             <elementProp name="H1_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">H1_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_Pskill" elementType="Argument">
               <stringProp name="Argument.name">H1_Pskill</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H2_Scorable_PE_Count" elementType="Argument">
@@ -1383,12 +1383,12 @@
             </elementProp>
             <elementProp name="H2_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">H2_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H2_Pskill" elementType="Argument">
               <stringProp name="Argument.name">H2_Pskill</stringProp>
-              <stringProp name="Argument.value">6</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_Scorable_PE_Count" elementType="Argument">
@@ -1403,12 +1403,12 @@
             </elementProp>
             <elementProp name="H3_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">H3_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_Pskill" elementType="Argument">
               <stringProp name="Argument.name">H3_Pskill</stringProp>
-              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_Scorable_PE_Count" elementType="Argument">
@@ -1423,12 +1423,32 @@
             </elementProp>
             <elementProp name="H4_Pskill_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">H4_Pskill_PE_Count</stringProp>
-              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_Pskill" elementType="Argument">
               <stringProp name="Argument.name">H4_Pskill</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H6_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">H6_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">9</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H6_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">H6_Scorable</stringProp>
               <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H6_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">H6_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">9</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H6_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">H6_Pskill</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -1961,7 +1981,7 @@ out.close();
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2864,7 +2884,7 @@ for (int i = 0; i &lt; stringArray.length; i++) {
           </IncludeController>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Class Assignments" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Class Assignments" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
