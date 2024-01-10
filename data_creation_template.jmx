@@ -1981,7 +1981,7 @@ out.close();
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="false">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2011,6 +2011,7 @@ for (int i = 0; i &lt; stringArray.length; i++) {
     vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
 }
 
+vars.put(&quot;productcode&quot;, stringArray[0]);
 </stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
@@ -2771,7 +2772,7 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="User State - Students" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="User State - Students" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2801,7 +2802,7 @@ for (int i = 0; i &lt; stringArray.length; i++) {
     vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
 }
 
-</stringProp>
+vars.put(&quot;productcode&quot;, stringArray[0]);</stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
