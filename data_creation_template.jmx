@@ -1121,6 +1121,36 @@
               <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perfprod3&quot;,&quot;perfprod4&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf40_630lo_1&quot;,&quot;perf40_630lo_2&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="L9" elementType="Argument">
+              <stringProp name="Argument.name">L9</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;, &quot;perf30_100lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L9_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7" elementType="Argument">
+              <stringProp name="Argument.name">L7</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;, &quot;perf30_100lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L7_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8" elementType="Argument">
+              <stringProp name="Argument.name">L8</stringProp>
+              <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L8_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -1448,7 +1478,7 @@
             </elementProp>
             <elementProp name="H4_Pskill" elementType="Argument">
               <stringProp name="Argument.name">H4_Pskill</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_Scorable_PE_Count" elementType="Argument">
@@ -1509,6 +1539,66 @@
             <elementProp name="M5_Pskill" elementType="Argument">
               <stringProp name="Argument.name">M5_Pskill</stringProp>
               <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L7_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L7_Scorable</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L7_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L7_Pskill</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L8_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L8_Scorable</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L8_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L8_Pskill</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L9_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L9_Scorable</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L9_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L9_Pskill</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -1923,7 +2013,7 @@
             </elementProp>
             <elementProp name="M4_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">M4_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">80</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M4_50LOsLockRuleCount" elementType="Argument">
@@ -1933,7 +2023,7 @@
             </elementProp>
             <elementProp name="M4_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">M4_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">40</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M4_150LOsLockRuleCount" elementType="Argument">
@@ -1943,7 +2033,7 @@
             </elementProp>
             <elementProp name="M4_customGradingCount" elementType="Argument">
               <stringProp name="Argument.name">M4_customGradingCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M4_noOfAssignmentsInClass" elementType="Argument">
@@ -1968,17 +2058,17 @@
             </elementProp>
             <elementProp name="M5_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">M5_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">80</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M5_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">M5_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">70</stringProp>
+              <stringProp name="Argument.value">45</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M5_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">M5_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">30</stringProp>
+              <stringProp name="Argument.value">35</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M5_150LOsLockRuleCount" elementType="Argument">
@@ -2013,12 +2103,12 @@
             </elementProp>
             <elementProp name="H1_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H1_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H1_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">35</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_100LOsLockRuleCount" elementType="Argument">
@@ -2153,17 +2243,17 @@
             </elementProp>
             <elementProp name="H4_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H4_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H4_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H4_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_customGradingCount" elementType="Argument">
@@ -2193,22 +2283,22 @@
             </elementProp>
             <elementProp name="H5_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H5_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">500</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.value">350</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">6</stringProp>
+              <stringProp name="Argument.value">100</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">14</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_customGradingCount" elementType="Argument">
@@ -2238,27 +2328,27 @@
             </elementProp>
             <elementProp name="H6_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H6_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">500</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H6_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">350</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H6_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">100</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H6_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_customGradingCount" elementType="Argument">
               <stringProp name="Argument.name">H6_customGradingCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_noOfAssignmentsInClass" elementType="Argument">
@@ -2296,10 +2386,145 @@
               <stringProp name="Argument.value">10</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="L7_noOfLockRulesInClass" elementType="Argument">
+              <stringProp name="Argument.name">L7_noOfLockRulesInClass</stringProp>
+              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">60</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_noOfLockRulesInClass" elementType="Argument">
+              <stringProp name="Argument.name">L8_noOfLockRulesInClass</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_customGradingCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_noOfLockRulesInClass" elementType="Argument">
+              <stringProp name="Argument.name">L9_noOfLockRulesInClass</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_noOfAssignmentsInClass" elementType="Argument">
+              <stringProp name="Argument.name">L7_noOfAssignmentsInClass</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_20LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_20LOsCount</stringProp>
+              <stringProp name="Argument.value">18</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_30LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_30LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_50LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_50LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_noOfAssignmentsInClass" elementType="Argument">
+              <stringProp name="Argument.name">L8_noOfAssignmentsInClass</stringProp>
+              <stringProp name="Argument.value">30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_20LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_20LOsCount</stringProp>
+              <stringProp name="Argument.value">28</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_30LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_30LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_50LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_50LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_noOfAssignmentsInClass" elementType="Argument">
+              <stringProp name="Argument.name">L9_noOfAssignmentsInClass</stringProp>
+              <stringProp name="Argument.value">30</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_20LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_20LOsCount</stringProp>
+              <stringProp name="Argument.value">28</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_30LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_30LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_50LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_50LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template" enabled="true"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">template_new.csv</stringProp>
@@ -2826,7 +3051,7 @@ out.close();
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="false">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
