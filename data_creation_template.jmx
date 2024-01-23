@@ -2203,12 +2203,12 @@
             </elementProp>
             <elementProp name="H3_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H3_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.value">30</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H3_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_customGradingCount" elementType="Argument">
@@ -3716,7 +3716,7 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="false">
             <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
           </IncludeController>
           <hashTree/>

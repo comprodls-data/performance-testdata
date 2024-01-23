@@ -59,7 +59,7 @@
           <hashTree/>
           <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Class Id" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">classid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].uuid</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..entities[?(@.class.instructor.uuid==&quot;${access_token}&quot;)].uuid </stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">CLASSID_NOT_FOUND</stringProp>
           </JSONPostProcessor>
