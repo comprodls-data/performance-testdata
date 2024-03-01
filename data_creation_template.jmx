@@ -1161,6 +1161,16 @@
               <stringProp name="Argument.value">&quot;perfprod3&quot;,&quot;perfprod4&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="L10" elementType="Argument">
+              <stringProp name="Argument.name">L10</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;, &quot;perf30_100lo_1&quot;, &quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;,&quot;perfprodct10&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L10_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;,  &quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -1628,6 +1638,26 @@
             </elementProp>
             <elementProp name="T1005_Scorable" elementType="Argument">
               <stringProp name="Argument.name">T1005_Scorable</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L10_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L10_Scorable</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L10_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L10_Pskill</stringProp>
               <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
@@ -2551,6 +2581,51 @@
               <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="L10_noOfLockRulesInClass" elementType="Argument">
+              <stringProp name="Argument.name">L10_noOfLockRulesInClass</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_noOfAssignmentsInClass" elementType="Argument">
+              <stringProp name="Argument.name">L10_noOfAssignmentsInClass</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_20LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_20LOsCount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_30LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_30LOsCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_50LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_50LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -2681,6 +2756,55 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
               <stringProp name="ConstantTimer.delay">720000</stringProp>
               <stringProp name="RandomTimer.range">30000</stringProp>
             </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;L10&quot;;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">//String[] stringArray = {&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf40_630lo_1&quot;,&quot;perf40_630lo_2&quot;};
+
+//int randomIndex = (int) (Math.random() * stringArray.length);
+
+//String randomValue = perfprodct10;
+
+vars.put(&quot;productcode&quot;, &quot;perfprodct10&quot;);</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] itemCodes = { &quot;1631184898880/1631184933374&quot;};
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+//prefix4 = vars.get(&quot;assignmentCount&quot;);
+prefix6 = vars.get(&quot;classcode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + &quot;_&quot; + &quot;1LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+              <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_1LOs .jmx</stringProp>
+            </IncludeController>
             <hashTree/>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x assignments" enabled="true">
@@ -3915,7 +4039,7 @@ for (int i = 0; i &lt; itemCodes.length; i++) {
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get rules Count" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get rules Count" enabled="true"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
@@ -9352,7 +9476,7 @@ vars.put(&quot;peCount&quot;, String.valueOf(multiProducts.length));</stringProp
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="enroll teacher into classes" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="enroll teacher into classes" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
