@@ -17,7 +17,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">4</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">100</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -3185,7 +3185,7 @@ for (int i = 0; i &lt; orglist.length; i++) {
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
-          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="false">
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
             <stringProp name="ForeachController.inputVal">sch_spacecode</stringProp>
             <stringProp name="ForeachController.returnVal">spacecode</stringProp>
             <boolProp name="ForeachController.useSeparator">false</boolProp>
@@ -3235,7 +3235,7 @@ vars.put(&quot;extuserid&quot;, extuserid);
               </UniformRandomTimer>
               <hashTree/>
             </hashTree>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="false">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -3306,7 +3306,7 @@ vars.put(&quot;schl_classProductCodes&quot;, prefix9);
               <stringProp name="IncludeController.includepath">associate_multi_products_with_class_schl_classProductCodes.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [420-450]" enabled="false">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [420-450]" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -3411,10 +3411,10 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               </BeanShellSampler>
               <hashTree/>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-                <intProp name="ThroughputController.style">0</intProp>
+                <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">true</boolProp>
                 <stringProp name="ThroughputController.maxThroughput">${20LOsCount}</stringProp>
-                <stringProp name="ThroughputController.percentThroughput">${20LOsPercentage}</stringProp>
+                <stringProp name="ThroughputController.percentThroughput">${20LOsCount}</stringProp>
               </ThroughputController>
               <hashTree>
                 <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
@@ -3436,10 +3436,10 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
                 <hashTree/>
               </hashTree>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-                <intProp name="ThroughputController.style">0</intProp>
+                <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">true</boolProp>
                 <stringProp name="ThroughputController.maxThroughput">${30LOsCount}</stringProp>
-                <stringProp name="ThroughputController.percentThroughput">${30LOsPercentage}</stringProp>
+                <stringProp name="ThroughputController.percentThroughput">${30LOsCount}</stringProp>
               </ThroughputController>
               <hashTree>
                 <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
@@ -3461,10 +3461,10 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
                 <hashTree/>
               </hashTree>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-                <intProp name="ThroughputController.style">0</intProp>
+                <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">true</boolProp>
                 <stringProp name="ThroughputController.maxThroughput">${50LOsCount}</stringProp>
-                <stringProp name="ThroughputController.percentThroughput">${50LOsPercentage}</stringProp>
+                <stringProp name="ThroughputController.percentThroughput">${50LOsCount}</stringProp>
               </ThroughputController>
               <hashTree>
                 <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
@@ -3705,10 +3705,10 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               </BeanShellSampler>
               <hashTree/>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-                <intProp name="ThroughputController.style">0</intProp>
+                <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">true</boolProp>
                 <stringProp name="ThroughputController.maxThroughput">${50LOsLockRuleCount}</stringProp>
-                <stringProp name="ThroughputController.percentThroughput">${20LOsPercentage}</stringProp>
+                <stringProp name="ThroughputController.percentThroughput">${50LOsLockRuleCount}</stringProp>
               </ThroughputController>
               <hashTree>
                 <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
@@ -3726,10 +3726,10 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
                 <hashTree/>
               </hashTree>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-                <intProp name="ThroughputController.style">0</intProp>
+                <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">true</boolProp>
                 <stringProp name="ThroughputController.maxThroughput">${100LOsLockRuleCount}</stringProp>
-                <stringProp name="ThroughputController.percentThroughput">${30LOsPercentage}</stringProp>
+                <stringProp name="ThroughputController.percentThroughput">${100LOsLockRuleCount}</stringProp>
               </ThroughputController>
               <hashTree>
                 <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
@@ -3747,10 +3747,10 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
                 <hashTree/>
               </hashTree>
               <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-                <intProp name="ThroughputController.style">0</intProp>
+                <intProp name="ThroughputController.style">1</intProp>
                 <boolProp name="ThroughputController.perThread">true</boolProp>
                 <stringProp name="ThroughputController.maxThroughput">${150LOsLockRuleCount}</stringProp>
-                <stringProp name="ThroughputController.percentThroughput">${50LOsPercentage}</stringProp>
+                <stringProp name="ThroughputController.percentThroughput">${150LOsLockRuleCount}</stringProp>
               </ThroughputController>
               <hashTree>
                 <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
@@ -3848,7 +3848,7 @@ out.write(vars.get(&quot;stdCat&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;assignedPathList&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
-
+vars.put(&quot;assignedPathList&quot;, &quot;&quot;);
 out.flush();
 out.close();
 </stringProp>
@@ -16101,7 +16101,7 @@ out.close();
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
