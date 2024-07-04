@@ -18,7 +18,7 @@
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -1222,6 +1222,16 @@
               <stringProp name="Argument.value">&quot;BNH-VYJ-HKE&quot;,&quot;YTB-LTC-EAL&quot;,&quot;CJG-BDQ-DYD&quot;,&quot;QCV-HJU-YWJ&quot;,&quot;RED-YGL-QYG&quot;,&quot;VEC-JCP-JCB&quot;,&quot;GHP-QYC-FMZ&quot;,&quot;MFN-DYW-KCV&quot;,&quot;WKV-QPC-RDC&quot;,&quot;LRY-MRN-YDT&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="StdCatv1_orgId" elementType="Argument">
+              <stringProp name="Argument.name">StdCatv1_orgId</stringProp>
+              <stringProp name="Argument.value">&quot;perf-test3july-alpha&quot;,&quot;test1-alpha&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="StdCatv1_spacecode" elementType="Argument">
+              <stringProp name="Argument.name">StdCatv1_spacecode</stringProp>
+              <stringProp name="Argument.value">&quot;GKY-HFV-UPX&quot;,&quot;NVH-BRE-QUV&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -1450,6 +1460,41 @@
             <elementProp name="perf-test17-alpha_spacecode" elementType="Argument">
               <stringProp name="Argument.name">perf-test17-alpha_spacecode</stringProp>
               <stringProp name="Argument.value">&quot;LRY-MRN-YDT&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf-test2-alpha_PEs" elementType="Argument">
+              <stringProp name="Argument.name">perf-test2-alpha_PEs</stringProp>
+              <stringProp name="Argument.value">&quot;perfprod110&quot;,&quot;perfprod109&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf-test3july-alpha_ProductCodes" elementType="Argument">
+              <stringProp name="Argument.name">perf-test3july-alpha_ProductCodes</stringProp>
+              <stringProp name="Argument.value">&quot;perfprod110&quot;,&quot;perfprod109&quot;,&quot;perfprod108&quot;,&quot;perfprod107&quot;,&quot;perfprod106&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf-test3july-alpha_PEs" elementType="Argument">
+              <stringProp name="Argument.name">perf-test3july-alpha_PEs</stringProp>
+              <stringProp name="Argument.value">&quot;perfprod110&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="perf-test3july-alpha_spacecode" elementType="Argument">
+              <stringProp name="Argument.name">perf-test3july-alpha_spacecode</stringProp>
+              <stringProp name="Argument.value">&quot;GKY-HFV-UPX&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="test1-alpha_ProductCodes" elementType="Argument">
+              <stringProp name="Argument.name">test1-alpha_ProductCodes</stringProp>
+              <stringProp name="Argument.value">&quot;perfprod110&quot;,&quot;perfprod109&quot;,&quot;perfprod108&quot;,&quot;perfprod107&quot;,&quot;perfprod106&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="test1-alpha_PEs" elementType="Argument">
+              <stringProp name="Argument.name">test1-alpha_PEs</stringProp>
+              <stringProp name="Argument.value">&quot;perfprod110&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="test1-alpha_spacecode" elementType="Argument">
+              <stringProp name="Argument.name">test1-alpha_spacecode</stringProp>
+              <stringProp name="Argument.value">&quot;NVH-BRE-QUV&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -2958,80 +3003,55 @@
               </elementProp>
               <elementProp name="enddate" elementType="Argument">
                 <stringProp name="Argument.name">enddate</stringProp>
-                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P2000D,,)}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-            <stringProp name="BeanShellSampler.query">String[] stringArray  =${__evalVar(${productcodes})}
-//String[] stringArray = productcodes.split(&quot;,&quot;);
-l//og.info(productcodes);
-log.info(stringArray[0]);
+            <stringProp name="BeanShellSampler.query">
+String[] schl_PEs = {${__evalVar(${orgid}_PEs)}};
 
+//vars.put(&quot;schl_PEs&quot; , schl_PEs);
 
-//String[] stringArray = {${__evalVar(${category}_Assignment)}};  
-
-//String[] stringArray = {${__evalVar(${productcodes})}};  
-
-
-for (int i = 0; i &lt; stringArray.length; i++) {
-    vars.put(&quot;productcode&quot; + i, stringArray[i]);
+for (int i = 0; i &lt; schl_PEs.length; i++) {
+    vars.put(&quot;schl_productcode&quot; + (i + 1), schl_PEs[i]);
 }
 
-vars.put(&quot;productcode&quot;, stringArray[0]);
-
-
-</stringProp>
+// Get the length of the array
+int length = schl_PEs.length;
+vars.put(&quot;schPEscount&quot;, String.valueOf(length));</stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
           <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
-            <stringProp name="ForeachController.inputVal">productcode</stringProp>
+            <stringProp name="ForeachController.inputVal">schl_productcode</stringProp>
             <stringProp name="ForeachController.returnVal">productcode</stringProp>
             <boolProp name="ForeachController.useSeparator">false</boolProp>
             <stringProp name="ForeachController.startIndex">0</stringProp>
-            <stringProp name="ForeachController.endIndex">${count}</stringProp>
+            <stringProp name="ForeachController.endIndex">${schPEscount}</stringProp>
           </ForeachController>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create_a_Org-Product_Entitlement_in_an_org" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_Org-Product_Entitlement_in_an_org.jmx</stringProp>
             </IncludeController>
             <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for entitlement [10-15 sec]" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">1000</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="false">
-            <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">${count}</stringProp>
-          </LoopController>
-          <hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-              <stringProp name="BeanShellSampler.query">String[] multiProducts = {
-    ${__evalVar(${productcodes})}
-};
-
-String mergedJson = &quot;[&quot;;
-
-for (int i = 0; i &lt; multiProducts.length; i++) {
-	mergedJson += &quot;{\&quot;productcode\&quot;: \&quot;&quot; + multiProducts[i] + &quot;\&quot;,\&quot;ext_product_meta\&quot;: {\&quot;startdate\&quot;:&quot; + &quot;${startDate}&quot; + &quot;,\&quot;enddate\&quot;:&quot; + &quot;${endDate}&quot; + &quot;}},&quot;;
-}
-mergedJson = mergedJson.substring(0, mergedJson.length() - 1) + &quot;]&quot;;
-
-vars.put(&quot;provisionProductsArray&quot;, mergedJson);</stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
-          </hashTree>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
-            <boolProp name="displayJMeterProperties">false</boolProp>
-            <boolProp name="displayJMeterVariables">true</boolProp>
-            <boolProp name="displaySystemProperties">false</boolProp>
-          </DebugSampler>
-          <hashTree/>
         </hashTree>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="set up user" enabled="false">
           <intProp name="ThroughputController.style">1</intProp>
@@ -3072,7 +3092,7 @@ vars.put(&quot;provisionProductsArray&quot;, mergedJson);</stringProp>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="CoreDataTemplate_stdCat _1011_Step 1" enabled="true"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">std_template.csv</stringProp>
+            <stringProp name="filename">1011_std_template.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">stdCat,classType,category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfStudentsInClass,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
@@ -3976,7 +3996,7 @@ out.close();
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">setupuserlist.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">orgid,extuserid,stdCat</stringProp>
+            <stringProp name="variableNames">extuserid,stdCat</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
@@ -3985,27 +4005,59 @@ out.close();
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - get productcode" enabled="true">
-            <stringProp name="BeanShellSampler.query">String[] schl_PEs = {${__evalVar(${orgid}_PEs)}};
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - get school list" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] orglist = {${__evalVar(${stdCat}_orgId)}}; 
 
-for (int i = 0; i &lt; schl_PEs.length; i++) {
-    vars.put(&quot;schl_PEs&quot; + (i + 1), schl_PEs[i]);
-}</stringProp>
+// Get the length of the array
+int length = orglist.length;
+
+// Save it into a JMeter variable
+vars.put(&quot;schcount&quot;, String.valueOf(length));
+
+for (int i = 0; i &lt; orglist.length; i++) {
+    vars.put(&quot;sch_orgid&quot; + (i + 1), orglist[i]);
+}
+</stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">sch_orgid</stringProp>
+            <stringProp name="ForeachController.returnVal">orgid</stringProp>
+            <boolProp name="ForeachController.useSeparator">false</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex">${schcount}</stringProp>
+          </ForeachController>
+          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
             <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
           </IncludeController>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - get school PEs" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] schl_PEs = {${__evalVar(${orgid}_PEs)}};
+
+//vars.put(&quot;schl_PEs&quot; , schl_PEs);
+
+for (int i = 0; i &lt; schl_PEs.length; i++) {
+    vars.put(&quot;schl_PEs&quot; + (i + 1), schl_PEs[i]);
+}
+
+// Get the length of the array
+int length = schl_PEs.length;
+vars.put(&quot;schPEscount&quot;, String.valueOf(length));</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
           <hashTree/>
           <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
             <stringProp name="ForeachController.inputVal">schl_PEs</stringProp>
             <stringProp name="ForeachController.returnVal">productcode</stringProp>
             <boolProp name="ForeachController.useSeparator">false</boolProp>
             <stringProp name="ForeachController.startIndex">0</stringProp>
-            <stringProp name="ForeachController.endIndex">10</stringProp>
+            <stringProp name="ForeachController.endIndex">${schPEscount}</stringProp>
           </ForeachController>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Setting_up_the_user" enabled="true">
@@ -4017,9 +4069,9 @@ for (int i = 0; i &lt; schl_PEs.length; i++) {
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_1002" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">template_new.csv</stringProp>
+            <stringProp name="filename">1002_template.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfStudentsInClass,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
+            <stringProp name="variableNames">orgid,category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfStudentsInClass,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
@@ -4075,11 +4127,15 @@ for (int i = 0; i &lt; schl_PEs.length; i++) {
             <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
 prefix3 = ctx.getThread().getThreadNum() + 1;
 prefix4 = vars.get(&quot;category&quot;);
+prefix5 = vars.get(&quot;orgid&quot;);
 
-extuserid = &quot;tch&quot; + &quot;_&quot; + prefix4 + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
+extuserid = &quot;tch&quot; + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
 vars.put(&quot;extuserid&quot;, extuserid);
 
-classname = &quot;class&quot; + &quot;_&quot; + prefix4 + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
+String sch_spacecode = ${__evalVar(${orgid}_spacecode)}; 
+vars.put(&quot;spacecode&quot;, sch_spacecode);
+
+classname = &quot;class&quot; + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
 vars.put(&quot;classname&quot;, classname);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
@@ -4087,7 +4143,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <stringProp name="IncludeController.includepath">Join_a_space_with_space_code.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="false">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -4115,7 +4171,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <stringProp name="IncludeController.includepath">create_new_instructor_led_class_context.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="false">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -4131,10 +4187,9 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <stringProp name="IncludeController.includepath">associate_multi_products_with_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - get schl PES" enabled="true">
-            <stringProp name="BeanShellSampler.query">String schl_PEs = ${__evalVar(${orgid}_PEs)};
-
-vars.put(&quot;schl_PEs&quot; , schl_PEs);</stringProp>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - get schl PES" enabled="false">
+            <stringProp name="BeanShellSampler.query">prefix1 = ${__evalVar(${orgid}_PEs)};
+vars.put(&quot;schl_PEs&quot;, prefix1);</stringProp>
             <stringProp name="BeanShellSampler.filename"></stringProp>
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
@@ -4144,7 +4199,7 @@ vars.put(&quot;schl_PEs&quot; , schl_PEs);</stringProp>
             <stringProp name="IncludeController.includepath">associate_multi_products_with_class_schlPEs.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [420-450]" enabled="true">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [420-450]" enabled="false">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -4205,7 +4260,7 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
             </IncludeController>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x assignments" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x assignments" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
             <stringProp name="LoopController.loops">${noOfAssignmentsInClass}</stringProp>
           </LoopController>
@@ -4236,7 +4291,17 @@ for (int i = 0; i &lt; itemCodes.length; i++) {
             </BeanShellSampler>
             <hashTree/>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-              <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
+              <stringProp name="BeanShellSampler.query">import java.util.Arrays;
+
+String[] stringArray1 = {${__evalVar(${category}_Assignment)}};
+String[] stringArray2 = {${__evalVar(${orgid}_PEs)}};
+int length = stringArray1.length + stringArray2.length;
+String[] stringArray = new String[length];
+// Copy elements of array1 to mergedArray
+System.arraycopy(stringArray1, 0, stringArray, 0, stringArray1.length);
+
+// Copy elements of array2 to mergedArray
+System.arraycopy(stringArray2, 0, stringArray, stringArray1.length, stringArray2.length);
 
 int randomIndex = (int) (Math.random() * stringArray.length);
 
@@ -4499,7 +4564,7 @@ vars.put(&quot;assignedPathList&quot;, apList);
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
             <stringProp name="LoopController.loops">${noOfLockRulesInClass}</stringProp>
           </LoopController>
@@ -4529,7 +4594,17 @@ for (int i = 0; i &lt; itemCodes.length; i++) {
             </BeanShellSampler>
             <hashTree/>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-              <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
+              <stringProp name="BeanShellSampler.query">import java.util.Arrays;
+
+String[] stringArray1 = {${__evalVar(${category}_Assignment)}};
+String[] stringArray2 = {${__evalVar(${orgid}_PEs)}};
+int length = stringArray1.length + stringArray2.length;
+String[] stringArray = new String[length];
+// Copy elements of array1 to mergedArray
+System.arraycopy(stringArray1, 0, stringArray, 0, stringArray1.length);
+
+// Copy elements of array2 to mergedArray
+System.arraycopy(stringArray2, 0, stringArray, stringArray1.length, stringArray2.length);
 
 int randomIndex = (${lockRulesCount})%(stringArray.length);
 
@@ -4605,16 +4680,24 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="false"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
             </IncludeController>
             <hashTree/>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-              <stringProp name="BeanShellSampler.query">String[] multiProducts = {
-    ${__evalVar(${category})}
-};
+              <stringProp name="BeanShellSampler.query">import java.util.Arrays;
+
+String[] stringArray1 = {${__evalVar(${category}_Assignment)}};
+String[] stringArray2 = {${__evalVar(${orgid}_PEs)}};
+int length = stringArray1.length + stringArray2.length;
+String[] multiProducts = new String[length];
+// Copy elements of array1 to mergedArray
+System.arraycopy(stringArray1, 0, multiProducts, 0, stringArray1.length);
+
+// Copy elements of array2 to mergedArray
+System.arraycopy(stringArray2, 0, multiProducts, stringArray1.length, stringArray2.length);
 
 String mergedColumnJson = &quot;[&quot;;
 int customWeightage = 0;
@@ -4728,6 +4811,8 @@ vars.put(&quot;provisionProductsArray&quot;, mergedJson);</stringProp>
 FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameStd&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;orgid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;classcode&quot;).getBytes());
@@ -4748,6 +4833,8 @@ out.close();
             <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameTch&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;orgid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;teachername&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;classtitle&quot;).getBytes());
@@ -16101,7 +16188,7 @@ out.close();
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">

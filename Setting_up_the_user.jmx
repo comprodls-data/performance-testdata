@@ -19,12 +19,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;ext_user_id&quot;: ${extuserid},&#xd;
+  &quot;ext_user_id&quot;: &quot;${extuserid}&quot;,&#xd;
   &quot;workflow_type&quot;: &quot;org_entitlement&quot;,&#xd;
   &quot;org_entitlement&quot;: {&#xd;
-    &quot;productcode&quot;: ${productcode},&#xd;
-    &quot;orgid&quot;: ${orgid},&#xd;
-    &quot;dls_user_id&quot;: ${userid},&#xd;
+    &quot;productcode&quot;: &quot;${productcode}&quot;,&#xd;
+    &quot;orgid&quot;: &quot;${orgid}&quot;,&#xd;
+    &quot;dls_user_id&quot;: &quot;${userid}&quot;,&#xd;
     &quot;ext_role&quot;: &quot;student&quot;&#xd;
   }&#xd;
 }</stringProp>
@@ -36,7 +36,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-authextn/accounts/${accountid}/user/setup</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-authextn/accounts/${accountid}/user/setupp</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -62,8 +62,8 @@
           <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
             <stringProp name="JSON_PATH">$.status</stringProp>
-            <stringProp name="EXPECTED_VALUE">${productcode}</stringProp>
-            <boolProp name="JSONVALIDATION">false</boolProp>
+            <stringProp name="EXPECTED_VALUE">in-process</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">false</boolProp>

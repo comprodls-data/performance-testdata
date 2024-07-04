@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="5.5">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <boolProp name="TestPlan.functional_mode">false</boolProp>
@@ -19,7 +19,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;productcode&quot;:  ${productcode},&#xd;
+  &quot;productcode&quot;:  &quot;${productcode}&quot;,&#xd;
   &quot;status&quot;: &quot;active&quot;,&#xd;
   &quot;expired&quot;: false,&#xd;
   &quot;startdate&quot;: ${startDate},&#xd;
@@ -55,6 +55,10 @@
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">test-perf-id</stringProp>
                 <stringProp name="Header.value">${date}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
