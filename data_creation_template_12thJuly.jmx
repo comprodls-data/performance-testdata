@@ -2,26 +2,26 @@
 <jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ComproDLS Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <boolProp name="TestPlan.tearDown_on_shutdown">false</boolProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Performance Test Data Setup" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">8</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">50</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">400</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha" enabled="true">
@@ -1151,9 +1151,24 @@
               <stringProp name="Argument.value">&quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;, &quot;perfb2pe2&quot;, &quot;perfb2pe1&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="TMP_cat" elementType="Argument">
-              <stringProp name="Argument.name">TMP_cat</stringProp>
+            <elementProp name="T1005" elementType="Argument">
+              <stringProp name="Argument.name">T1005</stringProp>
               <stringProp name="Argument.value">&quot;perfprod3&quot;,&quot;perfprod4&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="T1005_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">T1005_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;perfprod3&quot;,&quot;perfprod4&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10" elementType="Argument">
+              <stringProp name="Argument.name">L10</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;, &quot;perf30_100lo_1&quot;, &quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;,&quot;perfprodct11&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Assignment" elementType="Argument">
+              <stringProp name="Argument.name">L10_Assignment</stringProp>
+              <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;,  &quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -1603,6 +1618,46 @@
             </elementProp>
             <elementProp name="L9_Pskill" elementType="Argument">
               <stringProp name="Argument.name">L9_Pskill</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="T1005_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">T1005_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="T1005_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">T1005_Pskill</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="T1005_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">T1005_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="T1005_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">T1005_Scorable</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Scorable_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L10_Scorable_PE_Count</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Scorable" elementType="Argument">
+              <stringProp name="Argument.name">L10_Scorable</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Pskill_PE_Count" elementType="Argument">
+              <stringProp name="Argument.name">L10_Pskill_PE_Count</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_Pskill" elementType="Argument">
+              <stringProp name="Argument.name">L10_Pskill</stringProp>
               <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
@@ -2063,17 +2118,17 @@
             </elementProp>
             <elementProp name="M5_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">M5_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.value">40</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M5_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">M5_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">45</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M5_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">M5_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">35</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M5_150LOsLockRuleCount" elementType="Argument">
@@ -2108,22 +2163,22 @@
             </elementProp>
             <elementProp name="H1_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H1_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">50</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H1_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">35</stringProp>
+              <stringProp name="Argument.value">17</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H1_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H1_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H1_customGradingCount" elementType="Argument">
@@ -2153,22 +2208,22 @@
             </elementProp>
             <elementProp name="H2_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H2_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H2_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H2_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">60</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H2_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H2_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H2_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H2_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H2_customGradingCount" elementType="Argument">
@@ -2198,22 +2253,22 @@
             </elementProp>
             <elementProp name="H3_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H3_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H3_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">60</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H3_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">30</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H3_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H3_customGradingCount" elementType="Argument">
@@ -2243,22 +2298,22 @@
             </elementProp>
             <elementProp name="H4_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H4_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H4_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">60</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H4_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">30</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H4_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H4_customGradingCount" elementType="Argument">
@@ -2288,22 +2343,22 @@
             </elementProp>
             <elementProp name="H5_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H5_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">500</stringProp>
+              <stringProp name="Argument.value">125</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">480</stringProp>
+              <stringProp name="Argument.value">120</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H5_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H5_customGradingCount" elementType="Argument">
@@ -2333,22 +2388,22 @@
             </elementProp>
             <elementProp name="H6_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">H6_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">500</stringProp>
+              <stringProp name="Argument.value">125</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H6_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">480</stringProp>
+              <stringProp name="Argument.value">120</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H6_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">H6_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="H6_customGradingCount" elementType="Argument">
@@ -2393,22 +2448,22 @@
             </elementProp>
             <elementProp name="L7_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">L7_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L7_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">L7_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">60</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L7_100LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">L7_100LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L7_150LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">L7_150LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L7_customGradingCount" elementType="Argument">
@@ -2418,12 +2473,12 @@
             </elementProp>
             <elementProp name="L8_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">L8_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L8_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">L8_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L8_100LOsLockRuleCount" elementType="Argument">
@@ -2443,12 +2498,12 @@
             </elementProp>
             <elementProp name="L9_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">L9_noOfLockRulesInClass</stringProp>
-              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L9_50LOsLockRuleCount" elementType="Argument">
               <stringProp name="Argument.name">L9_50LOsLockRuleCount</stringProp>
-              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L9_100LOsLockRuleCount" elementType="Argument">
@@ -2526,13 +2581,58 @@
               <stringProp name="Argument.value">1</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="L10_noOfLockRulesInClass" elementType="Argument">
+              <stringProp name="Argument.name">L10_noOfLockRulesInClass</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">25</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_noOfAssignmentsInClass" elementType="Argument">
+              <stringProp name="Argument.name">L10_noOfAssignmentsInClass</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_20LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_20LOsCount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_30LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_30LOsCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_50LOsCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_50LOsCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">1041_template.csv</stringProp>
+            <stringProp name="filename">template_new.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,noOfAssignmentsInClass,20LOsCount,30LOsCount,50LOsCount,noOfStudentsInClass,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
@@ -2547,12 +2647,12 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilenameTch" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
-                <stringProp name="Argument.value">1042_scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="outputCsvFilenameStd" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
-                <stringProp name="Argument.value">1042_student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="startdate" elementType="Argument">
@@ -2609,7 +2709,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">10000</stringProp>
+              <stringProp name="ConstantTimer.delay">60000</stringProp>
               <stringProp name="RandomTimer.range">5000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
@@ -2637,7 +2737,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">30000</stringProp>
+              <stringProp name="ConstantTimer.delay">10000</stringProp>
               <stringProp name="RandomTimer.range">5000</stringProp>
             </UniformRandomTimer>
             <hashTree/>
@@ -2656,6 +2756,55 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
               <stringProp name="ConstantTimer.delay">720000</stringProp>
               <stringProp name="RandomTimer.range">30000</stringProp>
             </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;L10&quot;;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">//String[] stringArray = {&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf38_300lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf40_630lo_1&quot;,&quot;perf40_630lo_2&quot;};
+
+//int randomIndex = (int) (Math.random() * stringArray.length);
+
+//String randomValue = perfprodct10;
+
+vars.put(&quot;productcode&quot;, &quot;perfprodct11&quot;);</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] itemCodes = { &quot;1631184898880/1631184933374&quot;};
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+//prefix4 = vars.get(&quot;assignmentCount&quot;);
+prefix6 = vars.get(&quot;classcode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + &quot;_&quot; + &quot;1LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+              <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_1LOs .jmx</stringProp>
+            </IncludeController>
             <hashTree/>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x assignments" enabled="true">
@@ -2701,18 +2850,6 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
-              <intProp name="ActionProcessor.action">1</intProp>
-              <intProp name="ActionProcessor.target">0</intProp>
-              <stringProp name="ActionProcessor.duration">0</stringProp>
-            </TestAction>
-            <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">3500</stringProp>
-                <stringProp name="RandomTimer.range">200</stringProp>
-              </UniformRandomTimer>
-              <hashTree/>
-            </hashTree>
             <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
               <intProp name="ThroughputController.style">0</intProp>
               <boolProp name="ThroughputController.perThread">true</boolProp>
@@ -3182,8 +3319,8 @@ vars.put(&quot;provisionProductsArray&quot;, mergedJson);</stringProp>
             </TestAction>
             <hashTree>
               <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">3500</stringProp>
-                <stringProp name="RandomTimer.range">500</stringProp>
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">1000</stringProp>
               </UniformRandomTimer>
               <hashTree/>
             </hashTree>
@@ -3231,77 +3368,6 @@ out.close();
             <stringProp name="BeanShellSampler.parameters"></stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
-          <hashTree/>
-        </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="TMP-c-p-association(1041,42)" enabled="true"/>
-        <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">TMP_cat.csv</stringProp>
-            <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">extuserid,title,classCode,category</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
-            <stringProp name="delimiter">,</stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="shareMode">shareMode.group</stringProp>
-          </CSVDataSet>
-          <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="outputCsvFilenameTch" elementType="Argument">
-                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
-                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="outputCsvFilenameStd" elementType="Argument">
-                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
-                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="startdate" elementType="Argument">
-                <stringProp name="Argument.name">startdate</stringProp>
-                <stringProp name="Argument.value">${__time(,)}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="enddate" elementType="Argument">
-                <stringProp name="Argument.name">enddate</stringProp>
-                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="assignedPathList" elementType="Argument">
-                <stringProp name="Argument.name">assignedPathList</stringProp>
-                <stringProp name="Argument.value"></stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="title" elementType="Argument">
-                <stringProp name="Argument.name">title</stringProp>
-                <stringProp name="Argument.value">default gradebook 1</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="gradebook_id" elementType="Argument">
-                <stringProp name="Argument.name">gradebook_id</stringProp>
-                <stringProp name="Argument.value">default-gradebook</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </Arguments>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
-            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Validate cc" enabled="true">
-            <stringProp name="IncludeController.includepath">validate_classcode.jmx</stringProp>
-          </IncludeController>
-          <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate multi products with a class" enabled="true">
-            <stringProp name="IncludeController.includepath">associate_multi_products_with_class.jmx</stringProp>
-          </IncludeController>
           <hashTree/>
         </hashTree>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Attempts and User State - Students" enabled="false">
@@ -3496,12 +3562,75 @@ vars.put(&quot;psfolderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&qu
           </IncludeController>
           <hashTree/>
         </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Get dlsuserid" enabled="false">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <FloatProperty>
+            <name>ThroughputController.percentThroughput</name>
+            <value>100.0</value>
+            <savedValue>0.0</savedValue>
+          </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="filename">attempts.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">extuserid,cc,category</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilename" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilename</stringProp>
+                <stringProp name="Argument.value">dlsuserid_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user_institution.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="false">
+            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilename&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;cc&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;userid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lock Rules and Custom Grading" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">attempts.csv</stringProp>
+            <stringProp name="filename">createRule.csv</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
@@ -3747,6 +3876,698 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Add columns to a particular gradebook of a class" enabled="true">
               <stringProp name="IncludeController.includepath">Add_columns_to_a_particular_gradebook_of_a_class_with_custom_components.jmx</stringProp>
             </IncludeController>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create 5 rules if rule count is less than 5" enabled="false"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">createRule.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid,classtitle,classCode,category</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="rulesCountFile" elementType="Argument">
+                <stringProp name="Argument.name">rulesCountFile</stringProp>
+                <stringProp name="Argument.value">Rules_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};  
+
+
+for (int i = 0; i &lt; stringArray.length; i++) {
+    vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
+}
+
+vars.put(&quot;productcode&quot;, stringArray[0]);
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
+int stringArrayLen = stringArray.length;
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="get_classes_of_an_user" enabled="true">
+            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get_details_for_a_specific_class_All_Details" enabled="false">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class_All_Details.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">${category}_productcode</stringProp>
+            <stringProp name="ForeachController.returnVal">productcode</stringProp>
+            <boolProp name="ForeachController.useSeparator">false</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex">20</stringProp>
+          </ForeachController>
+          <hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all rules" enabled="true">
+              <stringProp name="IncludeController.includepath">Get_all_the_rules.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for writing data into csv file" enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">1000</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+              <stringProp name="BeanShellSampler.query">
+FileOutputStream out = new FileOutputStream(vars.get(&quot;rulesCountFile&quot;),true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classtitle&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;productcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;rulesCount&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+
+
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+              <stringProp name="IfController.condition">&quot;${rulesCount}&quot; &lt; 5;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+    &quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;
+};
+
+for (int i = 0; i &lt; itemCodes.length; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[i]);
+}
+
+</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+                <boolProp name="LoopController.continue_forever">true</boolProp>
+                <stringProp name="LoopController.loops">5</stringProp>
+              </LoopController>
+              <hashTree>
+                <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
+                  <stringProp name="maximumValue">999999</stringProp>
+                  <stringProp name="minimumValue">000000</stringProp>
+                  <stringProp name="outputFormat">000000</stringProp>
+                  <boolProp name="perThread">true</boolProp>
+                  <stringProp name="randomSeed"></stringProp>
+                  <stringProp name="variableName">randomNo</stringProp>
+                </RandomVariableConfig>
+                <hashTree/>
+                <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                  <stringProp name="CounterConfig.start">1</stringProp>
+                  <stringProp name="CounterConfig.end"></stringProp>
+                  <stringProp name="CounterConfig.incr">1</stringProp>
+                  <stringProp name="CounterConfig.name">lockRulesCount</stringProp>
+                  <stringProp name="CounterConfig.format"></stringProp>
+                  <boolProp name="CounterConfig.per_user">false</boolProp>
+                </CounterConfig>
+                <hashTree/>
+                <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="create a rule" enabled="true">
+                  <stringProp name="IncludeController.includepath">Create_a_rule_50LOs.jmx</stringProp>
+                </IncludeController>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get rules Count" enabled="true"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">1040_ruleCreation.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid,classtitle,classCode,category</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="rulesCountFile" elementType="Argument">
+                <stringProp name="Argument.name">rulesCountFile</stringProp>
+                <stringProp name="Argument.value">Rules_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};  
+
+
+for (int i = 0; i &lt; stringArray.length; i++) {
+    vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
+}
+
+vars.put(&quot;productcode&quot;, stringArray[0]);
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
+int stringArrayLen = stringArray.length;
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="get_classes_of_an_user" enabled="true">
+            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get_details_for_a_specific_class_All_Details" enabled="false">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class_All_Details.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">${category}_productcode</stringProp>
+            <stringProp name="ForeachController.returnVal">productcode</stringProp>
+            <boolProp name="ForeachController.useSeparator">false</boolProp>
+            <stringProp name="ForeachController.startIndex">0</stringProp>
+            <stringProp name="ForeachController.endIndex">20</stringProp>
+          </ForeachController>
+          <hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all rules" enabled="true">
+              <stringProp name="IncludeController.includepath">Get_all_the_rules.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for writing data into csv file" enabled="false">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+                <stringProp name="RandomTimer.range">1000</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="false">
+              <stringProp name="BeanShellSampler.query">
+FileOutputStream out = new FileOutputStream(vars.get(&quot;rulesCountFile&quot;),true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classtitle&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;productcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;rulesCount&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+
+
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+              <stringProp name="BeanShellAssertion.query">int rulesCount = Integer.parseInt(vars.get(&quot;rulesCount&quot; ));
+if(rulesCount &lt; 5){
+Failure = true;
+FailureMessage = &quot;rulesCount = &quot; + rulesCount + &quot; is less than &quot; + &quot;5&quot;;}</stringProp>
+              <stringProp name="BeanShellAssertion.filename"></stringProp>
+              <stringProp name="BeanShellAssertion.parameters"></stringProp>
+              <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+            </BeanShellAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get students" enabled="false"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">getStudents.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid,classtitle,classCode,category</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="getStudent" elementType="Argument">
+                <stringProp name="Argument.name">getStudent</stringProp>
+                <stringProp name="Argument.value">getStudent_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};  
+
+
+for (int i = 0; i &lt; stringArray.length; i++) {
+    vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
+}
+
+vars.put(&quot;productcode&quot;, stringArray[0]);
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="get_classes_of_an_user" enabled="true">
+            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get_details_for_a_specific_class_All_Details" enabled="false">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class_All_Details.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get_members_of _a_class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_one_member_of _a_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+            <stringProp name="BeanShellSampler.query">
+FileOutputStream out = new FileOutputStream(vars.get(&quot;getStudent&quot;),true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classtitle&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;stdUserid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get all student details of class" enabled="false"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">getStudents.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid,classtitle,classCode,category</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmt_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputCsvFilenameStd" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameStd</stringProp>
+                <stringProp name="Argument.value">student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="startdate" elementType="Argument">
+                <stringProp name="Argument.name">startdate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="enddate" elementType="Argument">
+                <stringProp name="Argument.name">enddate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="assignedPathList" elementType="Argument">
+                <stringProp name="Argument.name">assignedPathList</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="title" elementType="Argument">
+                <stringProp name="Argument.name">title</stringProp>
+                <stringProp name="Argument.value">default gradebook 1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="gradebook_id" elementType="Argument">
+                <stringProp name="Argument.name">gradebook_id</stringProp>
+                <stringProp name="Argument.value">default-gradebook</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="getStudent" elementType="Argument">
+                <stringProp name="Argument.name">getStudent</stringProp>
+                <stringProp name="Argument.value">getStudent_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};  
+
+
+for (int i = 0; i &lt; stringArray.length; i++) {
+    vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
+}
+
+vars.put(&quot;productcode&quot;, stringArray[0]);
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="get_classes_of_an_user" enabled="true">
+            <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get_details_for_a_specific_class_All_Details" enabled="false">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class_All_Details.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get_members_of _a_class" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_members_of_a_class_All.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+            <stringProp name="BeanShellSampler.query">
+for (int i = 0; i &lt; entities.length; i++) {
+    vars.put(vars.get(&quot;category&quot;) + &quot;_productcode&quot; + (i + 1), stringArray[i]);
+}
+FileOutputStream out = new FileOutputStream(vars.get(&quot;getStudent&quot;),true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classtitle&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;stdUserid&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -4190,7 +5011,7 @@ vars.put(&quot;psfolderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&qu
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">tch_2feb_set1_createasnmgt.csv</stringProp>
+            <stringProp name="filename">createAssignment.csv</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
@@ -4222,8 +5043,8 @@ vars.put(&quot;psfolderid&quot;, &quot;activity-state/&quot; + &quot;${orgid}&qu
           </TestAction>
           <hashTree>
             <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">10000</stringProp>
-              <stringProp name="RandomTimer.range">2500</stringProp>
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
@@ -8375,62 +9196,20 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Entitle user with product codes(1021)" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Entitle user with product codes" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">studentProduct.csv</stringProp>
+            <stringProp name="filename">studentextuserid.csv</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
-            <stringProp name="shareMode">shareMode.group</stringProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
             <boolProp name="stopThread">false</boolProp>
-            <stringProp name="variableNames">studentextuserid,cc,category</stringProp>
+            <stringProp name="variableNames">studentextuserid</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller-L1-L9" enabled="true">
-            <boolProp name="IfController.evaluateAll">false</boolProp>
-            <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;L1&quot; || &quot;${category}&quot; == &quot;L2&quot; || &quot;${category}&quot; == &quot;L3&quot; || &quot;${category}&quot; == &quot;L4&quot; || &quot;${category}&quot; == &quot;L5&quot; || &quot;${category}&quot; == &quot;L6&quot; || &quot;${category}&quot; == &quot;L7&quot; || &quot;${category}&quot; == &quot;L8&quot; || &quot;${category}&quot; == &quot;L9&quot;;</stringProp>
-          </IfController>
-          <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Entitle User with Product" enabled="true">
-              <stringProp name="IncludeController.includepath">Entitle_User_With_Product_L1_L9.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-          </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller-M1-M5" enabled="true">
-            <boolProp name="IfController.evaluateAll">false</boolProp>
-            <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;M1&quot; || &quot;${category}&quot; == &quot;M2&quot; || &quot;${category}&quot; == &quot;M3&quot; || &quot;${category}&quot; == &quot;M4&quot; || &quot;${category}&quot; == &quot;M5&quot;;</stringProp>
-          </IfController>
-          <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Entitle User with Product" enabled="true">
-              <stringProp name="IncludeController.includepath">Entitle_User_With_Product_M1_M5.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-          </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller-H1-H3" enabled="true">
-            <boolProp name="IfController.evaluateAll">false</boolProp>
-            <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H1&quot; || &quot;${category}&quot; == &quot;H2&quot; || &quot;${category}&quot; == &quot;H3&quot;;</stringProp>
-          </IfController>
-          <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Entitle User with Product" enabled="true">
-              <stringProp name="IncludeController.includepath">Entitle_User_With_Product_H1_H3.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
-          </hashTree>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
-            <intProp name="ActionProcessor.action">1</intProp>
-            <intProp name="ActionProcessor.target">0</intProp>
-            <stringProp name="ActionProcessor.duration">0</stringProp>
-          </TestAction>
-          <hashTree>
-            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-              <stringProp name="ConstantTimer.delay">30000</stringProp>
-              <stringProp name="RandomTimer.range">10000</stringProp>
-            </UniformRandomTimer>
-            <hashTree/>
-          </hashTree>
           <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - Multi Umbrella" enabled="false">
             <collectionProp name="Arguments.arguments">
               <elementProp name="productcode" elementType="Argument">
@@ -8547,6 +9326,19 @@ vars.put(&quot;productcode&quot;, &quot;evpel1&quot;);</stringProp>
             <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
           </BeanShellSampler>
           <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="true">
+            <stringProp name="ForeachController.inputVal">cat2pe</stringProp>
+            <stringProp name="ForeachController.returnVal">multiProduct</stringProp>
+            <boolProp name="ForeachController.useSeparator">false</boolProp>
+            <stringProp name="ForeachController.startIndex">2</stringProp>
+            <stringProp name="ForeachController.endIndex">6</stringProp>
+          </ForeachController>
+          <hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Entitle User with Product" enabled="true">
+              <stringProp name="IncludeController.includepath">Entitle_User_With_Product.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+          </hashTree>
           <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="ForEach Controller" enabled="false">
             <stringProp name="ForeachController.inputVal">cat5pe</stringProp>
             <stringProp name="ForeachController.returnVal">multiProduct</stringProp>
@@ -13243,7 +14035,6 @@ out.close();
           </value>
         </objProp>
         <stringProp name="filename"></stringProp>
-        <boolProp name="useGroupName">true</boolProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
