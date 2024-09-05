@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="5.5">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ComproDLS Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -18,10 +18,11 @@
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha" enabled="true">
@@ -1169,6 +1170,31 @@
             <elementProp name="L10_Assignment" elementType="Argument">
               <stringProp name="Argument.name">L10_Assignment</stringProp>
               <stringProp name="Argument.value">&quot;evpel1&quot;, &quot;perf30_300lo_1&quot;, &quot;perf30_300lo_2&quot;,  &quot;perfb1pe1&quot;, &quot;perfb1pe2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_Assignment50LO" elementType="Argument">
+              <stringProp name="Argument.name">H5_Assignment50LO</stringProp>
+              <stringProp name="Argument.value">&quot;perf41_400lo_1&quot;,&quot;perf41_500lo_1&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf34_400lo_1&quot;,&quot;perf37_400lo_1&quot;,&quot;perf37_400lo_2&quot;,&quot;perf37_400lo_3&quot;,&quot;perf37_630lo_1&quot;,&quot;perf37_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_Assignment50LO" elementType="Argument">
+              <stringProp name="Argument.name">H1_Assignment50LO</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf36_400lo_1&quot;,&quot;perf36_500lo_1&quot;,&quot;perf36_500lo_2&quot;,&quot;perf36_630lo_1&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_Assignment50LO" elementType="Argument">
+              <stringProp name="Argument.name">H2_Assignment50LO</stringProp>
+              <stringProp name="Argument.value">&quot;perf36_400lo_1&quot;,&quot;perf36_500lo_1&quot;,&quot;perf36_500lo_2&quot;,&quot;perf36_630lo_1&quot;,&quot;perf37_400lo_1&quot;,&quot;perf37_400lo_2&quot;,&quot;perf37_400lo_3&quot;,&quot;perf37_630lo_1&quot;,&quot;perf37_630lo_2&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_Assignment50LO" elementType="Argument">
+              <stringProp name="Argument.name">H3_Assignment50LO</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perf33_400lo_1&quot;, &quot;perf33_500lo_1&quot;, &quot;perf33_500lo_2&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_Assignment50LO" elementType="Argument">
+              <stringProp name="Argument.name">H4_Assignment50LO</stringProp>
+              <stringProp name="Argument.value">&quot;perf35_400lo_1&quot;,&quot;perf35_500lo_1&quot;,&quot;perfprod3&quot;,&quot;perfprod4&quot;,&quot;perf38_630lo_1&quot;,&quot;perf38_630lo_2&quot;,&quot;perf40_630lo_1&quot;,&quot;perf40_630lo_2&quot;</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -2629,6 +2655,361 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV -- Assignments for custom link" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="M1_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">M1_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M1_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M1_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M1_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M1_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M1_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">M2_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M2_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M2_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M2_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M2_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M2_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">M3_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M3_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">9</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M3_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M3_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M3_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M3_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">M4_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">12</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M4_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M4_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M4_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M4_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M4_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">M5_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M5_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">16</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M5_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M5_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M5_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">M5_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H1_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">6</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H1_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H1_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H1_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H1_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H1_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_50LOasgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H1_50LOasgmtPECount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_50LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H1_50LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H2_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">17</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H2_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H2_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H2_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H2_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H2_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_50LOasgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H2_50LOasgmtPECount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_50LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H2_50LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H3_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H3_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H3_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H3_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H3_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H3_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_50LOasgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H3_50LOasgmtPECount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_50LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H3_50LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H4_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">9</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H4_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H4_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H4_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H4_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H4_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_50LOasgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H4_50LOasgmtPECount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_50LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H4_50LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_asgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H5_asgmtPECount</stringProp>
+              <stringProp name="Argument.value">14</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_5LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H5_5LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_10LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H5_10LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_15LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H5_15LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_20LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H5_20LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_25LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H5_25LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_50LOasgmtPECount" elementType="Argument">
+              <stringProp name="Argument.name">H5_50LOasgmtPECount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_50LOsCountAsgmt" elementType="Argument">
+              <stringProp name="Argument.name">H5_50LOsCountAsgmt</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -4039,7 +4420,7 @@ for (int i = 0; i &lt; itemCodes.length; i++) {
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get rules Count" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get rules Count" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
@@ -13752,6 +14133,483 @@ out.close();
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Class Assignments_new" enabled="true"/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">scenario_tch_asnmt.csv</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">extuserid,classtitle,classCode,category</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
+            <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="validate classcode" enabled="true">
+            <stringProp name="IncludeController.includepath">validate_classcode.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="false">
+            <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">${maxWait}</stringProp>
+              <stringProp name="RandomTimer.range">${minWait}</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x assignments_for all PES" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${__evalVar(${category}_asgmtPECount)}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end">${__evalVar(${category}_asgmtPECount)}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">PECounter</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">true</boolProp>
+              <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Set PE for assignment creation" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
+
+//int randomIndex = (int) (Math.random() * stringArray.length);
+int PECounter = Integer.parseInt(vars.get(&quot;PECounter&quot;));
+PECounter = PECounter - 1;
+String productValue = stringArray[PECounter];
+
+vars.put(&quot;productcode&quot;, productValue);
+
+int start_index = 0;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 5LOsCount asgmt" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_5LOsCountAsgmt)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_5LOsCountAsgmt)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">asnmtCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544592286221/1544592474205/1544592511422&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544592286221/1547439887065/1544592716116&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544525043137/1544525159358/1544525175677&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1547439716609/1544528439584&quot;,&quot;1544596644314/1544597008306/1544597048285&quot;,&quot;1544525043137/1544525159358/1544525239184&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544593830881/1547439992703/1544596607802&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544591089661/1547439767627/1544591734989&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544593830881/1547439992703/1544596586244&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544521486954/1544521507623/1676462274556&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544591751639/1547439831649/1544592253853&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544591089661/1544591364773/1544591400139&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544525043137/1544525159358/1544525192972&quot;,&quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526779004/1544526946815&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544596644314/1547440046070/1544597345478&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544592857014/1544593529004/1544593573380&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544525043137/1544525159358/1544525217177&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544526345845/1544526779004/1544526923433&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544526345845/1547439716609/1544528426617&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544525043137/1544525058289/1544525143762&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544591089661/1547439767627/1544591707621&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544525043137/1544525280855/1544525303429&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544593830881/1544596248781/1544596283112&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544591751639/1547439831649/1544592270374&quot;,&quot;1544592857014/1547439926624/1544593813987&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544591751639/1544591937229/1544591964946&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544596644314/1547440046070/1544597324337&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1547439887065/1544592727327&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;
+};
+
+
+int loopCounter = Integer.parseInt(vars.get(&quot;asnmtCounter&quot;));
+int start_index = Integer.parseInt(vars.get(&quot;start_index&quot;));
+
+// Subtract 1 from the loop counter variable
+//int start_index = loopCounter - 1;
+
+// Multiply the result by 20
+//start_index = loopCounter * 10;
+
+for (int i = 0; i &lt; 5; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[start_index+ i]);
+}
+
+start_index = start_index + 5;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+prefix4 = vars.get(&quot;asnmtCounter&quot;);
+prefix5 = vars.get(&quot;productcode&quot;);
+prefix6 = vars.get(&quot;classCode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + &quot;5LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
+
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+                <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_5LOs.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 10LOsCount asgmt" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_10LOsCountAsgmt)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_10LOsCountAsgmt)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">asnmtCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544592286221/1544592474205/1544592511422&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544592286221/1547439887065/1544592716116&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544525043137/1544525159358/1544525175677&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1547439716609/1544528439584&quot;,&quot;1544596644314/1544597008306/1544597048285&quot;,&quot;1544525043137/1544525159358/1544525239184&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544593830881/1547439992703/1544596607802&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544591089661/1547439767627/1544591734989&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544593830881/1547439992703/1544596586244&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544521486954/1544521507623/1676462274556&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544591751639/1547439831649/1544592253853&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544591089661/1544591364773/1544591400139&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544525043137/1544525159358/1544525192972&quot;,&quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526779004/1544526946815&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544596644314/1547440046070/1544597345478&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544592857014/1544593529004/1544593573380&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544525043137/1544525159358/1544525217177&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544526345845/1544526779004/1544526923433&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544526345845/1547439716609/1544528426617&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544525043137/1544525058289/1544525143762&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544591089661/1547439767627/1544591707621&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544525043137/1544525280855/1544525303429&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544593830881/1544596248781/1544596283112&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544591751639/1547439831649/1544592270374&quot;,&quot;1544592857014/1547439926624/1544593813987&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544591751639/1544591937229/1544591964946&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544596644314/1547440046070/1544597324337&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1547439887065/1544592727327&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;
+};
+
+
+int loopCounter = Integer.parseInt(vars.get(&quot;asnmtCounter&quot;));
+int start_index = Integer.parseInt(vars.get(&quot;start_index&quot;));
+// Subtract 1 from the loop counter variable
+//int start_index = loopCounter - 1;
+
+// Multiply the result by 20
+//start_index = loopCounter * 10;
+
+for (int i = 0; i &lt; 10; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[start_index+ i]);
+}
+
+start_index = start_index + 10;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+prefix4 = vars.get(&quot;asnmtCounter&quot;);
+prefix5 = vars.get(&quot;productcode&quot;);
+prefix6 = vars.get(&quot;classCode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + &quot;10LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
+
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+                <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_10LOs.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 15LOsCount asgmt" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_15LOsCountAsgmt)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_15LOsCountAsgmt)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">asnmtCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544592286221/1544592474205/1544592511422&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544592286221/1547439887065/1544592716116&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544525043137/1544525159358/1544525175677&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1547439716609/1544528439584&quot;,&quot;1544596644314/1544597008306/1544597048285&quot;,&quot;1544525043137/1544525159358/1544525239184&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544593830881/1547439992703/1544596607802&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544591089661/1547439767627/1544591734989&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544593830881/1547439992703/1544596586244&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544521486954/1544521507623/1676462274556&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544591751639/1547439831649/1544592253853&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544591089661/1544591364773/1544591400139&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544525043137/1544525159358/1544525192972&quot;,&quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526779004/1544526946815&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544596644314/1547440046070/1544597345478&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544592857014/1544593529004/1544593573380&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544525043137/1544525159358/1544525217177&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544526345845/1544526779004/1544526923433&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544526345845/1547439716609/1544528426617&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544525043137/1544525058289/1544525143762&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544591089661/1547439767627/1544591707621&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544525043137/1544525280855/1544525303429&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544593830881/1544596248781/1544596283112&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544591751639/1547439831649/1544592270374&quot;,&quot;1544592857014/1547439926624/1544593813987&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544591751639/1544591937229/1544591964946&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544596644314/1547440046070/1544597324337&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1547439887065/1544592727327&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;
+};
+
+int loopCounter = Integer.parseInt(vars.get(&quot;asnmtCounter&quot;));
+int start_index = Integer.parseInt(vars.get(&quot;start_index&quot;));
+
+
+for (int i = 0; i &lt; 15; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[start_index+ i]);
+}
+
+start_index = start_index + 15;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+prefix4 = vars.get(&quot;asnmtCounter&quot;);
+prefix5 = vars.get(&quot;productcode&quot;);
+prefix6 = vars.get(&quot;classCode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + &quot;15LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
+
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+                <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_15LOs.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 20LOsCount asgmt" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_20LOsCountAsgmt)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_20LOsCountAsgmt)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">asnmtCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544592286221/1544592474205/1544592511422&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544592286221/1547439887065/1544592716116&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544525043137/1544525159358/1544525175677&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1547439716609/1544528439584&quot;,&quot;1544596644314/1544597008306/1544597048285&quot;,&quot;1544525043137/1544525159358/1544525239184&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544593830881/1547439992703/1544596607802&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544591089661/1547439767627/1544591734989&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544593830881/1547439992703/1544596586244&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544521486954/1544521507623/1676462274556&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544591751639/1547439831649/1544592253853&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544591089661/1544591364773/1544591400139&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544525043137/1544525159358/1544525192972&quot;,&quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526779004/1544526946815&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544596644314/1547440046070/1544597345478&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544592857014/1544593529004/1544593573380&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544525043137/1544525159358/1544525217177&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544526345845/1544526779004/1544526923433&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544526345845/1547439716609/1544528426617&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544525043137/1544525058289/1544525143762&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544591089661/1547439767627/1544591707621&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544525043137/1544525280855/1544525303429&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544593830881/1544596248781/1544596283112&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544591751639/1547439831649/1544592270374&quot;,&quot;1544592857014/1547439926624/1544593813987&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544591751639/1544591937229/1544591964946&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544596644314/1547440046070/1544597324337&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1547439887065/1544592727327&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;
+};
+
+
+int loopCounter = Integer.parseInt(vars.get(&quot;asnmtCounter&quot;));
+int start_index = Integer.parseInt(vars.get(&quot;start_index&quot;));
+
+
+for (int i = 0; i &lt; 20; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[start_index+ i]);
+}
+
+start_index = start_index + 20;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+prefix4 = vars.get(&quot;asnmtCounter&quot;);
+prefix5 = vars.get(&quot;productcode&quot;);
+prefix6 = vars.get(&quot;classCode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + &quot;20LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
+
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+                <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_20LOs.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 25LOsCount asgmt" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_25LOsCountAsgmt)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_25LOsCountAsgmt)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">asnmtCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {
+&quot;1544596644314/1544597220792/1544597309385&quot;,&quot;1544592857014/1544593703192/1544593743725&quot;,&quot;1544596644314/1544596678647/1544596792897&quot;,&quot;1544593830881/1544593842258/1544593889640&quot;,&quot;1544526345845/1544526671965/1544526763389&quot;,&quot;1544591751639/1544591756584/1544591852005&quot;,&quot;1544592286221/1544592474205/1544592511422&quot;,&quot;1544591751639/1544591859950/1544591889129&quot;,&quot;1544592286221/1547439887065/1544592716116&quot;,&quot;1544525043137/1544525159358/1544525263160&quot;,&quot;1544591089661/1544591099675/1544591181584&quot;,&quot;1544526345845/1544526589100/1544526623799&quot;,&quot;1544525043137/1544525159358/1544525175677&quot;,&quot;1544526345845/1544526589100/1544526610825&quot;,&quot;1544526345845/1547439716609/1544528439584&quot;,&quot;1544596644314/1544597008306/1544597048285&quot;,&quot;1544525043137/1544525159358/1544525239184&quot;,&quot;1544592857014/1544592865722/1544593072380&quot;,&quot;1544526345845/1544526671965/1544526728620&quot;,&quot;1544591089661/1544591602655/1544591669971&quot;,&quot;1544591751639/1544591756584/1544591786410&quot;,&quot;1544526345845/1544526671965/1544526721801&quot;,&quot;1544591089661/1544591412698/1544591428190&quot;,&quot;1544593830881/1547439992703/1544596607802&quot;,&quot;1544593830881/1544593964252/1544594078882&quot;,&quot;1544591089661/1544591364773/1544591392809&quot;,&quot;1544593830881/1544596494652/1544596545929&quot;,&quot;1544593830881/1544593842258/1544593905062&quot;,&quot;1544596644314/1544597220792/1544597245750&quot;,&quot;1544593830881/1544596291616/1544596322099&quot;,&quot;1544596644314/1544597091060/1544597104557&quot;,&quot;1544591089661/1544591602655/1544591649137&quot;,&quot;1544591089661/1544591099675/1544591237488&quot;,&quot;1544593830881/1544593842258/1544593949312&quot;,&quot;1544592857014/1544593139545/1544593454057&quot;,&quot;1544591089661/1544591260222/1544591341221&quot;,&quot;1544521486954/1544521507623/1676462231296&quot;,&quot;1544591751639/1544592145731/1544592165309&quot;,&quot;1544592857014/1544593703192/1544593752239&quot;,&quot;1544591089661/1544591260222/1544591334581&quot;,&quot;1544596644314/1544596678647/1544596731689&quot;,&quot;1544591751639/1544591989858/1544592034736&quot;,&quot;1544592286221/1544592379241/1544592415158&quot;,&quot;1544591751639/1544591756584/1544591826125&quot;,&quot;1544592286221/1544592474205/1544592491253&quot;,&quot;1544592857014/1544593585947/1544593632079&quot;,&quot;1544592286221/1544592520233/1544592555974&quot;,&quot;1544591089661/1547439767627/1544591734989&quot;,&quot;1544596644314/1544596802487/1544596921860&quot;,&quot;1544596644314/1544596802487/1544596877787&quot;,&quot;1544593830881/1547439992703/1544596586244&quot;,&quot;1544593830881/1544593964252/1544594102416&quot;,&quot;1544521486954/1544521507623/1676462274556&quot;,&quot;1544592286221/1544592379241/1544592466092&quot;,&quot;1544525590768/1544525683364/1544525709799&quot;,&quot;1544526345845/1544526589100/1544526638110&quot;,&quot;1544593830881/1544593964252/1544594194047&quot;,&quot;1544591089661/1544591602655/1544591636888&quot;,&quot;1544591751639/1544591989858/1544592010989&quot;,&quot;1544591751639/1544591756584/1544591842867&quot;,&quot;1544592857014/1544592865722/1544593079694&quot;,&quot;1544591751639/1547439831649/1544592253853&quot;,&quot;1544592286221/1544592379241/1544592422449&quot;,&quot;1544591089661/1544591099675/1544591247402&quot;,&quot;1544593830881/1544596494652/1544596565260&quot;,&quot;1544592286221/1544592379241/1544592438186&quot;,&quot;1564112332682/1564112347344/1564112375692&quot;,&quot;1544591089661/1544591364773/1544591400139&quot;,&quot;1544593830881/1544596291616/1544596347700&quot;,&quot;1544591751639/1544592145731/1544592194540&quot;,&quot;1544596644314/1544596802487/1544596890399&quot;,&quot;1544592286221/1544592291887/1544592370486&quot;,&quot;1544526345845/1544526961740/1544526980657&quot;,&quot;1544526345845/1544528319371/1544528367998&quot;,&quot;1544525043137/1544525159358/1544525192972&quot;,&quot;1544525043137/1544525159358/1544525246748&quot;,&quot;1544592286221/1544592291887/1544592333414&quot;,&quot;1544591089661/1544591260222/1544591320423&quot;,&quot;1544591751639/1544591859950/1544591895035&quot;,&quot;1544596644314/1544597008306/1544597032165&quot;,&quot;1544593830881/1544596248781/1544596271349&quot;,&quot;1544596644314/1544596678647/1544596761923&quot;,&quot;1544526345845/1544526671965/1544526710051&quot;,&quot;1544526345845/1544526779004/1544526946815&quot;,&quot;1544592286221/1544592291887/1544592363784&quot;,&quot;1544596644314/1547440046070/1544597345478&quot;,&quot;1544526345845/1544526961740/1544527008225&quot;,&quot;1544591751639/1544592145731/1544592176780&quot;,&quot;1544593830881/1544593964252/1544594113782&quot;,&quot;1544525590768/1544525683364/1544525756801&quot;,&quot;1544596644314/1544596802487/1544596858389&quot;,&quot;1544592286221/1544592291887/1544592314873&quot;,&quot;1544591089661/1544591099675/1544591165699&quot;,&quot;1544593830881/1544593964252/1544594135462&quot;,&quot;1544591089661/1544591412698/1544591455780&quot;,&quot;1544593830881/1544596494652/1544596513093&quot;,&quot;1544593830881/1544593842258/1544593925051&quot;,&quot;1544596644314/1544597220792/1544597275965&quot;,&quot;1544593830881/1544596291616/1544596327463&quot;,&quot;1544591089661/1544591260222/1544591284840&quot;,&quot;1544593830881/1544593964252/1544594177257&quot;,&quot;1544592857014/1544593529004/1544593551477&quot;,&quot;1544525590768/1544525595533/1544525627465&quot;,&quot;1544525590768/1544525595533/1544525611432&quot;,&quot;1544596644314/1544596678647/1544596745950&quot;,&quot;1544596644314/1544596802487/1544596845016&quot;,&quot;1544525590768/1544525683364/1544525720457&quot;,&quot;1544592857014/1544592865722/1544593104748&quot;,&quot;1544593830881/1544596494652/1544596529922&quot;,&quot;1544592857014/1544593529004/1544593573380&quot;,&quot;1544591089661/1544591099675/1544591219876&quot;,&quot;1544596644314/1544597220792/1544597262426&quot;,&quot;1544525043137/1544525159358/1544525217177&quot;,&quot;1544592286221/1544592623523/1544592671565&quot;,&quot;1544592286221/1544592623523/1544592648386&quot;,&quot;1544591089661/1544591260222/1544591295680&quot;,&quot;1544526345845/1544526779004/1544526923433&quot;,&quot;1544525590768/1544525683364/1544525778291&quot;,&quot;1544592857014/1544593585947/1544593620647&quot;,&quot;1544525590768/1544525595533/1544525635696&quot;,&quot;1544526345845/1547439716609/1544528426617&quot;,&quot;1544526345845/1544526589100/1544526657285&quot;,&quot;1544592286221/1544592291887/1544592347743&quot;,&quot;1544592857014/1544593139545/1544593173865&quot;,&quot;1544591751639/1544591859950/1544591923488&quot;,&quot;1544525043137/1544525058289/1544525143762&quot;,&quot;1544525590768/1544525683364/1544525729515&quot;,&quot;1544526345845/1544526961740/1544526994099&quot;,&quot;1544526345845/1544526671965/1544526695320&quot;,&quot;1544591089661/1547439767627/1544591707621&quot;,&quot;1544593830881/1544593842258/1544593874472&quot;,&quot;1544591751639/1544591756584/1544591792950&quot;,&quot;1544525043137/1544525280855/1544525303429&quot;,&quot;1544591751639/1544591937229/1544591951092&quot;,&quot;1544525590768/1544525595533/1544525679427&quot;,&quot;1544593830881/1544596248781/1544596283112&quot;,&quot;1544591089661/1544591099675/1544591198772&quot;,&quot;1544591751639/1544591989858/1544592017149&quot;,&quot;1544592857014/1544593139545/1544593476327&quot;,&quot;1544591751639/1547439831649/1544592270374&quot;,&quot;1544592857014/1547439926624/1544593813987&quot;,&quot;1544592857014/1544592865722/1544593123201&quot;,&quot;1544592286221/1544592520233/1544592561671&quot;,&quot;1544526345845/1544526671965/1544526688230&quot;,&quot;1544596644314/1544597091060/1544597121860&quot;,&quot;1544596644314/1544597091060/1544597193850&quot;,&quot;1544593830881/1544593842258/1544593932560&quot;,&quot;1544591751639/1544591937229/1544591964946&quot;,&quot;1544592857014/1544592865722/1544593053271&quot;,&quot;1544596644314/1547440046070/1544597324337&quot;,&quot;1544525590768/1544525683364/1544525734676&quot;,&quot;1544591751639/1544591859950/1544591913490&quot;,&quot;1544592857014/1544593139545/1544593488247&quot;,&quot;1544596644314/1544597091060/1544597149347&quot;,&quot;1544596644314/1544596678647/1544596711546&quot;,&quot;1544592857014/1544593139545/1544593187008&quot;,&quot;1544592857014/1544593703192/1544593728070&quot;,&quot;1544592286221/1544592623523/1544592658543&quot;,&quot;1544525590768/1544525595533/1544525649026&quot;,&quot;1544592286221/1544592291887/1544592322911&quot;,&quot;1544592286221/1547439887065/1544592727327&quot;,&quot;1544526345845/1544528319371/1544528334775&quot;,&quot;1544526345845/1544526589100/1544526606750&quot;,&quot;1544596644314/1544596802487/1544596904838&quot;,&quot;1544591089661/1544591412698/1544591439057&quot;,&quot;1544592286221/1544592379241/1544592404760&quot;,&quot;1544596644314/1544596678647/1544596768254&quot;,&quot;1544593830881/1544596291616/1544596481675&quot;,&quot;1544592286221/1544592520233/1544592540334&quot;,&quot;1544591751639/1544591756584/1544591814105&quot;,&quot;1544592857014/1544593139545/1544593471128&quot;,&quot;1544525043137/1544525280855/1544525289279&quot;,&quot;1544526345845/1544528319371/1544528345283&quot;,&quot;1544592857014/1544592865722/1544593093552&quot;,&quot;1544592857014/1544593585947/1544593606215&quot;,&quot;1544525590768/1544525595533/1544525663048&quot;,&quot;1544521486954/1544521507623/1676462230045&quot;,&quot;1544591089661/1544591260222/1544591363137&quot;,&quot;1544526345845/1544526589100/1544526644717&quot;,&quot;1544592286221/1544592379241/1544592448263&quot;
+};
+
+
+int loopCounter = Integer.parseInt(vars.get(&quot;asnmtCounter&quot;));
+int start_index = Integer.parseInt(vars.get(&quot;start_index&quot;));
+
+
+for (int i = 0; i &lt; 25; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[start_index+ i]);
+}
+
+start_index = start_index + 25;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+prefix4 = vars.get(&quot;asnmtCounter&quot;);
+prefix5 = vars.get(&quot;productcode&quot;);
+prefix6 = vars.get(&quot;classCode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + &quot;25LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
+
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+                <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_25LOs.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="false">
+              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
+apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
+vars.put(&quot;assignedPathList&quot;, apList);
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 50 LO assignments" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${__evalVar(${category}_50LOasgmtPECount)}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end">${__evalVar(${category}_50LOasgmtPECount)}</stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">PECounter_50Lo</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">true</boolProp>
+              <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Set PE for assignment creation" enabled="true">
+              <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment50LO)}};
+
+//int randomIndex = (int) (Math.random() * stringArray.length);
+int PECounter_50Lo = Integer.parseInt(vars.get(&quot;PECounter_50Lo&quot;));
+PECounter_50Lo = PECounter_50Lo - 1;
+String productValue = stringArray[PECounter_50Lo];
+
+vars.put(&quot;productcode&quot;, productValue);
+
+int start_index = 0;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 50LOsCount asgmt" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_50LOsCountAsgmt)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_50LOsCountAsgmt)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">asnmtCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+                <stringProp name="BeanShellSampler.query">String[] itemCodes = {&quot;1676462274659/1676462274660/1676462274670&quot;,&quot;1676462274659/1676462274660/1676462274709&quot;,&quot;1676462274659/1676462274660/1676462274760&quot;,&quot;1676462274659/1676462274660/1676462274747&quot;,&quot;1676462274557/1676462274558/1676462274584&quot;,&quot;1676462274659/1676462274660/1676462274694&quot;,&quot;1676462274659/1676462274660/1676462274749&quot;,&quot;1676462274557/1676462274558/1676462274564&quot;,&quot;1676462274659/1676462274660/1676462274741&quot;,&quot;1676462274659/1676462274660/1676462274849&quot;,&quot;1676462274659/1676462274660/1676462274756&quot;,&quot;1676462274557/1676462274558/1676462274583&quot;,&quot;1676462274557/1676462274558/1676462274599&quot;,&quot;1676462274659/1676462274660/1676462274757&quot;,&quot;1676462274659/1676462274660/1676462274738&quot;,&quot;1676462274659/1676462274660/1676462274845&quot;,&quot;1676462274659/1676462274660/1676462274856&quot;,&quot;1676462274659/1676462274660/1676462274754&quot;,&quot;1676462274557/1676462274558/1676462274591&quot;,&quot;1676462274557/1676462274558/1676462274589&quot;,&quot;1676462274557/1676462274558/1676462274577&quot;,&quot;1676462274557/1676462274558/1676462274576&quot;,&quot;1676462274659/1676462274660/1676462274745&quot;,&quot;1676462274557/1676462274558/1676462274592&quot;,&quot;1676462274659/1676462274660/1676462274855&quot;,&quot;1676462274659/1676462274660/1676462274752&quot;,&quot;1676462274659/1676462274660/1676462274850&quot;,&quot;1676462274557/1676462274558/1676462274567&quot;,&quot;1676462274659/1676462274660/1676462274683&quot;,&quot;1676462274659/1676462274660/1676462274675&quot;,&quot;1676462274557/1676462274558/1676462274568&quot;,&quot;1676462274557/1676462274558/1676462274594&quot;,&quot;1676462274659/1676462274660/1676462274685&quot;,&quot;1676462274557/1676462274558/1676462274590&quot;,&quot;1676462274659/1676462274660/1676462274755&quot;,&quot;1676462274557/1676462274558/1676462274575&quot;,&quot;1676462274659/1676462274660/1676462274750&quot;,&quot;1676462274659/1676462274660/1676462274735&quot;,&quot;1676462274659/1676462274660/1676462274674&quot;,&quot;1676462274557/1676462274558/1676462274582&quot;,&quot;1676462274659/1676462274660/1676462274731&quot;,&quot;1676462274557/1676462274558/1676462274604&quot;,&quot;1676462274557/1676462274558/1676462274571&quot;,&quot;1676462274659/1676462274660/1676462274684&quot;,&quot;1676462274659/1676462274660/1676462274758&quot;,&quot;1676462274659/1676462274660/1676462274663&quot;,&quot;1676462274659/1676462274660/1676462274721&quot;,&quot;1676462274659/1676462274660/1676462274677&quot;,&quot;1676462274659/1676462274660/1676462274696&quot;,&quot;1676462274659/1676462274660/1676462274692&quot;,&quot;1676462274659/1676462274660/1676462274714&quot;,&quot;1676462274659/1676462274660/1676462274751&quot;,&quot;1676462274557/1676462274558/1676462274579&quot;,&quot;1676462274659/1676462274660/1676462274734&quot;,&quot;1676462274659/1676462274660/1676462274724&quot;,&quot;1676462274557/1676462274558/1676462274561&quot;,&quot;1676462274659/1676462274660/1676462274666&quot;,&quot;1676462274659/1676462274660/1676462274706&quot;,&quot;1676462274557/1676462274558/1676462274601&quot;,&quot;1676462274659/1676462274660/1676462274851&quot;,&quot;1676462274659/1676462274660/1676462274842&quot;,&quot;1676462274659/1676462274660/1676462274688&quot;,&quot;1676462274659/1676462274660/1676462274673&quot;,&quot;1676462274557/1676462274558/1676462274595&quot;,&quot;1676462274659/1676462274660/1676462274680&quot;,&quot;1676462274659/1676462274660/1676462274717&quot;,&quot;1676462274557/1676462274558/1676462274569&quot;,&quot;1676462274557/1676462274558/1676462274597&quot;,&quot;1676462274659/1676462274660/1676462274681&quot;,&quot;1676462274659/1676462274660/1676462274740&quot;,&quot;1676462274659/1676462274660/1676462274837&quot;,&quot;1676462274557/1676462274558/1676462274581&quot;,&quot;1676462274557/1676462274558/1676462274587&quot;,&quot;1676462274659/1676462274660/1676462274737&quot;,&quot;1676462274659/1676462274660/1676462274672&quot;,&quot;1676462274659/1676462274660/1676462274711&quot;,&quot;1676462274659/1676462274660/1676462274852&quot;,&quot;1676462274659/1676462274660/1676462274664&quot;,&quot;1676462274557/1676462274558/1676462274588&quot;,&quot;1676462274659/1676462274660/1676462274713&quot;,&quot;1676462274557/1676462274558/1676462274563&quot;,&quot;1676462274659/1676462274660/1676462274704&quot;,&quot;1676462274659/1676462274660/1676462274727&quot;,&quot;1676462274659/1676462274660/1676462274669&quot;,&quot;1676462274659/1676462274660/1676462274843&quot;,&quot;1676462274659/1676462274660/1676462274848&quot;,&quot;1676462274557/1676462274558/1676462274562&quot;,&quot;1676462274557/1676462274558/1676462274560&quot;,&quot;1676462274659/1676462274660/1676462274662&quot;,&quot;1676462274659/1676462274660/1676462274712&quot;,&quot;1676462274659/1676462274660/1676462274723&quot;,&quot;1676462274659/1676462274660/1676462274722&quot;,&quot;1676462274557/1676462274558/1676462274559&quot;,&quot;1676462274557/1676462274558/1676462274578&quot;,&quot;1676462274659/1676462274660/1676462274686&quot;,&quot;1676462274659/1676462274660/1676462274700&quot;,&quot;1676462274659/1676462274660/1676462274708&quot;,&quot;1676462274659/1676462274660/1676462274682&quot;,&quot;1676462274659/1676462274660/1676462274661&quot;,&quot;1676462274557/1676462274558/1676462274605&quot;};
+
+int loopCounter = Integer.parseInt(vars.get(&quot;asnmtCounter&quot;));
+int start_index = Integer.parseInt(vars.get(&quot;start_index&quot;));
+
+
+for (int i = 0; i &lt; 50; i++) {
+    vars.put(&quot;itemcode&quot; + (i + 1), itemCodes[start_index+ i]);
+}
+
+start_index = start_index + 50;
+vars.put(&quot;start_index&quot;, String.valueOf(start_index));</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="assignment_name" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">prefix2 = vars.get(&quot;date&quot;);
+prefix3 = ctx.getThread().getThreadNum() + 1;
+prefix4 = vars.get(&quot;asnmtCounter&quot;);
+prefix5 = vars.get(&quot;productcode&quot;);
+prefix6 = vars.get(&quot;classCode&quot;);
+
+assignmenttitle = &quot;Asgmt&quot; + &quot;_&quot; +  prefix6 + &quot;_&quot; +  prefix2 + &quot;_&quot; + prefix3 + &quot;_&quot; + prefix5 + &quot;_&quot; + prefix4 + &quot;_&quot; + &quot;50LOs&quot;;
+vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
+
+</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create assigned paths" enabled="true">
+                <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_50LOs.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="false">
+              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
+apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
+vars.put(&quot;assignedPathList&quot;, apList);
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
