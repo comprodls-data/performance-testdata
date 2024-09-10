@@ -15279,17 +15279,17 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
                 <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_10LOs.jmx</stringProp>
               </IncludeController>
               <hashTree/>
-            </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
-              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
+                <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
 apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
 vars.put(&quot;assignedPathList&quot;, apList);
 </stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 20 Lo assignments_for 1 PES" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -15379,17 +15379,17 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
                 <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_20LOs.jmx</stringProp>
               </IncludeController>
               <hashTree/>
-            </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
-              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
+                <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
 apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
 vars.put(&quot;assignedPathList&quot;, apList);
 </stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 25 Lo assignments_for 3 PES" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -15479,17 +15479,17 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
                 <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_25LOs.jmx</stringProp>
               </IncludeController>
               <hashTree/>
-            </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
-              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
+                <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
 apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
 vars.put(&quot;assignedPathList&quot;, apList);
 </stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 50 LO assignments" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -15576,21 +15576,21 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);
                 <stringProp name="IncludeController.includepath">create_an_assigned_path_in_a_class_50LOs.jmx</stringProp>
               </IncludeController>
               <hashTree/>
-            </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
-              <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="assignment_list" enabled="true">
+                <stringProp name="BeanShellSampler.query">String apList = vars.get(&quot;assignedPathList&quot;);
 apList = apList + &quot;,&quot; + vars.get(&quot;assigned_path_id&quot;);
 vars.put(&quot;assignedPathList&quot;, apList);
 </stringProp>
-              <stringProp name="BeanShellSampler.filename"></stringProp>
-              <stringProp name="BeanShellSampler.parameters"></stringProp>
-              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-            </BeanShellSampler>
-            <hashTree/>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">3</stringProp>
+            <stringProp name="LoopController.loops">150</stringProp>
           </LoopController>
           <hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="student_name" enabled="true">
@@ -15601,7 +15601,7 @@ prefix2 = date.getTime();
 prefix3 = ctx.getThread().getThreadNum() + 1;
 prefix4 = vars.get(&quot;classcode&quot;);
 
-studentextuserid = &quot;std_LTI_&quot; + &quot;_&quot; + prefix4 + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
+studentextuserid = &quot;std_LTI_&quot; + prefix4 + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix3;
 
 vars.put(&quot;studentextuserid&quot;, studentextuserid);
 </stringProp>
@@ -15632,6 +15632,18 @@ vars.put(&quot;provisionProductsArray&quot;, mergedJson);</stringProp>
               <stringProp name="IncludeController.includepath">Enroll_a_user_in_lti_class.jmx</stringProp>
             </IncludeController>
             <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for enrolling student " enabled="true">
+              <intProp name="ActionProcessor.action">1</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree>
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+                <stringProp name="ConstantTimer.delay">500</stringProp>
+                <stringProp name="RandomTimer.range">50</stringProp>
+              </UniformRandomTimer>
+              <hashTree/>
+            </hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Entitle User with Product" enabled="true">
               <stringProp name="IncludeController.includepath">Entitle User With H7 LTI class products.jmx</stringProp>
             </IncludeController>
@@ -16294,7 +16306,7 @@ vars.put(&quot;assignedPathList&quot;, apList);
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
