@@ -4874,11 +4874,12 @@ String LineSEPARATOR = &quot;\n&quot;;
 out.write(vars.get(&quot;studentextuserid&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
 
 out.flush();
-out.close();
-</stringProp>
+out.close();</stringProp>
                 <stringProp name="BeanShellSampler.filename"></stringProp>
                 <stringProp name="BeanShellSampler.parameters"></stringProp>
                 <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
