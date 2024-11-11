@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1500</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -1725,7 +1725,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Assignment, Lock Rules and Custom Grading" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Assignment, Lock Rules and Custom Grading-OLD" enabled="false">
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_noOfLockRulesInClass" elementType="Argument">
               <stringProp name="Argument.name">L1_noOfLockRulesInClass</stringProp>
@@ -2685,6 +2685,461 @@
             <elementProp name="L10_50LOsCount" elementType="Argument">
               <stringProp name="Argument.name">L10_50LOsCount</stringProp>
               <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Assignment, Lock Rules and Custom Grading" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="L1_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L1_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L1_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L1_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L1_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L1_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L1_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L2_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L2_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L2_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L2_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L2_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L2_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L3_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L3_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L3_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L3_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L3_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L3_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L3_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L3_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L3_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L3_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L7_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L7_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L7_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L8_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L8_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L8_customGradingCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L9_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L9_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L9_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">L10_rulesPECount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="L10_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">L10_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">M1_rulesPECount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M1_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M1_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M1_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M1_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">M1_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">M2_rulesPECount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M2_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M2_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M2_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M2_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">M2_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">M3_rulesPECount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M3_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M3_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M3_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M3_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">M3_customGradingCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">M4_rulesPECount</stringProp>
+              <stringProp name="Argument.value">12</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M4_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M4_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M4_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M4_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">M4_customGradingCount</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">M5_rulesPECount</stringProp>
+              <stringProp name="Argument.value">4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M5_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M5_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">M5_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="M5_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">M5_customGradingCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">H1_rulesPECount</stringProp>
+              <stringProp name="Argument.value">6</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H1_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H1_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H1_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H1_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">H1_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">H2_rulesPECount</stringProp>
+              <stringProp name="Argument.value">17</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H2_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H2_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H2_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H2_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">H2_customGradingCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">H3_rulesPECount</stringProp>
+              <stringProp name="Argument.value">8</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H3_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H3_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H3_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H3_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">H3_customGradingCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">H4_rulesPECount</stringProp>
+              <stringProp name="Argument.value">9</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H4_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H4_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H4_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H4_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">H4_customGradingCount</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">H5_rulesPECount</stringProp>
+              <stringProp name="Argument.value">14</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H5_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H5_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H5_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H5_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">H5_customGradingCount</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H7_rulesPECount" elementType="Argument">
+              <stringProp name="Argument.name">H7_rulesPECount</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H7_50LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H7_50LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H7_100LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H7_100LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H7_150LOsLockRuleCount" elementType="Argument">
+              <stringProp name="Argument.name">H7_150LOsLockRuleCount</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H7_customGradingCount" elementType="Argument">
+              <stringProp name="Argument.name">H7_customGradingCount</stringProp>
+              <stringProp name="Argument.value">15</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -4915,7 +5370,7 @@ out.close();</stringProp>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">template_new_v2_1021.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">category,classType,noOfStudentsInClass,noOfLockRulesInClass,50LOsLockRuleCount,100LOsLockRuleCount,150LOsLockRuleCount,customGradingCount</stringProp>
+            <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
@@ -6030,18 +6485,19 @@ vars.put(&quot;assignedPathList&quot;, apList);
               </hashTree>
             </hashTree>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules for multiple PEs" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">${noOfLockRulesInClass}</stringProp>
+            <stringProp name="LoopController.loops">${__evalVar(${category}_rulesPECount)}</stringProp>
           </LoopController>
           <hashTree>
             <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
               <stringProp name="CounterConfig.start">1</stringProp>
-              <stringProp name="CounterConfig.end"></stringProp>
+              <stringProp name="CounterConfig.end">${__evalVar(${category}_rulesPECount)}</stringProp>
               <stringProp name="CounterConfig.incr">1</stringProp>
-              <stringProp name="CounterConfig.name">lockRulesCount</stringProp>
+              <stringProp name="CounterConfig.name">PECounter</stringProp>
               <stringProp name="CounterConfig.format"></stringProp>
-              <boolProp name="CounterConfig.per_user">false</boolProp>
+              <boolProp name="CounterConfig.per_user">true</boolProp>
+              <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
             </CounterConfig>
             <hashTree/>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
@@ -6059,26 +6515,37 @@ for (int i = 0; i &lt; itemCodes.length; i++) {
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
             <hashTree/>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Set PE for Rule creation" enabled="true">
               <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};
 
-int randomIndex = (${lockRulesCount})%(stringArray.length);
+//int randomIndex = (int) (Math.random() * stringArray.length);
+int PECounter = Integer.parseInt(vars.get(&quot;PECounter&quot;));
+PECounter = PECounter - 1;
+String productValue = stringArray[PECounter];
 
-String randomValue = stringArray[randomIndex];
+vars.put(&quot;productcode&quot;, productValue);
 
-vars.put(&quot;productcode&quot;, randomValue);</stringProp>
+</stringProp>
               <stringProp name="BeanShellSampler.filename"></stringProp>
               <stringProp name="BeanShellSampler.parameters"></stringProp>
               <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
             </BeanShellSampler>
             <hashTree/>
-            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-              <intProp name="ThroughputController.style">0</intProp>
-              <boolProp name="ThroughputController.perThread">true</boolProp>
-              <stringProp name="ThroughputController.maxThroughput">${50LOsLockRuleCount}</stringProp>
-              <stringProp name="ThroughputController.percentThroughput">${20LOsPercentage}</stringProp>
-            </ThroughputController>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 50LOsRules" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_50LOsLockRuleCount)}</stringProp>
+            </LoopController>
             <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_50LOsLockRuleCount)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">lockRulesCount</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
               <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
                 <stringProp name="maximumValue">999999</stringProp>
                 <stringProp name="minimumValue">000000</stringProp>
@@ -6093,13 +6560,21 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
-            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-              <intProp name="ThroughputController.style">0</intProp>
-              <boolProp name="ThroughputController.perThread">true</boolProp>
-              <stringProp name="ThroughputController.maxThroughput">${100LOsLockRuleCount}</stringProp>
-              <stringProp name="ThroughputController.percentThroughput">${30LOsPercentage}</stringProp>
-            </ThroughputController>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 100LOsRules" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_100LOsLockRuleCount)}</stringProp>
+            </LoopController>
             <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_100LOsLockRuleCount)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">lockRulesCount</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
               <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
                 <stringProp name="maximumValue">999999</stringProp>
                 <stringProp name="minimumValue">000000</stringProp>
@@ -6114,13 +6589,21 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
-            <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller" enabled="true">
-              <intProp name="ThroughputController.style">0</intProp>
-              <boolProp name="ThroughputController.perThread">true</boolProp>
-              <stringProp name="ThroughputController.maxThroughput">${150LOsLockRuleCount}</stringProp>
-              <stringProp name="ThroughputController.percentThroughput">${50LOsPercentage}</stringProp>
-            </ThroughputController>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create 150LOsRules" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_150LOsLockRuleCount)}</stringProp>
+            </LoopController>
             <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_150LOsLockRuleCount)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">lockRulesCount</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
               <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Random Variable" enabled="true">
                 <stringProp name="maximumValue">999999</stringProp>
                 <stringProp name="minimumValue">000000</stringProp>
@@ -6136,7 +6619,7 @@ vars.put(&quot;productcode&quot;, randomValue);</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="false"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
@@ -6160,11 +6643,11 @@ for (int i = 0; i &lt; multiProducts.length; i++) {
 
 remainingValue = 100 - (5*(multiProducts.length));
 
-customWeightage = remainingValue/${customGradingCount};
-pendingWeightage = remainingValue%${customGradingCount};
+customWeightage = remainingValue/(${__evalVar(${category}_customGradingCount)});
+pendingWeightage = remainingValue%(${__evalVar(${category}_customGradingCount)});
 
-for (int i = 1; i &lt;= ${customGradingCount}; i++) {
-	if(i != ${customGradingCount}) {
+for (int i = 1; i &lt;= ${__evalVar(${category}_customGradingCount)}; i++) {
+	if(i != ${__evalVar(${category}_customGradingCount)}) {
 		mergedColumnJson += &quot;{\&quot;column_id\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;,\&quot;type\&quot;: \&quot;custom\&quot;, \&quot;custom_component_code\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;, \&quot;title\&quot;: \&quot;PerfCustComp_&quot; + i + &quot;\&quot;, \&quot;weightage\&quot;: \&quot;&quot; + customWeightage + &quot;\&quot;,\&quot;scoring_type\&quot;: \&quot;SIMPLE\&quot;},&quot;;
 	} else {
 		int finalWeightage = customWeightage + pendingWeightage;
