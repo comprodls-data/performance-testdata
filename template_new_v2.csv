@@ -1,4 +1,11 @@
 category,classType,noOfStudentsInClass
+H5,normal,150
+H7,normal,150
+H1,normal,75
+H1,normal,75
+H2,normal,75
+H3,normal,100
+H4,normal,100
 L1,normal,50
 L1,normal,50
 L1,normal,50
@@ -92,10 +99,3 @@ M5,normal,80
 M5,normal,80
 M5,normal,80
 M5,context,80
-H1,normal,75
-H1,normal,75
-H2,normal,75
-H3,normal,100
-H4,normal,100
-H7,normal,150
-H5,normal,150

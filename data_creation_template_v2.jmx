@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">600</stringProp>
+        <stringProp name="ThreadGroup.num_threads">60</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1200</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -4012,14 +4012,14 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
               <stringProp name="IncludeController.includepath">create_new_instructor_led_LTIclass.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for creating class [60-65 sec]" enabled="true">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for creating class [5 min - 5 min 5ec]" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
             </TestAction>
             <hashTree>
               <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-                <stringProp name="ConstantTimer.delay">60000</stringProp>
+                <stringProp name="ConstantTimer.delay">300000</stringProp>
                 <stringProp name="RandomTimer.range">5000</stringProp>
               </UniformRandomTimer>
               <hashTree/>
@@ -11744,7 +11744,7 @@ out.close();</stringProp>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2_1005" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">template_new_v2_1002.csv</stringProp>
+            <stringProp name="filename">template_new_v2_1005.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
