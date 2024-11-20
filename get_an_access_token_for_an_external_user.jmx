@@ -77,6 +77,27 @@
             <boolProp name="ISREGEX">false</boolProp>
           </JSONPathAssertion>
           <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Firstname" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">firstname</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.user.first_name</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">USERID_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract LastName" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">lastname</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.user.last_name</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">USERID_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Email" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">email</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.user.email</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">USERID_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
         </hashTree>
       </hashTree>
     </hashTree>
