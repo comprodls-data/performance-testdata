@@ -10,8 +10,8 @@
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Performance Test Data Setup">
-        <intProp name="ThreadGroup.num_threads">100</intProp>
-        <intProp name="ThreadGroup.ramp_time">1800</intProp>
+        <intProp name="ThreadGroup.num_threads">12</intProp>
+        <intProp name="ThreadGroup.ramp_time">24</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
@@ -3887,7 +3887,7 @@
         <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">template_new_v2.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
@@ -3943,7 +3943,7 @@
               </elementProp>
               <elementProp name="outputFile" elementType="Argument">
                 <stringProp name="Argument.name">outputFile</stringProp>
-                <stringProp name="Argument.value">cleaned.csv</stringProp>
+                <stringProp name="Argument.value">student_${__time()}_cleaned.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -3966,59 +3966,59 @@ vars.put(&quot;classname&quot;, classname);
 vars.put(&quot;teachername&quot;, extuserid);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class creation ">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class creation " enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; != &quot;H5&quot; &amp;&amp; &quot;${category}&quot; != &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
           </IfController>
           <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with Space Code">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with Space Code" enabled="true">
               <stringProp name="IncludeController.includepath">Join_a_space_with_space_code.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
             </TestAction>
             <hashTree>
-              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause">
+              <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
                 <stringProp name="ConstantTimer.delay">60000</stringProp>
                 <stringProp name="RandomTimer.range">5000</stringProp>
               </UniformRandomTimer>
               <hashTree/>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces" enabled="true">
               <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get an access token for an external user" enabled="true">
               <stringProp name="IncludeController.includepath">Get_an_access_token_for_an_external_user.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller">
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
               <stringProp name="IfController.condition">&quot;${classType}&quot; == &quot;normal&quot;;</stringProp>
               <boolProp name="IfController.evaluateAll">false</boolProp>
               <boolProp name="IfController.useExpression">false</boolProp>
             </IfController>
             <hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a new Instructor-led class">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a new Instructor-led class" enabled="true">
                 <stringProp name="IncludeController.includepath">create_new_instructor_led_class.jmx</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller">
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
               <stringProp name="IfController.condition">&quot;${classType}&quot; == &quot;context&quot;;</stringProp>
               <boolProp name="IfController.evaluateAll">false</boolProp>
               <boolProp name="IfController.useExpression">false</boolProp>
             </IfController>
             <hashTree>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a new Instructor-led class - CONTEXT">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a new Instructor-led class - CONTEXT" enabled="true">
                 <stringProp name="IncludeController.includepath">create_new_instructor_led_class_context.jmx</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [10-15 sec]" enabled="true">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -4031,7 +4031,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class Creation">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class Creation" enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H5&quot; || &quot;${category}&quot; == &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5246,13 +5246,13 @@ out.close();
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Student enrollment - Lti class" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Student enrollment - Lti class">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H5&quot; || &quot;${category}&quot; == &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
           </IfController>
           <hashTree>
-            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher" enabled="true">
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher">
               <boolProp name="LoopController.continue_forever">true</boolProp>
               <stringProp name="LoopController.loops">${noOfStudentsInClass}</stringProp>
             </LoopController>
@@ -5279,7 +5279,7 @@ for (int i = 0; i &lt; multiProducts.length; i++) {
 }</stringProp>
               </BeanShellSampler>
               <hashTree/>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Enroll user in LTI Class" enabled="true">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Enroll user in LTI Class">
                 <stringProp name="IncludeController.includepath">Enroll_a_user_in_lti_class.jmx</stringProp>
               </IncludeController>
               <hashTree/>
@@ -5381,7 +5381,7 @@ out.close();
               </BeanShellSampler>
               <hashTree/>
             </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameTch&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
@@ -5402,10 +5402,11 @@ out.close();</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
-          <stringProp name="BeanShellSampler.query">
-
-import java.io.*;
+        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor - cleanup">
+          <boolProp name="resetInterpreter">false</boolProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="script">import java.io.*;
 import java.util.ArrayList;
 
 
@@ -5464,8 +5465,78 @@ import java.util.ArrayList;
 
 
 </stringProp>
-        </BeanShellSampler>
+        </BeanShellPostProcessor>
         <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with Space Code" enabled="false">
+          <stringProp name="IncludeController.includepath">Join_a_space_with_space_code.jmx</stringProp>
+        </IncludeController>
+        <hashTree>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor - cleanup" enabled="false">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.io.*;
+import java.util.ArrayList;
+
+
+	String outputFile = vars.get(&quot;outputFile&quot;);  // Get input file name
+	String inputFile = vars.get(&quot;outputCsvFilenameStd&quot;);
+	print(&quot;outputFile2....&quot;);
+	print(outputFile);
+	BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+	ArrayList validRows = new ArrayList();
+	String line;
+	ArrayList validLengthsA = new ArrayList();
+	print(&quot;1&quot;);
+	validLengthsA.add(29);
+	validLengthsA.add(30);
+	validLengthsA.add(31);
+	validLengthsA.add(33);
+	print(&quot;2&quot;);
+    int validLengthB = 9;  
+    int validLengthC = 2; 
+
+    while ((line = reader.readLine()) != null) {
+        String[] columns = line.split(&quot;,&quot;); // Assuming CSV is comma-separated
+        
+        // Check if the row meets the criteria
+        boolean isValid = columns.length &gt;= 3 &amp;&amp; // Ensure there are at least 3 columns
+            validLengthsA.contains(columns[0].length()) &amp;&amp; 
+            columns[1].length() == validLengthB &amp;&amp;         
+            columns[2].length() == validLengthC;          
+
+        if (isValid) {
+            validRows.add(line); // Keep the valid rows
+//            validRows.add(&quot;\n&quot;);
+        }
+    }
+    reader.close();
+    // Overwrite the file with only valid rows
+//    String cleanedFileName = originalFileName.replaceFirst(&quot;\\.csv$&quot;, &quot;_cleaned.csv&quot;);
+//    print(&quot;outfile file namw&quot;, cleanedFileName);
+    BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, false));
+//	FileOutputStream writer = new FileOutputStream(vars.get(outputFile), false);
+    
+    for (String validRow : validRows) {
+        writer.write(validRow);
+        writer.newLine();
+    }
+    writer.close();
+
+    log.info(&quot;CSV file processed successfully. Invalid rows removed.&quot;);
+    print(&quot;3&quot;);
+//    print(&quot;3&quot;);
+//    	print(validRows);
+//     print(&quot;\n&quot;);
+        
+    
+	
+
+
+</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2_1021" enabled="false"/>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -14233,7 +14304,7 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             <stringProp name="filename">attempts.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">extuserid,cc,category</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
