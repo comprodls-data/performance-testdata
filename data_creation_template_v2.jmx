@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="5.6.3">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ComproDLS Test Plan">
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Performance Test Data Setup">
-        <intProp name="ThreadGroup.num_threads">12</intProp>
-        <intProp name="ThreadGroup.ramp_time">24</intProp>
+        <intProp name="ThreadGroup.num_threads">100</intProp>
+        <intProp name="ThreadGroup.ramp_time">1200</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
@@ -20,7 +18,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha">
           <collectionProp name="Arguments.arguments">
             <elementProp name="startTime" elementType="Argument">
               <stringProp name="Argument.name">startTime</stringProp>
@@ -945,7 +943,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Product Category Details Updated" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Product Category Details Updated">
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1" elementType="Argument">
               <stringProp name="Argument.name">L1</stringProp>
@@ -1275,7 +1273,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Attempts" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV - Attempts">
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_Scorable_PE_Count" elementType="Argument">
               <stringProp name="Argument.name">L1_Scorable_PE_Count</stringProp>
@@ -3885,9 +3883,9 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2" enabled="false"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="filename">template_new_v2.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
@@ -3949,7 +3947,7 @@
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name">
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name" enabled="true">
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
@@ -5246,13 +5244,13 @@ out.close();
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Student enrollment - Lti class">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Student enrollment - Lti class" enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H5&quot; || &quot;${category}&quot; == &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
           </IfController>
           <hashTree>
-            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher">
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x students and join using classcode of current teacher" enabled="true">
               <boolProp name="LoopController.continue_forever">true</boolProp>
               <stringProp name="LoopController.loops">${noOfStudentsInClass}</stringProp>
             </LoopController>
@@ -5279,7 +5277,7 @@ for (int i = 0; i &lt; multiProducts.length; i++) {
 }</stringProp>
               </BeanShellSampler>
               <hashTree/>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Enroll user in LTI Class">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Enroll user in LTI Class" enabled="true">
                 <stringProp name="IncludeController.includepath">Enroll_a_user_in_lti_class.jmx</stringProp>
               </IncludeController>
               <hashTree/>
@@ -5381,7 +5379,7 @@ out.close();
               </BeanShellSampler>
               <hashTree/>
             </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameTch&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
@@ -5402,144 +5400,9 @@ out.close();</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor - cleanup">
-          <boolProp name="resetInterpreter">false</boolProp>
-          <stringProp name="parameters"></stringProp>
-          <stringProp name="filename"></stringProp>
-          <stringProp name="script">import java.io.*;
-import java.util.ArrayList;
-
-
-	String outputFile = vars.get(&quot;outputFile&quot;);  // Get input file name
-	String inputFile = vars.get(&quot;outputCsvFilenameStd&quot;);
-	print(&quot;outputFile2....&quot;);
-	print(outputFile);
-	BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-	ArrayList validRows = new ArrayList();
-	String line;
-	ArrayList validLengthsA = new ArrayList();
-	print(&quot;1&quot;);
-	validLengthsA.add(29);
-	validLengthsA.add(30);
-	validLengthsA.add(31);
-	validLengthsA.add(33);
-	print(&quot;2&quot;);
-    int validLengthB = 9;  
-    int validLengthC = 2; 
-
-    while ((line = reader.readLine()) != null) {
-        String[] columns = line.split(&quot;,&quot;); // Assuming CSV is comma-separated
-        
-        // Check if the row meets the criteria
-        boolean isValid = columns.length &gt;= 3 &amp;&amp; // Ensure there are at least 3 columns
-            validLengthsA.contains(columns[0].length()) &amp;&amp; 
-            columns[1].length() == validLengthB &amp;&amp;         
-            columns[2].length() == validLengthC;          
-
-        if (isValid) {
-            validRows.add(line); // Keep the valid rows
-//            validRows.add(&quot;\n&quot;);
-        }
-    }
-    reader.close();
-    // Overwrite the file with only valid rows
-//    String cleanedFileName = originalFileName.replaceFirst(&quot;\\.csv$&quot;, &quot;_cleaned.csv&quot;);
-//    print(&quot;outfile file namw&quot;, cleanedFileName);
-    BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, false));
-//	FileOutputStream writer = new FileOutputStream(vars.get(outputFile), false);
-    
-    for (String validRow : validRows) {
-        writer.write(validRow);
-        writer.newLine();
-    }
-    writer.close();
-
-    log.info(&quot;CSV file processed successfully. Invalid rows removed.&quot;);
-    print(&quot;3&quot;);
-//    print(&quot;3&quot;);
-//    	print(validRows);
-//     print(&quot;\n&quot;);
-        
-    
-	
-
-
-</stringProp>
-        </BeanShellPostProcessor>
-        <hashTree/>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with Space Code" enabled="false">
-          <stringProp name="IncludeController.includepath">Join_a_space_with_space_code.jmx</stringProp>
-        </IncludeController>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2_1021"/>
         <hashTree>
-          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor - cleanup" enabled="false">
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="script">import java.io.*;
-import java.util.ArrayList;
-
-
-	String outputFile = vars.get(&quot;outputFile&quot;);  // Get input file name
-	String inputFile = vars.get(&quot;outputCsvFilenameStd&quot;);
-	print(&quot;outputFile2....&quot;);
-	print(outputFile);
-	BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-	ArrayList validRows = new ArrayList();
-	String line;
-	ArrayList validLengthsA = new ArrayList();
-	print(&quot;1&quot;);
-	validLengthsA.add(29);
-	validLengthsA.add(30);
-	validLengthsA.add(31);
-	validLengthsA.add(33);
-	print(&quot;2&quot;);
-    int validLengthB = 9;  
-    int validLengthC = 2; 
-
-    while ((line = reader.readLine()) != null) {
-        String[] columns = line.split(&quot;,&quot;); // Assuming CSV is comma-separated
-        
-        // Check if the row meets the criteria
-        boolean isValid = columns.length &gt;= 3 &amp;&amp; // Ensure there are at least 3 columns
-            validLengthsA.contains(columns[0].length()) &amp;&amp; 
-            columns[1].length() == validLengthB &amp;&amp;         
-            columns[2].length() == validLengthC;          
-
-        if (isValid) {
-            validRows.add(line); // Keep the valid rows
-//            validRows.add(&quot;\n&quot;);
-        }
-    }
-    reader.close();
-    // Overwrite the file with only valid rows
-//    String cleanedFileName = originalFileName.replaceFirst(&quot;\\.csv$&quot;, &quot;_cleaned.csv&quot;);
-//    print(&quot;outfile file namw&quot;, cleanedFileName);
-    BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, false));
-//	FileOutputStream writer = new FileOutputStream(vars.get(outputFile), false);
-    
-    for (String validRow : validRows) {
-        writer.write(validRow);
-        writer.newLine();
-    }
-    writer.close();
-
-    log.info(&quot;CSV file processed successfully. Invalid rows removed.&quot;);
-    print(&quot;3&quot;);
-//    print(&quot;3&quot;);
-//    	print(validRows);
-//     print(&quot;\n&quot;);
-        
-    
-	
-
-
-</stringProp>
-          </BeanShellPostProcessor>
-          <hashTree/>
-        </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2_1021" enabled="false"/>
-        <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="filename">template_new_v2_1021.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
@@ -5551,7 +5414,7 @@ import java.util.ArrayList;
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilenameTch" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
@@ -5593,10 +5456,15 @@ import java.util.ArrayList;
                 <stringProp name="Argument.value">attempt_tool_student_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
+              <elementProp name="outputFile" elementType="Argument">
+                <stringProp name="Argument.name">outputFile</stringProp>
+                <stringProp name="Argument.value">1021_student_${__time()}_cleaned.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name" enabled="true">
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name">
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
@@ -5613,7 +5481,7 @@ vars.put(&quot;classname&quot;, classname);
 vars.put(&quot;teachername&quot;, extuserid);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class creation " enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class creation ">
             <stringProp name="IfController.condition">&quot;${category}&quot; != &quot;H5&quot; &amp;&amp; &quot;${category}&quot; != &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5678,7 +5546,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class Creation" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class Creation">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H5&quot; || &quot;${category}&quot; == &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5721,7 +5589,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
             <stringProp name="IncludeController.includepath">associate_multi_products_with_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [420-450]" enabled="true">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for associating a product to a class [420-450]">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -7111,7 +6979,7 @@ out.close();</stringProp>
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilenameTch" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
@@ -7153,10 +7021,15 @@ out.close();</stringProp>
                 <stringProp name="Argument.value">attempt_tool_student_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
+              <elementProp name="outputFile" elementType="Argument">
+                <stringProp name="Argument.name">outputFile</stringProp>
+                <stringProp name="Argument.value">1041_student_${__time()}_cleaned.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name" enabled="true">
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name">
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
@@ -8627,7 +8500,7 @@ out.close();</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2_1042" enabled="false"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="filename">template_new_v2_1041.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
@@ -8639,7 +8512,7 @@ out.close();</stringProp>
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilenameTch" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
@@ -8679,6 +8552,11 @@ out.close();</stringProp>
               <elementProp name="outputCsvFilenameStd_AttemptTool" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameStd_AttemptTool</stringProp>
                 <stringProp name="Argument.value">attempt_tool_student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputFile" elementType="Argument">
+                <stringProp name="Argument.name">outputFile</stringProp>
+                <stringProp name="Argument.value">1042_student_${__time()}_cleaned.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -10143,7 +10021,7 @@ out.close();</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Core Data Template_v2_1002" enabled="false"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="filename">template_new_v2_1002.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">category,classType,noOfStudentsInClass</stringProp>
@@ -10155,7 +10033,7 @@ out.close();</stringProp>
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilenameTch" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
@@ -10197,10 +10075,15 @@ out.close();</stringProp>
                 <stringProp name="Argument.value">attempt_tool_student_${__time()}.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
+              <elementProp name="outputFile" elementType="Argument">
+                <stringProp name="Argument.name">outputFile</stringProp>
+                <stringProp name="Argument.value">1002_student_${__time()}_cleaned.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
-          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name" enabled="true">
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="teacher_class_name">
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
@@ -11667,7 +11550,7 @@ out.close();</stringProp>
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments">
               <elementProp name="outputCsvFilenameTch" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
@@ -11707,6 +11590,11 @@ out.close();</stringProp>
               <elementProp name="outputCsvFilenameStd_AttemptTool" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilenameStd_AttemptTool</stringProp>
                 <stringProp name="Argument.value">attempt_tool_student_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="outputFile" elementType="Argument">
+                <stringProp name="Argument.name">outputFile</stringProp>
+                <stringProp name="Argument.value">1005_student_${__time()}_cleaned.csv</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -14300,7 +14188,7 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="filename">attempts.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">extuserid,cc,category</stringProp>
@@ -14312,7 +14200,7 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             <stringProp name="shareMode">shareMode.group</stringProp>
           </CSVDataSet>
           <hashTree/>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
             <stringProp name="BeanShellSampler.query">String[] stringArray = {${__evalVar(${category}_Assignment)}};  
 
 for (int i = 0; i &lt; stringArray.length; i++) {
@@ -14608,6 +14496,80 @@ out.close();
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
+      <PostThreadGroup guiclass="PostThreadGroupGui" testclass="PostThreadGroup" testname="tearDown Thread Group">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </PostThreadGroup>
+      <hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler - Tear-down-cleanup">
+          <stringProp name="BeanShellSampler.query">import java.io.*;
+import java.util.ArrayList;
+
+
+	String outputFile = vars.get(&quot;outputFile&quot;);  // Get input file name
+	String inputFile = vars.get(&quot;outputCsvFilenameStd&quot;);
+	print(&quot;outputFile2....&quot;);
+	print(outputFile);
+	BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+	ArrayList validRows = new ArrayList();
+	String line;
+	ArrayList validLengthsA = new ArrayList();
+	print(&quot;1&quot;);
+	validLengthsA.add(29);
+	validLengthsA.add(30);
+	validLengthsA.add(31);
+	validLengthsA.add(33);
+	print(&quot;2&quot;);
+    int validLengthB = 9;  
+    int validLengthC = 2; 
+
+    while ((line = reader.readLine()) != null) {
+        String[] columns = line.split(&quot;,&quot;); // Assuming CSV is comma-separated
+        
+        // Check if the row meets the criteria
+        boolean isValid = columns.length &gt;= 3 &amp;&amp; // Ensure there are at least 3 columns
+            validLengthsA.contains(columns[0].length()) &amp;&amp; 
+            columns[1].length() == validLengthB &amp;&amp;         
+            columns[2].length() == validLengthC;          
+
+        if (isValid) {
+            validRows.add(line); // Keep the valid rows
+//            validRows.add(&quot;\n&quot;);
+        }
+    }
+    reader.close();
+    // Overwrite the file with only valid rows
+//    String cleanedFileName = originalFileName.replaceFirst(&quot;\\.csv$&quot;, &quot;_cleaned.csv&quot;);
+//    print(&quot;outfile file namw&quot;, cleanedFileName);
+    BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, false));
+//	FileOutputStream writer = new FileOutputStream(vars.get(outputFile), false);
+    
+    for (String validRow : validRows) {
+        writer.write(validRow);
+        writer.newLine();
+    }
+    writer.close();
+
+    log.info(&quot;CSV file processed successfully. Invalid rows removed.&quot;);
+    print(&quot;3&quot;);
+//    print(&quot;3&quot;);
+//    	print(validRows);
+//     print(&quot;\n&quot;);
+        
+    
+	
+
+
+</stringProp>
+        </BeanShellSampler>
+        <hashTree/>
+      </hashTree>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
