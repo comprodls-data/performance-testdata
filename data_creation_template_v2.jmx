@@ -4664,37 +4664,37 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L1_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L2_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L2_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L3_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L3_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">7</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L7_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L7_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">20</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L8_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L8_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">37</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L9_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L9_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">36</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L10_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L10_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M1_asgmtDeleteCount" elementType="Argument">
@@ -15877,7 +15877,7 @@ out.close();
             <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
