@@ -4664,37 +4664,37 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L1_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L2_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L2_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L3_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L3_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">7</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L7_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L7_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">20</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L8_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L8_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">37</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L9_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L9_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">36</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="L10_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">L10_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="M1_asgmtDeleteCount" elementType="Argument">
@@ -4749,6 +4749,11 @@
             </elementProp>
             <elementProp name="H7_asgmtDeleteCount" elementType="Argument">
               <stringProp name="Argument.name">H7_asgmtDeleteCount</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="H6_asgmtDeleteCount" elementType="Argument">
+              <stringProp name="Argument.name">H6_asgmtDeleteCount</stringProp>
               <stringProp name="Argument.value">0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
@@ -4836,7 +4841,7 @@ vars.put(&quot;classname&quot;, classname);
 vars.put(&quot;teachername&quot;, extuserid);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class creation ">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Class creation " enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; != &quot;H5&quot; &amp;&amp; &quot;${category}&quot; != &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -4956,7 +4961,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - L10 category" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - L10 category">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;L10&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -6214,13 +6219,13 @@ vars.put(&quot;productcode&quot;, productValue);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class"/>
           <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
               <stringProp name="BeanShellSampler.query">String[] multiProducts = {
     ${__evalVar(${category})}
 };
@@ -6255,7 +6260,7 @@ mergedColumnJson = mergedColumnJson.substring(0, mergedColumnJson.length() - 1) 
 vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             </BeanShellSampler>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -6272,7 +6277,7 @@ vars.put(&quot;mergedColumnJsonFinal&quot;, mergedColumnJson);</stringProp>
             </IncludeController>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Student enrollment" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Student enrollment">
             <stringProp name="IfController.condition">&quot;${category}&quot; != &quot;H5&quot; &amp;&amp; &quot;${category}&quot; != &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -6529,7 +6534,7 @@ out.close();
               </BeanShellSampler>
               <hashTree/>
             </hashTree>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation" enabled="true">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation">
               <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameTch&quot;), true);
 String SEPARATOR = &quot;,&quot;;
 String LineSEPARATOR = &quot;\n&quot;;
@@ -14205,7 +14210,7 @@ out.close();</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Class Assignments" enabled="false"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="filename">createAssignment.csv</stringProp>
@@ -15418,7 +15423,7 @@ vars.put(&quot;assignedPathList&quot;, apList);
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules for multiple PEs" enabled="true">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create x rules for multiple PEs">
             <boolProp name="LoopController.continue_forever">true</boolProp>
             <stringProp name="LoopController.loops">${__evalVar(${category}_rulesPECount)}</stringProp>
           </LoopController>
@@ -15546,7 +15551,7 @@ vars.put(&quot;productcode&quot;, productValue);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class"/>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
@@ -15861,6 +15866,16 @@ out.close();
             <stringProp name="variableNames">extuserid,classtitle,classcode,category</stringProp>
           </CSVDataSet>
           <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="outputCsvFilenameTch" elementType="Argument">
+                <stringProp name="Argument.name">outputCsvFilenameTch</stringProp>
+                <stringProp name="Argument.value">scenario_tch_asnmtCount_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get all the User Spaces">
             <stringProp name="IncludeController.includepath">Get_all_the_User_Spaces.jmx</stringProp>
           </IncludeController>
@@ -15893,23 +15908,49 @@ out.close();
             <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="delete x assignments">
-            <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">${__evalVar(${category}_asgmtDeleteCount)}</stringProp>
-          </LoopController>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
+            <stringProp name="BeanShellSampler.query">// Retrieve the assigned_path_id_matchNr and category_asgmtDeleteCount values from JMeter variables
+//String assignedPathIdMatchNr = vars.get(&quot;assigned_path_id_count&quot;);
+String assignedPathIdMatchNr = vars.get(&quot;assigned_path_id_matchNr&quot;);
+String category = vars.get(&quot;category&quot;);
+String categoryAsgmtDeleteCount = vars.get(category + &quot;_asgmtDeleteCount&quot;);
+
+// Convert values to integers
+int assignedPathIdMatchNrInt = Integer.parseInt(assignedPathIdMatchNr);
+int categoryAsgmtDeleteCountInt = Integer.parseInt(categoryAsgmtDeleteCount);
+
+// Perform comparison and set a flag
+if (assignedPathIdMatchNrInt &gt; categoryAsgmtDeleteCountInt) {
+    vars.put(&quot;conditionFlag&quot;, &quot;true&quot;);
+} else {
+    vars.put(&quot;conditionFlag&quot;, &quot;false&quot;);
+}
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for all class except H7 &amp; H8">
+            <stringProp name="IfController.condition">&quot;${conditionFlag}&quot; == &quot;true&quot;;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">false</boolProp>
+          </IfController>
           <hashTree>
-            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter">
-              <stringProp name="CounterConfig.start">1</stringProp>
-              <stringProp name="CounterConfig.end">${__evalVar(${category}_asgmtDeleteCount)}</stringProp>
-              <stringProp name="CounterConfig.incr">1</stringProp>
-              <stringProp name="CounterConfig.name">assignedpathidCounter</stringProp>
-              <stringProp name="CounterConfig.format"></stringProp>
-              <boolProp name="CounterConfig.per_user">true</boolProp>
-              <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
-            </CounterConfig>
-            <hashTree/>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="get assignmentId for deletion">
-              <stringProp name="BeanShellSampler.query">// Assuming assigned_path_id_ALL is dynamically resolved at runtime
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="delete x assignments">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">${__evalVar(${category}_asgmtDeleteCount)}</stringProp>
+            </LoopController>
+            <hashTree>
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter">
+                <stringProp name="CounterConfig.start">1</stringProp>
+                <stringProp name="CounterConfig.end">${__evalVar(${category}_asgmtDeleteCount)}</stringProp>
+                <stringProp name="CounterConfig.incr">1</stringProp>
+                <stringProp name="CounterConfig.name">assignedpathidCounter</stringProp>
+                <stringProp name="CounterConfig.format"></stringProp>
+                <boolProp name="CounterConfig.per_user">true</boolProp>
+                <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+              </CounterConfig>
+              <hashTree/>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="get assignmentId for deletion">
+                <stringProp name="BeanShellSampler.query">// Assuming assigned_path_id_ALL is dynamically resolved at runtime
 String assigned_path_id_ALL = vars.get(&quot;assigned_path_id_ALL&quot;);  // Dynamically resolved variable in JMeter or similar context
 
 // Split the string by commas to create the array of UUIDs or values
@@ -15929,13 +15970,37 @@ if (assignedpathidCounter &gt;= 0 &amp;&amp; assignedpathidCounter &lt; stringAr
     System.out.println(&quot;Invalid counter value: &quot; + assignedpathidCounter);
 }
 </stringProp>
-            </BeanShellSampler>
-            <hashTree/>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Delete assigned paths">
-              <stringProp name="IncludeController.includepath">delete_an_assigned_path_in_a_class.jmx</stringProp>
-            </IncludeController>
-            <hashTree/>
+              </BeanShellSampler>
+              <hashTree/>
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Delete assigned paths">
+                <stringProp name="IncludeController.includepath">delete_an_assigned_path_in_a_class.jmx</stringProp>
+              </IncludeController>
+              <hashTree/>
+            </hashTree>
           </hashTree>
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class">
+            <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation">
+            <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameTch&quot;), true);
+String SEPARATOR = &quot;,&quot;;
+String LineSEPARATOR = &quot;\n&quot;;
+out.write(vars.get(&quot;extuserid&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classtitle&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;classcode&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;category&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;assigned_path_id_matchNr&quot;).getBytes());
+out.write(LineSEPARATOR.getBytes());
+
+out.flush();
+out.close();</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
