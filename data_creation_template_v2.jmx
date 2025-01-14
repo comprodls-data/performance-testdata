@@ -20,7 +20,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - NEW Alpha" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="startTime" elementType="Argument">
               <stringProp name="Argument.name">startTime</stringProp>
@@ -4660,7 +4660,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV -- Assignments Final count">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV -- Assignments Final count" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_asgmtFinalCount" elementType="Argument">
               <stringProp name="Argument.name">L1_asgmtFinalCount</stringProp>
@@ -4851,7 +4851,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
               <stringProp name="IncludeController.includepath">Join_a_space_with_space_code.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]">
               <intProp name="ActionProcessor.action">1</intProp>
               <intProp name="ActionProcessor.target">0</intProp>
               <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -4961,7 +4961,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - L10 category">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - L10 category" enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;L10&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5005,7 +5005,7 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
             </IncludeController>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for all class except H7 &amp; H8">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for all class except H7 &amp; H8" enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; != &quot;H7&quot; &amp;&amp; &quot;${category}&quot; != &quot;H8&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5444,7 +5444,7 @@ vars.put(&quot;assignedPathList&quot;, apList);
               </hashTree>
             </hashTree>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for H7 class">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for H7 class" enabled="true">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -6219,7 +6219,7 @@ vars.put(&quot;productcode&quot;, productValue);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
@@ -14210,7 +14210,7 @@ out.close();</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Class Assignments" enabled="false"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="filename">createAssignment.csv</stringProp>
@@ -15888,11 +15888,11 @@ out.close();
             <stringProp name="IncludeController.includepath">get_classes_of_an_user.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get details for a specific class" enabled="true">
             <stringProp name="IncludeController.includepath">Get_details_for_a_specific_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time on dashboard" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -15904,21 +15904,21 @@ out.close();
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class" enabled="true">
             <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - cursor">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - cursor" enabled="true">
             <stringProp name="IfController.condition">&quot;${assignment_cursor}&quot; != &quot;NOT_FOUND&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
           </IfController>
           <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class with cursor">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class with cursor" enabled="true">
               <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class_with_cursor.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
               <stringProp name="BeanShellSampler.query">// Retrieve the current value of &apos;assigned_path_id_count&apos; from JMeter variables
 String assigned_path_id_count = vars.get(&quot;assigned_path_id_count&quot;);
 
@@ -15937,7 +15937,7 @@ vars.put(&quot;assigned_path_id_count&quot;, assigned_path_id_count);
             </BeanShellSampler>
             <hashTree/>
           </hashTree>
-          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
             <stringProp name="BeanShellSampler.query">// Retrieve the assigned_path_id_matchNr and category_asgmtDeleteCount values from JMeter variables
 String assignedPathIdcurrentCountStr = vars.get(&quot;assigned_path_id_count&quot;);
 String category = vars.get(&quot;category&quot;);
@@ -15969,7 +15969,7 @@ if (categoryAsgmtFinalCount &lt; assignedPathIdcurrentCount) {
 </stringProp>
           </BeanShellSampler>
           <hashTree/>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for all class except H7 &amp; H8">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - deletion">
             <stringProp name="IfController.condition">&quot;${conditionFlag}&quot; == &quot;true&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -15980,7 +15980,7 @@ if (categoryAsgmtFinalCount &lt; assignedPathIdcurrentCount) {
               <stringProp name="LoopController.loops">${AsgmtDeleteCount}</stringProp>
             </LoopController>
             <hashTree>
-              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter">
+              <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
                 <stringProp name="CounterConfig.start">1</stringProp>
                 <stringProp name="CounterConfig.end">${AsgmtDeleteCount}</stringProp>
                 <stringProp name="CounterConfig.incr">1</stringProp>
@@ -15990,7 +15990,7 @@ if (categoryAsgmtFinalCount &lt; assignedPathIdcurrentCount) {
                 <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
               </CounterConfig>
               <hashTree/>
-              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="get assignmentId for deletion">
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="get assignmentId for deletion" enabled="true">
                 <stringProp name="BeanShellSampler.query">// Assuming assigned_path_id_ALL is dynamically resolved at runtime
 String assigned_path_id_ALL = vars.get(&quot;assigned_path_id_ALL&quot;);  // Dynamically resolved variable in JMeter or similar context
 
@@ -16013,11 +16013,23 @@ if (assignedpathidCounter &gt;= 0 &amp;&amp; assignedpathidCounter &lt; stringAr
 </stringProp>
               </BeanShellSampler>
               <hashTree/>
-              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Delete assigned paths">
+              <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Delete assigned paths" enabled="true">
                 <stringProp name="IncludeController.includepath">delete_an_assigned_path_in_a_class.jmx</stringProp>
               </IncludeController>
               <hashTree/>
             </hashTree>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for deleting space [60-65 sec]">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause">
+              <stringProp name="ConstantTimer.delay">60000</stringProp>
+              <stringProp name="RandomTimer.range">5000</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
           </hashTree>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class">
             <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class.jmx</stringProp>
@@ -16029,11 +16041,11 @@ if (assignedpathidCounter &gt;= 0 &amp;&amp; assignedpathidCounter &lt; stringAr
             <boolProp name="IfController.useExpression">false</boolProp>
           </IfController>
           <hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class with cursor">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class with cursor" enabled="true">
               <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class_with_cursor.jmx</stringProp>
             </IncludeController>
             <hashTree/>
-            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
               <stringProp name="BeanShellSampler.query">// Retrieve the current value of &apos;assigned_path_id_count&apos; from JMeter variables
 String assigned_path_id_count = vars.get(&quot;assigned_path_id_count&quot;);
 
