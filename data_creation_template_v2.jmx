@@ -4660,107 +4660,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV -- Assignments deletion" enabled="false">
-          <collectionProp name="Arguments.arguments">
-            <elementProp name="L1_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L1_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L2_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L2_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L3_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L3_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">7</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L7_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L7_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">20</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L8_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L8_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">37</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L9_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L9_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">36</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="L10_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">L10_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">2</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="M1_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">M1_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">14</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="M2_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">M2_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">14</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="M3_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">M3_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">4</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="M4_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">M4_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">5</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="M5_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">M5_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">9</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H1_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H1_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">69</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H2_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H2_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">49</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H3_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H3_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">61</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H4_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H4_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">86</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H5_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H5_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">48</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H7_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H7_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="H6_asgmtDeleteCount" elementType="Argument">
-              <stringProp name="Argument.name">H6_asgmtDeleteCount</stringProp>
-              <stringProp name="Argument.value">0</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-          </collectionProp>
-        </Arguments>
-        <hashTree/>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV -- Assignments deletion-new">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="UDV -- Assignments Final count">
           <collectionProp name="Arguments.arguments">
             <elementProp name="L1_asgmtFinalCount" elementType="Argument">
               <stringProp name="Argument.name">L1_asgmtFinalCount</stringProp>
@@ -5061,7 +4961,7 @@ vars.put(&quot;teachername&quot;, extuserid);</stringProp>
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - L10 category" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - L10 category">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;L10&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5105,7 +5005,7 @@ vars.put(&quot;assignmenttitle&quot;, assignmenttitle);</stringProp>
             </IncludeController>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for all class except H7 &amp; H8" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for all class except H7 &amp; H8">
             <stringProp name="IfController.condition">&quot;${category}&quot; != &quot;H7&quot; &amp;&amp; &quot;${category}&quot; != &quot;H8&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -5544,7 +5444,7 @@ vars.put(&quot;assignedPathList&quot;, apList);
               </hashTree>
             </hashTree>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for H7 class" enabled="true">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - Assignments for H7 class">
             <stringProp name="IfController.condition">&quot;${category}&quot; == &quot;H7&quot;;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">false</boolProp>
@@ -6319,7 +6219,7 @@ vars.put(&quot;productcode&quot;, productValue);
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="create custom grading in a class"/>
           <hashTree>
             <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Create a gradebook in a class" enabled="true">
               <stringProp name="IncludeController.includepath">Create_a_gradebook_in_a_class.jmx</stringProp>
@@ -14310,7 +14210,7 @@ out.close();</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Class Assignments" enabled="false"/>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="filename">createAssignment.csv</stringProp>
@@ -15957,7 +15857,7 @@ out.close();
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">deleteAssignments.csv</stringProp>
+            <stringProp name="filename">deleteAssignment.csv</stringProp>
             <boolProp name="ignoreFirstLine">false</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
@@ -16008,9 +15908,38 @@ out.close();
             <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - cursor">
+            <stringProp name="IfController.condition">&quot;${assignment_cursor}&quot; != &quot;NOT_FOUND&quot;;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class with cursor">
+              <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class_with_cursor.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
+              <stringProp name="BeanShellSampler.query">// Retrieve the current value of &apos;assigned_path_id_count&apos; from JMeter variables
+String assigned_path_id_count = vars.get(&quot;assigned_path_id_count&quot;);
+
+// Convert the string to an integer to perform numeric addition
+int assigned_path_id_count_int = Integer.parseInt(assigned_path_id_count);
+
+// Add 100 to the integer value
+assigned_path_id_count_int += 100;
+
+// Convert the result back to a string
+assigned_path_id_count = String.valueOf(assigned_path_id_count_int);
+
+// Store the updated value back into JMeter variables
+vars.put(&quot;assigned_path_id_count&quot;, assigned_path_id_count);
+</stringProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
             <stringProp name="BeanShellSampler.query">// Retrieve the assigned_path_id_matchNr and category_asgmtDeleteCount values from JMeter variables
-String assignedPathIdcurrentCountStr = vars.get(&quot;assigned_path_id_matchNr&quot;);
+String assignedPathIdcurrentCountStr = vars.get(&quot;assigned_path_id_count&quot;);
 String category = vars.get(&quot;category&quot;);
 String categoryAsgmtFinalCountStr = vars.get(category + &quot;_asgmtFinalCount&quot;);
 
@@ -16094,6 +16023,35 @@ if (assignedpathidCounter &gt;= 0 &amp;&amp; assignedpathidCounter &lt; stringAr
             <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class.jmx</stringProp>
           </IncludeController>
           <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller - cursor">
+            <stringProp name="IfController.condition">&quot;${assignment_cursor}&quot; != &quot;NOT_FOUND&quot;;</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Get assignments a specific class with cursor">
+              <stringProp name="IncludeController.includepath">get_all_assigned_path_of_a_class_with_cursor.jmx</stringProp>
+            </IncludeController>
+            <hashTree/>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler">
+              <stringProp name="BeanShellSampler.query">// Retrieve the current value of &apos;assigned_path_id_count&apos; from JMeter variables
+String assigned_path_id_count = vars.get(&quot;assigned_path_id_count&quot;);
+
+// Convert the string to an integer to perform numeric addition
+int assigned_path_id_count_int = Integer.parseInt(assigned_path_id_count);
+
+// Add 100 to the integer value
+assigned_path_id_count_int += 100;
+
+// Convert the result back to a string
+assigned_path_id_count = String.valueOf(assigned_path_id_count_int);
+
+// Store the updated value back into JMeter variables
+vars.put(&quot;assigned_path_id_count&quot;, assigned_path_id_count);
+</stringProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="output_csv_creation">
             <stringProp name="BeanShellSampler.query">FileOutputStream out = new FileOutputStream(vars.get(&quot;outputCsvFilenameTch&quot;), true);
 String SEPARATOR = &quot;,&quot;;
@@ -16106,7 +16064,7 @@ out.write(vars.get(&quot;classcode&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;category&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
-out.write(vars.get(&quot;assigned_path_id_matchNr&quot;).getBytes());
+out.write(vars.get(&quot;assigned_path_id_count&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
 
 out.flush();
