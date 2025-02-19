@@ -11,7 +11,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname=" Join Spaces with product_code and class_code" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname=" Join Spaces with product_code and class_code_private" enabled="true"/>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname=" Join Spaces with product_code and class_code" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -26,10 +26,37 @@
   &quot;ext_last_name&quot;: &quot;Perf Test&quot;,&#xd;
   &quot;ext_email&quot;: &quot;${extuserid}@yopmail.com&quot;,&#xd;
   &quot;ext_role&quot;: &quot;student&quot;,&#xd;
-  &quot;class_code&quot;: &quot;${classcode}&quot;,&#xd;
   &quot;products&quot;: [&#xd;
     {&#xd;
-      &quot;productcode&quot;: &quot;${productcode}&quot;,&#xd;
+      &quot;productcode&quot;: &quot;perfprod101&quot;,&#xd;
+      &quot;ext_product_meta&quot;: {&#xd;
+        &quot;startdate&quot;: ${startDate},&#xd;
+        &quot;enddate&quot;: ${endDate}&#xd;
+      }&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;productcode&quot;: &quot;perfprod102&quot;,&#xd;
+      &quot;ext_product_meta&quot;: {&#xd;
+        &quot;startdate&quot;: ${startDate},&#xd;
+        &quot;enddate&quot;: ${endDate}&#xd;
+      }&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;productcode&quot;: &quot;perfprod103&quot;,&#xd;
+      &quot;ext_product_meta&quot;: {&#xd;
+        &quot;startdate&quot;: ${startDate},&#xd;
+        &quot;enddate&quot;: ${endDate}&#xd;
+      }&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;productcode&quot;: &quot;perfprod104&quot;,&#xd;
+      &quot;ext_product_meta&quot;: {&#xd;
+        &quot;startdate&quot;: ${startDate},&#xd;
+        &quot;enddate&quot;: ${endDate}&#xd;
+      }&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;productcode&quot;: &quot;perfprod105&quot;,&#xd;
       &quot;ext_product_meta&quot;: {&#xd;
         &quot;startdate&quot;: ${startDate},&#xd;
         &quot;enddate&quot;: ${endDate}&#xd;

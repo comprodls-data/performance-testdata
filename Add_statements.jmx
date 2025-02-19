@@ -39,7 +39,10 @@
 	          &quot;raw&quot;: 0&#xd;
 	        		}&#xd;
   			}&#xd;
- 		 }],&#xd;
+ 		 },&#xd;
+ 		 {&quot;verb&quot;:&quot;answered&quot;,&quot;item-code&quot;:&quot;${task}&quot;,&quot;timestamp&quot;:${__time()},&quot;timespent&quot;:2000,&quot;result&quot;:{&quot;response&quot;:&quot;{\&quot;items\&quot;:[{\&quot;items\&quot;:[\&quot;dfdfd\&quot;]}],\&quot;status\&quot;:\&quot;corrected\&quot;,\&quot;checkAttempts\&quot;:1,\&quot;manualCheckAttempts\&quot;:1,\&quot;solutionHint\&quot;:false,\&quot;notes\&quot;:[],\&quot;tc_code\&quot;:2}&quot;,&quot;score&quot;:{&quot;scaled&quot;:0,&quot;raw&quot;:0,&quot;min&quot;:0,&quot;max&quot;:1}},&quot;meta&quot;:{&quot;contributesToCompletion&quot;:true}},&#xd;
+ 		 {&quot;verb&quot;:&quot;answered&quot;,&quot;item-code&quot;:&quot;${task}&quot;,&quot;timestamp&quot;:${__time()},&quot;timespent&quot;:2000,&quot;result&quot;:{&quot;response&quot;:&quot;{\&quot;items\&quot;:[{\&quot;items\&quot;:[\&quot;dfdfd\&quot;]}],\&quot;status\&quot;:\&quot;corrected\&quot;,\&quot;checkAttempts\&quot;:1,\&quot;manualCheckAttempts\&quot;:1,\&quot;solutionHint\&quot;:false,\&quot;notes\&quot;:[],\&quot;tc_code\&quot;:2}&quot;,&quot;score&quot;:{&quot;scaled&quot;:0,&quot;raw&quot;:0,&quot;min&quot;:0,&quot;max&quot;:1}},&quot;meta&quot;:{&quot;contributesToCompletion&quot;:true}},&#xd;
+ 		 {&quot;verb&quot;:&quot;answered&quot;,&quot;item-code&quot;:&quot;${task}&quot;,&quot;timestamp&quot;:${__time()},&quot;timespent&quot;:2000,&quot;result&quot;:{&quot;response&quot;:&quot;{\&quot;items\&quot;:[{\&quot;items\&quot;:[\&quot;dfdfd\&quot;]}],\&quot;status\&quot;:\&quot;corrected\&quot;,\&quot;checkAttempts\&quot;:1,\&quot;manualCheckAttempts\&quot;:1,\&quot;solutionHint\&quot;:false,\&quot;notes\&quot;:[],\&quot;tc_code\&quot;:2}&quot;,&quot;score&quot;:{&quot;scaled&quot;:0,&quot;raw&quot;:0,&quot;min&quot;:0,&quot;max&quot;:1}},&quot;meta&quot;:{&quot;contributesToCompletion&quot;:true}}],&#xd;
    &quot;classid&quot;: &quot;${classid}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -11,9 +11,9 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname=" Join Spaces with product_code and class_code" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Join Spaces with class_code" enabled="true"/>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname=" Join Spaces with product_code and class_code" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Join Spaces with class_code" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -22,20 +22,10 @@
                 <stringProp name="Argument.value">{&#xd;
   &quot;ext_user_id&quot;: &quot;${extuserid}&quot;,&#xd;
   &quot;ref_id&quot;: &quot;${extuserid}&quot;,&#xd;
+  &quot;ext_role&quot;: &quot;student&quot;,&#xd;
   &quot;ext_first_name&quot;: &quot;${extuserid}&quot;,&#xd;
   &quot;ext_last_name&quot;: &quot;Perf Test&quot;,&#xd;
-  &quot;ext_email&quot;: &quot;${extuserid}@yopmail.com&quot;,&#xd;
-  &quot;ext_role&quot;: &quot;student&quot;,&#xd;
-  &quot;class_code&quot;: &quot;${classcode}&quot;,&#xd;
-  &quot;products&quot;: [&#xd;
-    {&#xd;
-      &quot;productcode&quot;: &quot;${productcode}&quot;,&#xd;
-      &quot;ext_product_meta&quot;: {&#xd;
-        &quot;startdate&quot;: ${startDate},&#xd;
-        &quot;enddate&quot;: ${endDate}&#xd;
-      }&#xd;
-    }&#xd;
-  ]&#xd;
+  &quot;class_code&quot;: &quot;${classcode}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -45,9 +35,9 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/lb-auth/accounts/${accountid}/student/provision-spaces</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/accounts/${accountid}/enroll-with-classcode</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
@@ -59,6 +49,10 @@
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
               </elementProp>
@@ -69,8 +63,15 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Org Id  " enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">orgid</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.entities[0].dls_org_id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">$.entities[0].dls_account_id</stringProp>
+            <stringProp name="JSON_PATH">$.entities[0].dls_account_id  </stringProp>
             <stringProp name="EXPECTED_VALUE">${accountid}</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>

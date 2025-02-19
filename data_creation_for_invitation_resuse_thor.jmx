@@ -17,8 +17,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">25</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -32,9 +32,9 @@
               <stringProp name="Argument.value">${__P(auth_url,dls-asgard-thor-1453383019.us-west-2.elb.amazonaws.com)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="classname" elementType="Argument">
-              <stringProp name="Argument.name">classname</stringProp>
-              <stringProp name="Argument.value">${__P(classname,newclass)}</stringProp>
+            <elementProp name="accountid" elementType="Argument">
+              <stringProp name="Argument.name">accountid</stringProp>
+              <stringProp name="Argument.value">${__P(Account_id,cup1)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="orgid" elementType="Argument">
@@ -42,19 +42,9 @@
               <stringProp name="Argument.value">${__P(orgid,mqa-sierra-thor)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="accountid" elementType="Argument">
-              <stringProp name="Argument.name">accountid</stringProp>
-              <stringProp name="Argument.value">${__P(Account_id,cup1)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
             <elementProp name="spacecode" elementType="Argument">
               <stringProp name="Argument.name">spacecode</stringProp>
-              <stringProp name="Argument.value">${__P(space_code,PRF-ALP-ONE)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="startTime" elementType="Argument">
-              <stringProp name="Argument.name">startTime</stringProp>
-              <stringProp name="Argument.value">1587361481394</stringProp>
+              <stringProp name="Argument.value">${__P(space_code,MQA-ABC-DEF)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="minWait" elementType="Argument">
@@ -119,7 +109,7 @@
             </elementProp>
             <elementProp name="ext_product_id" elementType="Argument">
               <stringProp name="Argument.name">ext_product_id</stringProp>
-              <stringProp name="Argument.value">${__P(product_code,9781108414098)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,evolve_l2)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="ext_product_id2" elementType="Argument">
@@ -129,7 +119,7 @@
             </elementProp>
             <elementProp name="productcode" elementType="Argument">
               <stringProp name="Argument.name">productcode</stringProp>
-              <stringProp name="Argument.value">${__P(product_code,evpel1)}</stringProp>
+              <stringProp name="Argument.value">${__P(product_code,evolve_l2)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="productcode2" elementType="Argument">
@@ -1571,7 +1561,7 @@ out.close();
           </IncludeController>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="common_teacher-1class-class-product-20students" enabled="false">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="common_teacher-1class-class-product-20students" enabled="true">
           <stringProp name="TestPlan.comments">1003</stringProp>
         </GenericController>
         <hashTree>
@@ -1580,6 +1570,21 @@ out.close();
               <elementProp name="outputCsvFilename" elementType="Argument">
                 <stringProp name="Argument.name">outputCsvFilename</stringProp>
                 <stringProp name="Argument.value">scenario_${__time()}.csv</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="startDate" elementType="Argument">
+                <stringProp name="Argument.name">startDate</stringProp>
+                <stringProp name="Argument.value">${__time(,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="endDate" elementType="Argument">
+                <stringProp name="Argument.name">endDate</stringProp>
+                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -1608,26 +1613,11 @@ classname = &quot;class&quot; + &quot;_&quot; + prefix2 + &quot;_&quot; + prefix
 vars.put(&quot;classname&quot;, classname);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
-          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="startdate" elementType="Argument">
-                <stringProp name="Argument.name">startdate</stringProp>
-                <stringProp name="Argument.value">${__time(,)}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="enddate" elementType="Argument">
-                <stringProp name="Argument.name">enddate</stringProp>
-                <stringProp name="Argument.value">${__timeShift(,,P365D,,)}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </Arguments>
-          <hashTree/>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Join Spaces with Space Code" enabled="true">
             <stringProp name="IncludeController.includepath">join_a_space_with_space_code.jmx</stringProp>
           </IncludeController>
           <hashTree/>
-          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="false">
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait time for Joining Space [60-65 sec]" enabled="true">
             <intProp name="ActionProcessor.action">1</intProp>
             <intProp name="ActionProcessor.target">0</intProp>
             <stringProp name="ActionProcessor.duration">0</stringProp>
@@ -1684,7 +1674,7 @@ out.close();
           </hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="create 20 students and join using classcode of current teacher" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">20</stringProp>
+            <stringProp name="LoopController.loops">30</stringProp>
           </LoopController>
           <hashTree>
             <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
@@ -1885,7 +1875,7 @@ out.close();
           </DebugSampler>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="T1-C1-P1_ProdIssue" enabled="true">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="T1-C1-P1_ProdIssue" enabled="false">
           <stringProp name="TestPlan.comments">Set number of thread count as 6</stringProp>
         </GenericController>
         <hashTree>
@@ -1913,6 +1903,11 @@ out.close();
               </elementProp>
               <elementProp name="access_token" elementType="Argument">
                 <stringProp name="Argument.name">access_token</stringProp>
+                <stringProp name="Argument.value">7c736150-fb1a-42bf-84f1-15b4b79d18b6</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="userId" elementType="Argument">
+                <stringProp name="Argument.name">userId</stringProp>
                 <stringProp name="Argument.value">7c736150-fb1a-42bf-84f1-15b4b79d18b6</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -1977,7 +1972,7 @@ vars.put(&quot;classname&quot;, classname);</stringProp>
             <hashTree/>
           </hashTree>
           <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Associate a product with a class" enabled="true">
-            <stringProp name="IncludeController.includepath">associate_a_product_with_class2.jmx</stringProp>
+            <stringProp name="IncludeController.includepath">associate_a_product_with_class_prodIssue.jmx</stringProp>
           </IncludeController>
           <hashTree/>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="generate_outputfile" enabled="true">
@@ -1990,7 +1985,9 @@ out.write(vars.get(&quot;classid&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;classtitle&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
-out.write(vars.get(&quot;productcode&quot;).getBytes());
+out.write(vars.get(&quot;productcode_prodIssue&quot;).getBytes());
+out.write(SEPARATOR.getBytes());
+out.write(vars.get(&quot;bunlecode_thor&quot;).getBytes());
 out.write(SEPARATOR.getBytes());
 out.write(vars.get(&quot;teachername&quot;).getBytes());
 out.write(LineSEPARATOR.getBytes());
@@ -5498,43 +5495,6 @@ out.close();</stringProp>
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>false</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <stringProp name="filename">8JulySummary.csv</stringProp>
-          <boolProp name="useGroupName">true</boolProp>
-        </ResultCollector>
-        <hashTree/>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -5573,7 +5533,43 @@ out.close();</stringProp>
             </value>
           </objProp>
           <stringProp name="filename"></stringProp>
-          <boolProp name="ResultCollector.success_only_logging">true</boolProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">8JulySummary.csv</stringProp>
+          <boolProp name="useGroupName">true</boolProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
