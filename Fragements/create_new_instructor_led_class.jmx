@@ -21,18 +21,18 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
   &quot;title&quot;: &quot;${classname}&quot;,&#xd;
-  &quot;startdate&quot;: ${startdate},&#xd;
-  &quot;enddate&quot;: ${enddate}&#xd;
+  &quot;startdate&quot;: ${startDate},&#xd;
+  &quot;enddate&quot;: ${endDate}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${auth_url}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/org/${orgid}/classes</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/classes</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -77,6 +77,22 @@
             <stringProp name="JSONPostProcessor.jsonPathExprs">$.class_code</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">Class_Code_NOT_FOUND</stringProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract ClassTitle" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">classtitle</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.title</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">CLASS_TITLE_NOT_FOUND</stringProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract TeacherName" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">teachername</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.class.instructor.first_name</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TEACHER_NAME_NOT_FOUND</stringProp>
             <stringProp name="Scope.variable"></stringProp>
           </JSONPostProcessor>
           <hashTree/>

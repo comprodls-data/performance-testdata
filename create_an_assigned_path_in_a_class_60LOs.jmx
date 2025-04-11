@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Create an assigned path in a class"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create an assigned path in a class">
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/classes/${classid}/assigned-paths</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;title&quot;: &quot;${assignmenttitle}&quot;,&#xd;
+  &quot;duedate&quot;: ${assignmentenddate},&#xd;
+  &quot;items&quot;: [&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode1}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode2}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode3}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode4}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode5}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode6}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode7}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode8}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode9}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode10}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode11}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode12}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode13}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode14}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode15}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode16}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode17}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode18}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode19}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode20}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode21}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode22}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode23}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode24}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode25}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode26}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode27}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode28}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode29}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode30}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode31}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode32}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode33}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode34}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode35}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode36}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode37}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode38}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode39}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode40}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode41}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode42}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode43}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode44}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode45}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode46}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode47}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode48}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode49}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode50}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode51}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode52}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode53}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode54}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode55}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode56}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode57}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode58}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode59}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;item-code&quot;: &quot;${itemcode60}&quot;,&#xd;
+      &quot;item_type&quot;: &quot;dls-internal&quot;,&#xd;
+      &quot;dls_product_code&quot;: &quot;${productcode}&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;startdate&quot;: ${assignmentstartdate},&#xd;
+  &quot;shared_progress&quot;: true,&#xd;
+  &quot;path_type&quot;: &quot;flat&quot;,&#xd;
+  &quot;rules&quot;: {}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">authorization</stringProp>
+                <stringProp name="Header.value">${access_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">test-perf-id</stringProp>
+                <stringProp name="Header.value">${date}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.assigned_path_id</stringProp>
+            <stringProp name="EXPECTED_VALUE"></stringProp>
+            <boolProp name="JSONVALIDATION">false</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">assigned_path_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.assigned_path_id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

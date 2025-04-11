@@ -17,11 +17,11 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${auth_url}</stringProp>
+          <stringProp name="HTTPSampler.domain">${host_url}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/org/${orgid}/classes/${classid}</stringProp>
+          <stringProp name="HTTPSampler.path">/lb-auth/org/${orgid}/classes/${classid}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -52,23 +52,9 @@
             <stringProp name="JSONPostProcessor.defaultValues">CLASS_TITLE_NOT_FOUND</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Product Id" enabled="false">
-            <stringProp name="JSONPostProcessor.referenceNames">productid</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.products[0].uuid</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">PRODUCT_ID_NOT_FOUND</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract External Product ID" enabled="false">
-            <stringProp name="JSONPostProcessor.referenceNames">ext_product_id</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.products[0].meta.ext_product_id</stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
-            <stringProp name="JSONPostProcessor.defaultValues">PRODUCT_ID_NOT_FOUND</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
-            <stringProp name="JSON_PATH">$.products[0].uuid</stringProp>
-            <stringProp name="EXPECTED_VALUE">${productid}</stringProp>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.uuid</stringProp>
+            <stringProp name="EXPECTED_VALUE">${classid}</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
