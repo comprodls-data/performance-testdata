@@ -1,0 +1,136 @@
+Processing folder: classproductitemsaggregations/H1
+Found 6 JSON files in classproductitemsaggregations/H1
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf36_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf36_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf35_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf35_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf36_500lo_2--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf36_630lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Processing folder: classproductitemsaggregations/L9
+Found 3 JSON files in classproductitemsaggregations/L9
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-evpel1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf30_300lo_2--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductitemsaggregations/Id-product-perf30_300lo_1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Processing folder: classproductpendingsubmissions/H1
+Found 6 JSON files in classproductpendingsubmissions/H1
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf36_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf36_630lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf36_500lo_2--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf35_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf36_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf35_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Processing folder: classproductpendingsubmissions/H5
+Found 14 JSON files in classproductpendingsubmissions/H5
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_400lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf34_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_400lo_3--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_300lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf37_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-evpel1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf38_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf41_500lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf41_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf38_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf38_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Processing folder: classproductpendingsubmissions/L9
+Found 3 JSON files in classproductpendingsubmissions/L9
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf30_300lo_2--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-evpel1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductpendingsubmissions/Id-product-perf30_300lo_1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Processing folder: classproductusersaggregations/H1
+Found 6 JSON files in classproductusersaggregations/H1
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf36_630lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf36_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf35_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf35_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf36_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf36_500lo_2--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Processing folder: classproductusersaggregations/H5
+Found 14 JSON files in classproductusersaggregations/H5
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_400lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-evpel1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_300lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_400lo_3--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf34_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf37_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf38_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf41_500lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf38_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf41_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf38_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Processing folder: classproductusersaggregations/L9
+Found 3 JSON files in classproductusersaggregations/L9
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf30_300lo_1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-evpel1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classproductusersaggregations/Id-product-perf30_300lo_2--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Processing folder: classrecords/H1
+Found 6 JSON files in classrecords/H1
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf35_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf35_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf36_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf36_500lo_2--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf36_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf36_630lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Processing folder: classrecords/H5
+Found 14 JSON files in classrecords/H5
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-evpel1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_400lo_3--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_400lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_300lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf38_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf34_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf38_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf37_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf41_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf41_500lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf38_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Processing folder: classrecords/L9
+Found 3 JSON files in classrecords/L9
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf30_300lo_1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-evpel1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Uploaded: cup1/orgs/perf-test1-alpha/classrecords/Id-product-perf30_300lo_2--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Processing folder: crossproductagg/H1
+Found 1 JSON files in crossproductagg/H1
+Uploaded: cup1/orgs/perf-test1-alpha/crossproductagg/Id-class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json
+Processing folder: crossproductagg/H5
+Found 1 JSON files in crossproductagg/H5
+Uploaded: cup1/orgs/perf-test1-alpha/crossproductagg/Id-class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Processing folder: crossproductagg/L9
+Found 1 JSON files in crossproductagg/L9
+Uploaded: cup1/orgs/perf-test1-alpha/crossproductagg/Id-class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json
+Processing folder: userprogress/H1
+Found 6 JSON files in userprogress/H1
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf35_400lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_400lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_500lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_500lo_2.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_630lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf35_500lo_1.json
+Processing folder: userprogress/L9
+Found 3 JSON files in userprogress/L9
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-e2c05e2c-7129-441b-a6fe-3d9a97846b7c--product-evpel1.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-e2c05e2c-7129-441b-a6fe-3d9a97846b7c--product-perf30_300lo_2.json
+Uploaded: cup1/orgs/perf-test1-alpha/userprogress/Id-user-e2c05e2c-7129-441b-a6fe-3d9a97846b7c--product-perf30_300lo_1.json
+Processing folder: usersubmissions/H1
+Found 6 JSON files in usersubmissions/H1
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_500lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf35_500lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_400lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_500lo_2.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf36_630lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-0dbd9ba2-e63b-427a-a2c4-896c1bbafa52--product-perf35_400lo_1.json
+Processing folder: usersubmissions/L9
+Found 3 JSON files in usersubmissions/L9
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-e2c05e2c-7129-441b-a6fe-3d9a97846b7c--product-perf30_300lo_1.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-e2c05e2c-7129-441b-a6fe-3d9a97846b7c--product-evpel1.json
+Uploaded: cup1/orgs/perf-test1-alpha/usersubmissions/Id-user-e2c05e2c-7129-441b-a6fe-3d9a97846b7c--product-perf30_300lo_2.json
+All files uploaded successfully!

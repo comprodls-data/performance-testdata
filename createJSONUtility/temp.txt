@@ -1,0 +1,145 @@
+--------UserProgress Json Creation STARTED----------------
+
+--------UserProgress Json Creation ENDED----------------
+===============================================================
+--------ClassProductItemsAggregations Json Creation STARTED----------------
+
+--------ClassProductItemsAggregations Json Creation ENDED----------------
+===============================================================
+--------User Submission Json Creation STARTED----------------
+
+--------User Submission Json Creation Ended ----------------
+
+CSV Data Read: 
+reading json files
+./input/classproductpendingsubmissions/H5/
+Unique classid and corresponding category saved to ./input/classDetails/uniqueClass.csv
+json files read
+--------ClassProductPendingSubmission Json Creation STARTED----------------
+
+Creating Folder:  output\classproductpendingsubmissions\H5
+output\classproductpendingsubmissions\H5 CLEARED
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_300lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf34_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_400lo_3--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_400lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf38_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf41_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf38_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-evpel1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf41_500lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf38_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+JSON data saved to output\classproductpendingsubmissions\H5\Id-product-perf37_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductPendingSubmission json
+--------ClassProductPendingSubmission Json Creation ENDED----------------
+===============================================================
+reading json files
+./input/crossproductagg/H5/
+JSON file "Id-product-perf35_400lo_1--class-0cdaeb23-5d38-4f4b-8bfa-c0313a600617.json" copied and renamed to "Id-product-perf35_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json"
+JSON file "Id-product-perf35_500lo_1--class-0cdaeb23-5d38-4f4b-8bfa-c0313a600617.json" copied and renamed to "Id-product-perf35_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json"
+JSON file "Id-product-perf36_400lo_1--class-0cdaeb23-5d38-4f4b-8bfa-c0313a600617.json" copied and renamed to "Id-product-perf36_400lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json"
+JSON file "Id-product-perf36_500lo_1--class-0cdaeb23-5d38-4f4b-8bfa-c0313a600617.json" copied and renamed to "Id-product-perf36_500lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json"
+JSON file "Id-product-perf36_500lo_2--class-0cdaeb23-5d38-4f4b-8bfa-c0313a600617.json" copied and renamed to "Id-product-perf36_500lo_2--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json"
+json files read
+--------CrossProductAgg Json Creation STARTED----------------
+
+Creating Folder:  output\crossproductagg\H5
+output\crossproductagg\H5 CLEARED
+JSON data saved to output\crossproductagg\H5\Id-class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating createCrossProductAggJson
+--------CrossProductAgg Json Creation ENDED----------------
+===============================================================
+reading json files
+./input/classrecords/H5/
+JSON file "Id-product-perf36_630lo_1--class-0cdaeb23-5d38-4f4b-8bfa-c0313a600617.json" copied and renamed to "Id-product-perf36_630lo_1--class-36717cee-ef6d-48d9-ac0c-0fd8249c7de3.json"
+JSON file "Id-product-evpel1--class-bb305f84-0a99-4b28-9cf6-12a472339cd5.json" copied and renamed to "Id-product-evpel1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json"
+JSON file "Id-product-perf30_300lo_1--class-bb305f84-0a99-4b28-9cf6-12a472339cd5.json" copied and renamed to "Id-product-perf30_300lo_1--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json"
+JSON file "Id-product-perf30_300lo_2--class-bb305f84-0a99-4b28-9cf6-12a472339cd5.json" copied and renamed to "Id-product-perf30_300lo_2--class-b0cdc6dd-0e1c-48bf-aea1-84916901451c.json"
+json files read
+--------classRecord Json Creation STARTED----------------
+
+Creating Folder:  output\classrecords\H5
+output\classrecords\H5 CLEARED
+JSON data saved to output\classrecords\H5\Id-product-evpel1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf38_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_300lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_400lo_3--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf34_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf41_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_400lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf41_500lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf38_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf38_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+JSON data saved to output\classrecords\H5\Id-product-perf37_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating classRecord json
+--------classRecord Json Creation ENDED----------------
+===============================================================
+reading json files
+./input/classproductusersaggregations/H5/
+json files read
+--------ClassProductUsersaggregations Json Creation STARTED----------------
+
+Creating Folder:  output\classproductusersaggregations\H5
+output\classproductusersaggregations\H5 CLEARED
+JSON data saved to output\classproductusersaggregations\H5\Id-product-evpel1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf34_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_300lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_400lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf38_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_400lo_3--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf37_630lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf38_630lo_2--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf41_500lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf41_400lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+JSON data saved to output\classproductusersaggregations\H5\Id-product-perf38_300lo_1--class-0ba10677-4fc2-48df-825a-0cdbf143b4f6.json
+Completed creating ClassProductUserAggregation json
+--------ClassProductUsersaggregations Json Creation ENDED----------------
+===============================================================
